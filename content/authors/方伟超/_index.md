@@ -63,5 +63,7 @@ user_groups:
   - Researchers
 ---
 
-Chaowei FANG (方超伟) is a lecturer in the Key Laboratory of Intelligent Perception and Image Understanding of Ministry of Education, Xidian University. He received his Phd degree (under the supervision of Prof. Yizhou Yu, IEEE Fellow) from the Department of Computer Science, The University of Hong Kong. He authorized/co-authorized a number of publications in international journals and conferences, including TPAMI, TIP, TMI, MIA, CVPR, ICCV, ACMMM, IJCAI, MICCAI, etc. For more information about him, please visit his homepage:https://chaoweifang.github.io/. 
+Chaowei FANG (方超伟) is a lecturer in the Key Laboratory of Intelligent Perception and Image Understanding of Ministry of Education, Xidian University. He received his Phd degree (under the supervision of Prof. Yizhou Yu, IEEE Fellow) from the Department of Computer Science, The University of Hong Kong. 
+
+He authorized/co-authorized a number of publications in international journals and conferences, including TPAMI, TIP, TMI, MIA, CVPR, ICCV, ACMMM, IJCAI, MICCAI, etc. For more information about him, please visit his [homepage](https://chaoweifang.github.io). 
 
