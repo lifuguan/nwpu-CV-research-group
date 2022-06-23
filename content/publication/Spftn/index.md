@@ -1,14 +1,14 @@
 ---
-title: 'Reinforcement cutting-agent learning for video object segmentation. '
+title: 'Spftn: A self-paced fine-tuning network for segmenting objects in weakly labelled videos.'
 authors:
   - Dingwen Zhang
   - Le Yang
   - Junwei Han
-date: '2018-07-01T00:00:00Z'
+date: '2017-07-01T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2018-01-01T00:00:00Z'
+publishDate: '2017-01-01T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
