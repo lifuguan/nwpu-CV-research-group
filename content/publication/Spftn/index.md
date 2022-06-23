@@ -1,14 +1,14 @@
 ---
-title: 'Spftn: A self-paced fine-tuning network for segmenting objects in weakly labelled videos'
+title: 'Reinforcement cutting-agent learning for video object segmentation. '
 authors:
   - Dingwen Zhang
   - Le Yang
   - Junwei Han
-date: '2017-07-01T00:00:00Z'
+date: '2018-07-01T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2018-01-01T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -31,22 +31,9 @@ featured: true
 
 links:
   - name: Custom Link
-    url: https://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_SPFTN_A_Self-Paced_CVPR_2017_paper.pdf
-url_pdf: https://openaccess.thecvf.com/content_cvpr_2017/papers/Zhang_SPFTN_A_Self-Paced_CVPR_2017_paper.pdf
-url_code: '#'
-url_dataset: '#'
-url_poster: '#'
-url_project: ''
-url_slides: ''
-url_source: '#'
-url_video: '#'
+    url: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf
+url_pdf: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf
 
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
-  focal_point: ''
-  preview_only: false
 
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
