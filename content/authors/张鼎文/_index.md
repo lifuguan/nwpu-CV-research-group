@@ -4,7 +4,7 @@ title: Dingwen Zhang
 
 # Username (this should match the folder name)
 authors:
-  -Dingwen Zhang (张鼎文)
+  - Dingwen Zhang (张鼎文)
 
 # Is this the primary user of the site?
 superuser: false
