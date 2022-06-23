@@ -1,14 +1,14 @@
 ---
-title: 'Colar: Effective and efficient online action detection by consulting exemplars'
+title: 'Equivalent classification mapping for weakly supervised temporal action localization'
 authors:
   - Le Yang
   - Dingwen Zhang
   - Junwei Han
-date: '2022-07-01T00:00:00Z'
+date: '2021-07-01T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2022-01-01T00:00:00Z'
+publishDate: '2021-01-01T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
