@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role:  IET Fellow
+role:  IET Fellow, Professor of Artificial Intelligence
 
 # Organizations/Affiliations
 organizations:
