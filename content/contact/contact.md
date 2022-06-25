@@ -25,8 +25,8 @@ content:
     country: China
     country_code: CHN
   coordinates:
-    latitude: '34.250238'
-    longitude: '108.924276'
+    latitude: '34.24323'
+    longitude: '108.91133'
   directions: 自动化学院
   office_hours:
     - 'Monday 10:00 to 13:00'
