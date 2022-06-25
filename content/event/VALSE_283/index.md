@@ -5,6 +5,13 @@ event: VALSE Conference
 event_url: https://live.bilibili.com/22300737
 
 location: Virtual
+address:
+  street: 友谊西路127号
+  city: 西安市
+  region: 陕西省
+  postcode: '710072'
+  country: China
+  country_code: CHN
 
 summary: CRIS CLIP-Driven Referring Image Segmentation
 abstract: 'Mingming Gong is a lecturer and PhD supervisor at the School of Mathematics and Statistics, University of Melbourne, Australia, and a principal investigator at the Melbourne Centre for Data Science. He received his PhD from the University of Technology Sydney in 2017 and then did postdoctoral research at the University of Pittsburgh and Carnegie Mellon University. His research interests include causal machine learning, weakly supervised/ self-supervised learning, transfer learning, generative models, and 3D vision. He has published more than 50 papers in top conferences and journals related to artificial intelligence, such as NeurIPS, ICML, and CVPR. He is a recipient of the Australian Research Council Discovery Early Career Award in 2021. He is area chairs of top machine learning conferences such as NeurIPS, ICML, and ICLR.'
