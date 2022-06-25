@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Xiangsen Zhang
+title: Le Yang
 
 # Username (this should match the folder name)
 authors:
-  - Xiangsen Zhang (张祥森)
+  - Le Yang (杨乐)
 
 # Is this the primary user of the site?
 superuser: false
@@ -18,21 +18,22 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Xiangsen Zhang is a member of Vision & Intelligence Group in Brain Lab. His research interests include computer vision and medical information processing.
+bio: Le Yang is PhD candidate in Northwestern Polytechinical University.
 
 interests:
-  - Artificial Intelligence
-  - Computer Vision
-  - Medical Image Processing
+  - Temporal action localization
+  - online action detection
+  - video object segmentation
+  - weakly supervised learning.
 
 education:
   courses:
-    - course: PhD in Automation
-      institution: Northwestern Polytechinical University
-      year: So far
     - course: BSc in Automation
-      institution: Chang'an University
-      year: 2019
+      institution: Northwestern Polytechinical University
+      year: 2022
+    - course: BSc in Automation
+      institution: Northwestern Polytechinical University
+      year: 2016
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -41,10 +42,10 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'xszhang116@gmail.com'
+    link: 'nwpuyangle@gmail.com'
   - icon: github
     icon_pack: fab
-    link: https://github.com/jixiangsenlin
+    link: https://github.com/VividLe
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -60,4 +61,5 @@ user_groups:
   - Grad Students
 ---
 
-Xiangsen Zhang is a member of Vision & Intelligence Group in Brain Lab. His research interests include computer vision and medical information processing.
+Le Yang is PhD candidate in Northwestern Polytechinical University.
+

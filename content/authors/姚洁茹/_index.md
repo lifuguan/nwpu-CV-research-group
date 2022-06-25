@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Xiangsen Zhang
+title: Jieru Yao
 
 # Username (this should match the folder name)
 authors:
-  - Xiangsen Zhang (张祥森)
+  - Jieru Yao (姚洁茹)
 
 # Is this the primary user of the site?
 superuser: false
@@ -30,9 +30,12 @@ education:
     - course: PhD in Automation
       institution: Northwestern Polytechinical University
       year: So far
+    - course: MEng in Automation
+      institution: Chang'an University
+      year: 2018
     - course: BSc in Automation
       institution: Chang'an University
-      year: 2019
+      year: 2015
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -41,10 +44,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'xszhang116@gmail.com'
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/jixiangsenlin
+    link: 'rubyyao@mail.nwpu.edu.cn'
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -60,4 +60,4 @@ user_groups:
   - Grad Students
 ---
 
-Xiangsen Zhang is a member of Vision & Intelligence Group in Brain Lab. His research interests include computer vision and medical information processing.
+Jieru Yao is currently pursuing the Ph.D. degree in the School of Automation at NPU, Xian, China. Her research interests include computer vision and machine learning, especially on weakly supervised object detection in general and medical image. She received her M.S. degree from CHD , Xian, China. 
