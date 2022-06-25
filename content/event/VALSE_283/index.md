@@ -1,5 +1,5 @@
 ---
-title: VALSE Webinar 22-16期 总第283期 比物连类：对比表示学习
+title: VALSE Webinar 22-16-283 Contrastive Representive Learning
 
 event: VALSE Conference
 event_url: https://live.bilibili.com/22300737
