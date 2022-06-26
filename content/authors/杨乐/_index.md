@@ -28,9 +28,9 @@ interests:
 
 education:
   courses:
-    - course: BSc in Automation
+    - course: PhD in Automation
       institution: Northwestern Polytechinical University
-      year: 2022
+      year: So far
     - course: BSc in Automation
       institution: Northwestern Polytechinical University
       year: 2016

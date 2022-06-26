@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Jingfeng Li
+title: Guangyu Guo
 
 # Username (this should match the folder name)
 authors:
-  - Jingfeng Li (李靖峰)
+  - Guangyu Guo (郭广宇)
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: MEng of Artificial Intelligence
+role: PhD of Computer Vision
 
 # Organizations/Affiliations
 organizations:
@@ -18,19 +18,25 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Jingfeng Li is Master candidate in Northwestern Polytechinical University.
+bio: Guangyu Guo is pursuing his Ph.D. degree in the School of Automation at Northwestern Polytechnical University.
 
 interests:
-  - CSLAM
+  - Temporal action localization
+  - online action detection
+  - video object segmentation
+  - weakly supervised learning.
 
 education:
   courses:
-    - course: MEng in Automation
+    - course: PhD in Computer Vision
       institution: Northwestern Polytechinical University
       year: So far
-    - course: BSc in Automation
+    - course: MEng in Automation
       institution: Northwestern Polytechinical University
-      year: 2022
+      year: 2018
+    - course: BSc in Automation
+      institution: Nanjing University of Aeronautics and Astronautic
+      year: 2016
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -39,10 +45,10 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '1207814560@qq.com'
+    link: 'gyguo95@gmail.com'
   - icon: github
     icon_pack: fab
-    link: https://github.com/Li-jingfeng
+    link: https://github.com/gyguo
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -58,5 +64,4 @@ user_groups:
   - Grad Students
 ---
 
-Jingfeng Li is Master candidate in Northwestern Polytechinical University.
-
+Guangyu Guo is pursuing his Ph.D. degree in the School of Automation at Northwestern Polytechnical University. His research interests include computer vision and machine learning, especially weakly supervised learning, knowledge distillation.
