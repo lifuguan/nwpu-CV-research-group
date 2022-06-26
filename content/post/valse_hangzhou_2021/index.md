@@ -1,14 +1,20 @@
 ---
-title: Richard Hendricks Wins First Place in the Wowchemy Prize
-date: 2020-12-01
+title: Junwei Han and Dingwen Zhang invited as speakers at VALSE, Hangzhou
+date: 2021-10-08
+image:
+  focal_point: 'top'
 ---
 
-Congratulations to Richard Hendricks for winning first place in the Wowchemy Prize.
+韩军伟教授与张鼎文教授受邀参加VALSE·2021（杭州）并发表关键演讲。
 
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. Quisque at elit felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget elementum odio. Cras interdum eget risus sit amet aliquet. In volutpat, nisl ut fringilla dignissim, arcu nisl suscipit ante, at accumsan sapien nisl eu eros.
+### 报告题目： AI赋能高分遥感目标检测与识别：挑战、对策及展望
+演讲者：韩军伟
 
-Sed eu dui nec ligula bibendum dapibus. Nullam imperdiet auctor tortor, vel cursus mauris malesuada non. Quisque ultrices euismod dapibus. Aenean sed gravida risus. Sed nisi tortor, vulputate nec quam non, placerat porta nisl. Nunc varius lobortis urna, condimentum facilisis ipsum molestie eu. Ut molestie eleifend ligula sed dignissim. Duis ut tellus turpis. Praesent tincidunt, nunc sed congue malesuada, mauris enim maximus massa, eget interdum turpis urna et ante. Morbi sem nisl, cursus quis mollis et, interdum luctus augue. Aliquam laoreet, leo et accumsan tincidunt, libero neque aliquet lectus, a ultricies lorem mi a orci.
+高分辨率遥感图像目标检测与识别是空天地海一体化观测系统的一项关键技术，广泛应用在侦察、监视、预警、搜救等军民领域。与自然图像相比，高分辨率遥感图像具有目标方向多变、目标类型及数量繁杂、特定领域样本稀缺（如导弹阵地）、成像视角单一等特点，此外，不同平台、不同光照、天气条件、大气参数等都会对遥感图像获取产生影响。这些综合因素使得高分辨率遥感图像目标检测与识别，与自然图像理解相比，面临着更大的挑战和更多的难点问题。当AI与遥感技术深度融合，将会产生怎样的火花？本报告首先总结分析了高分辨率遥感图像目标检测与识别面临的挑战，接下来重点汇报我们团队在旋转不变目标检测、有向目标检测、弱监督目标检测、小样本目标检测、以及目标型号识别等方向取得的研究进展和典型应用，最后展望了未来的研究工作。
+### 报告题目： 视觉显著性计算前沿研究方向简述
+演讲者：张鼎文
 
-Mauris dapibus sem vel magna convallis laoreet. Donec in venenatis urna, vitae sodales odio. Praesent tortor diam, varius non luctus nec, bibendum vel est. Quisque id sem enim. Maecenas at est leo. Vestibulum tristique pellentesque ex, blandit placerat nunc eleifend sit amet. Fusce eget lectus bibendum, accumsan mi quis, luctus sem. Etiam vitae nulla scelerisque, eleifend odio in, euismod quam. Etiam porta ullamcorper massa, vitae gravida turpis euismod quis. Mauris sodales sem ac ultrices viverra. In placerat ultrices sapien. Suspendisse eu arcu hendrerit, luctus tortor cursus, maximus dolor. Proin et velit et quam gravida dapibus. Donec blandit justo ut consequat tristique.
+视觉显著性计算旨在模仿人类的视觉注意力机制以识别视觉场景中最显著或最独特的区域或物体。它是基本的底层图像处理技术之一，可以应用于许多下游计算机视觉任务中。从传统研究的角度来看，视觉显著性计算可以分为人眼关注点预测和显著物体检测。然而，近年来的最新研究进展显示，该领域逐步产生出了许多新生的研究方向与研究分支，包括弱/半/无监督视觉显著性学习、协同显著性检测、多模态显著性检测等。本报告将对这些新生研究方向和分支的目标与意义进行简要阐述，并介绍本团队在该领域的一些探索与思考。
+
