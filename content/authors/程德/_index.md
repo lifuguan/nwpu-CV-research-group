@@ -46,6 +46,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:dcheng@xidian.edu.cn
+
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=180lASkAAAAJ&hl=en
@@ -63,6 +64,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Collaborators
+
 ---
 
 De Cheng (程德）is an associate professor in the State Key Laboratory of Integrated Services Networks (ISN), Xidian University. Before that, he worked as a Pincipal Engineer in Huawei from 2018 to 2021. He got his Ph.D. and BSc from Xi'an Jiaotong University at Dec. 2017 and June. 2011, respectively. His research interests include Computer Vision, Image Processing, and Machine Learning. He authorized/co-authorized over 30 publications in international journals and conferences, including TIP, TNNLS, T-Cybernetics, T-CSVT, CVPR, ICCV, IJCAI, etc. One of his representative works has been cited over 1,200 times. For more information about him, please visit his homepage:https://web.xidian.edu.cn/dcheng/index.html. 
