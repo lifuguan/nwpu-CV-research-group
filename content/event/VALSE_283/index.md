@@ -23,7 +23,7 @@ date_end: '2022-06-29T20:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2022-06-26T20:00:00Z'
+publishDate: '2022-06-20T20:00:00Z'
 
 authors: ['宫明明']
 tags: []
