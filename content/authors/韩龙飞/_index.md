@@ -18,9 +18,7 @@ organizations:
     url: 'www.btbu.edu.cn'
 
 # Short bio (displayed in user profile at end of posts)
-bio: Hey! I am an associate professor at School of Computer Science, Beijing Technology and Business Unversity. I am mainly interested in effective medical artifical intelligence algorithms, Currently, I am working on larges-scale pretrained framework, light-weighted neural network, and multi-modal learning.
-
-Before that, I got my Ph.D. from Beijing Institue of Technology (BIT), at fall 2017. Since Sep. 2015, I am a visiting PHD student at Human Sensing Lab in Carnegie Mellon University (CMU). I am really fortunate to work with my advisor Dong Huang and Prof. Fernando de la Torre . After my graduation, I joint Tencent, and highly focus on Computational Advertising, especially on lift-time value prediction and dvertising recommendation system.
+bio: Hey! I am an associate professor at School of Computer Science, Beijing Technology and Business Unversity.
 
 interests:
   - Artificial Intelligence
