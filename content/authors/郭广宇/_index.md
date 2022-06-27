@@ -14,7 +14,7 @@ role: PhD of Computer Vision
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern Polytechinical University
+  - name: Northwestern PolytechnicalUniversity
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
@@ -29,10 +29,10 @@ interests:
 education:
   courses:
     - course: PhD in Computer Vision
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: So far
     - course: MEng in Automation
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: 2018
     - course: BSc in Automation
       institution: Nanjing University of Aeronautics and Astronautic

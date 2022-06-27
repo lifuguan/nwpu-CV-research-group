@@ -27,7 +27,7 @@ interests:
 education:
   courses:
     - course: MEng in Automation
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: So far
     - course: BSc in Automation
       institution: Xi 'an University of Technology

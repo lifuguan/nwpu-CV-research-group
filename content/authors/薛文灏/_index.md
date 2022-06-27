@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Le Yang
+title: Wenhao Xue
 
 # Username (this should match the folder name)
 authors:
-  - Le Yang (杨乐)
+  - Wenhao Xue (薛文灏)
 
 # Is this the primary user of the site?
 superuser: false
@@ -18,22 +18,22 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Le Yang is PhD candidate in Northwestern PolytechnicalUniversity.
+bio: Wenhao Xue is a PhD candidate in Northwestern Polytechnical University.
 
 interests:
-  - Temporal action localization
-  - online action detection
-  - video object segmentation
-  - weakly supervised learning.
+  - 3D Vision
 
 education:
   courses:
     - course: PhD in Automation
       institution: Northwestern PolytechnicalUniversity
       year: So far
-    - course: BSc in Automation
+    - course: MEng in Aeronautics
       institution: Northwestern PolytechnicalUniversity
-      year: 2016
+      year: 2022
+    - course: BSc in Aeronautics
+      institution: Northwestern PolytechnicalUniversity
+      year: 2019
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -42,10 +42,8 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'nwpuyangle@gmail.com'
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/VividLe
+    link: 'wenhaoxue@mail.nwpu.edu.cn'
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -61,5 +59,4 @@ user_groups:
   - Grad Students
 ---
 
-Le Yang is PhD candidate in Northwestern PolytechnicalUniversity.
-
+Wenhao Xue is a PhD candidate in Northwestern Polytechnical University.

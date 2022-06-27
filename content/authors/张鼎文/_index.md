@@ -10,11 +10,11 @@ authors:
 superuser: false
 
 # Role/position
-role: Professor of Northwestern Polytechinical University
+role: Professor of Northwestern PolytechnicalUniversity
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern Polytechinical University
+  - name: Northwestern PolytechnicalUniversity
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
@@ -28,10 +28,10 @@ interests:
 education:
   courses:
     - course: PhD in Automation
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: 2018
     - course: BSc in Automation
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: 2012
 
 # Social/Academic Networking

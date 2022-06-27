@@ -14,11 +14,11 @@ role:  IET Fellow, Professor of Artificial Intelligence
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern Polytechinical University
+  - name: Northwestern PolytechnicalUniversity
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Junwei Han is currently a Professor in Northwestern Polytechinical University. His research interests include computer vision, pattern recognition, and artifical intelligence.
+bio: Junwei Han is currently a Professor in Northwestern PolytechnicalUniversity. His research interests include computer vision, pattern recognition, and artifical intelligence.
 
 interests:
   - Computer Vision
@@ -28,7 +28,7 @@ interests:
 education:
   courses:
     - course: PhD in Computer Science
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: 2003
 
 # Social/Academic Networking
@@ -57,4 +57,4 @@ user_groups:
   - Principal Investigators
 ---
 
-Junwei Han is currently a Professor in Northwestern Polytechinical University. His research interests include computer vision, pattern recognition, and artifical intelligence. He has published more than 100 papers in top journals and conferences such as Proceedings of the IEEE, TPAMI, CVPR, MICCAI, and so on. He is an Associate Editor of IEEE Trans. on Neural Networks and Learning Systems, IEEE Trans. on Multimedia, IEEE Trans. on Circuits and Systems for Video Technology, and IEEE Trans. on Cybernetics. He also serves CVPR, ICPR, and ACCV as an area chair. Email: junweihan2010@gmail.com
+Junwei Han is currently a Professor in Northwestern PolytechnicalUniversity. His research interests include computer vision, pattern recognition, and artifical intelligence. He has published more than 100 papers in top journals and conferences such as Proceedings of the IEEE, TPAMI, CVPR, MICCAI, and so on. He is an Associate Editor of IEEE Trans. on Neural Networks and Learning Systems, IEEE Trans. on Multimedia, IEEE Trans. on Circuits and Systems for Video Technology, and IEEE Trans. on Cybernetics. He also serves CVPR, ICPR, and ACCV as an area chair. Email: junweihan2010@gmail.com

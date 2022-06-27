@@ -14,7 +14,7 @@ role: PhD of Artificial Intelligence
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern Polytechinical University
+  - name: Northwestern PolytechnicalUniversity
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
@@ -28,7 +28,7 @@ interests:
 education:
   courses:
     - course: PhD in Automation
-      institution: Northwestern Polytechinical University
+      institution: Northwestern PolytechnicalUniversity
       year: So far
     - course: MEng in Automation
       institution: Chang'an University
