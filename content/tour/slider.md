@@ -23,14 +23,6 @@ content:
         color: '#666'
         brightness: 0.7
         media: welcome.jpg
-    - title: Lunch & Learn ☕️
-      content: 'Share your knowledge with the group and explore exciting new topics together!'
-      align: left
-      background:
-        position: center
-        color: '#555'
-        brightness: 0.7
-        media: contact.jpg
     - title: World-Class Artificial Intelligence Lab
       content: 'Targets at the Cutting-edge Research'
       align: right
