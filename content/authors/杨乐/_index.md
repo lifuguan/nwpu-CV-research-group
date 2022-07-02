@@ -14,11 +14,11 @@ role: PhD of Artificial Intelligence
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern PolytechnicalUniversity
+  - name: Northwestern Polytechnical University
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Le Yang is PhD candidate in Northwestern PolytechnicalUniversity.
+bio: Le Yang is PhD candidate in Northwestern Polytechnical University.
 
 interests:
   - Temporal action localization
@@ -29,10 +29,10 @@ interests:
 education:
   courses:
     - course: PhD in Automation
-      institution: Northwestern PolytechnicalUniversity
+      institution: Northwestern Polytechnical University
       year: So far
     - course: BSc in Automation
-      institution: Northwestern PolytechnicalUniversity
+      institution: Northwestern Polytechnical University
       year: 2016
 
 # Social/Academic Networking
@@ -61,5 +61,5 @@ user_groups:
   - Grad Students
 ---
 
-Le Yang is PhD candidate in Northwestern PolytechnicalUniversity.
+Le Yang is PhD candidate in Northwestern Polytechnical University.
 

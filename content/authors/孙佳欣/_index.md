@@ -1,37 +1,37 @@
 ---
 # Display name
-title: Yingzi Fan
+title: Jiaxin Sun
 
 # Username (this should match the folder name)
 authors:
-  - Yingzi Fan (范樱子)
+  - Jiaxin Sun (孙佳欣)
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: MEng of Artificial Intelligence
+role: PhD of Computer Vision
 
 # Organizations/Affiliations
 organizations:
-  - name: Xidian University
+  - name: Northwestern Polytechnical University
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Yingzi Fan is Master candidate in Xidian University.
+bio: Jiaxin Sun is currently pursuing the Ph.D. degree in the School of Automation at Northwestern Polytechnical University, Xian, China.
 
 interests:
-  - Cross-modal
-  - Saliency prediction
+  - Artificial Intelligence
+  - Computer Vision
 
 education:
   courses:
-    - course: MEng in Automation
+    - course: PhD in Computer Vision
       institution: Northwestern Polytechnical University
       year: So far
     - course: BSc in Automation
-      institution: Xi 'an University of Technology
-      year: 2020
+      institution: Northwestern Polytechnical University
+      year: 2021
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -40,10 +40,10 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '15091172525@163.com'
+    link: 'sunjiaxin0604@163.com'
   - icon: github
     icon_pack: fab
-    link: https://github.com/Fanyingzi
+    link: https://github.com/gyguo
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -59,5 +59,4 @@ user_groups:
   - Grad Students
 ---
 
-Yingzi Fan is Master candidate in Xidian University.
-
+Jiaxin Sun is currently pursuing the Ph.D. degree in the School of Automation at Northwestern Polytechnical University, Xian, China. Her research interests include computer vision and deep learning, especially on video action localization and video object segmentation.

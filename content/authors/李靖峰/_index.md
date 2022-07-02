@@ -14,11 +14,11 @@ role: MEng of Artificial Intelligence
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern PolytechnicalUniversity
+  - name: Northwestern Polytechnical University
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Jingfeng Li is Master candidate in Northwestern PolytechnicalUniversity.
+bio: Jingfeng Li is Master candidate in Northwestern Polytechnical University.
 
 interests:
   - CSLAM
@@ -26,10 +26,10 @@ interests:
 education:
   courses:
     - course: MEng in Automation
-      institution: Northwestern PolytechnicalUniversity
+      institution: Northwestern Polytechnical University
       year: So far
     - course: BSc in Automation
-      institution: Northwestern PolytechnicalUniversity
+      institution: Northwestern Polytechnical University
       year: 2022
 
 # Social/Academic Networking
@@ -58,5 +58,5 @@ user_groups:
   - Grad Students
 ---
 
-Jingfeng Li is Master candidate in Northwestern PolytechnicalUniversity.
+Jingfeng Li is Master candidate in Northwestern Polytechnical University.
 
