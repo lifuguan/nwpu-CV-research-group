@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Post-Doctor of Pattern Recognition & Intelligent Systems
+role: Associate Professor
 
 # Organizations/Affiliations
 organizations:
