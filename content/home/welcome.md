@@ -9,17 +9,10 @@ weight: 10 # Order that this section will appear.
 title: |
   Vision 
   Intelligence Group
-# hero_media: welcome.jpg
+hero_media: welcome.jpg
 design:
-  background:
-    # Choose how many columns the section has. Valid values: 1 or 2.
-    image: welcome.jpg
-    image_size: cover
-    image_darken: 0.6
-    image_position: center
-    image_parallax: true
-    # Text color (true=light, false=dark, or remove for the dynamic theme color).
-    text_color_light: true
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns: '1'
   # Add custom styles
   css_style:
   css_class:
