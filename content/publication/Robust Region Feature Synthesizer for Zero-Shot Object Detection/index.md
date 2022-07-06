@@ -29,9 +29,6 @@ tags:
   - Source Themes
 featured: true
 
-links:
-  - name: Custom Link
-    url: https://doi.org/10.48550/arXiv.2201.00103
 url_pdf: https://arxiv.org/pdf/2201.00103
 
 

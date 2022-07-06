@@ -29,9 +29,6 @@ tags:
   - Source Themes
 featured: true
 
-links:
-  - name: Custom Link
-    url: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf
 url_pdf: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf
 
 

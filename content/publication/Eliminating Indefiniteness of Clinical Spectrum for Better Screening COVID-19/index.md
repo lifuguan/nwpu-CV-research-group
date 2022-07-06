@@ -29,9 +29,6 @@ tags:
   - Source Themes
 featured: true
 
-links:
-  - name: Custom Link
-    url: https://ieeexplore.ieee.org/document/9357911
 url_pdf: https://ieeexplore.ieee.org/document/9357911
 
 

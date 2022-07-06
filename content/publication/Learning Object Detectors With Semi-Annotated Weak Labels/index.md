@@ -1,5 +1,5 @@
 ---
-title: 'Learning Object Detectors with Semi-Annotated Weak Labels'
+title: 'Learning Object Detectors with Semi-Annotated Weak Labels.'
 authors:
   - Guoyu Guang
   - Dingwen Zhang
@@ -29,9 +29,6 @@ tags:
   - Source Themes
 featured: true
 
-links:
-  - name: Custom Link
-    url: https://ieeexplore.ieee.org/document/8554285
 url_pdf: https://ieeexplore.ieee.org/document/8554285
 
 

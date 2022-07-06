@@ -30,9 +30,6 @@ tags:
   - Source Themes
 featured: true
 
-links:
-  - name: Custom Link
-    url: https://ieeexplore.ieee.org/abstract/document/9525038
 url_pdf: https://ieeexplore.ieee.org/abstract/document/9525038
 
 
