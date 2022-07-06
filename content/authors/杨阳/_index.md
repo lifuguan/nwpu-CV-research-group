@@ -54,6 +54,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Collaborators
+  - AI for Unmanned Systems
 ---
 
 Yang Yang is a post-doctor of Pattern Recognition & Intelligent Systems at the Brain and Artificial Intelligence Laboratory in Northwestern Polytechnical University. His research interests include Computer Vision, Medical Image Analysis, Brain-inspired Artificial Intelligence and Neuromorphic Computing.

@@ -56,6 +56,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Collaborators
+  - Brain-inspired Visual Learning
 ---
 
 Lechao Cheng received Ph.D degree from Zhejiang University, supervised by Prof. Zhangye Wang and Prof. Wei Chen. His research area centres around Computational Photography, Knowledage Distillation, Few-shot Learning and Fine-grained Image Classification. He serves as a technical program committee (TPC) member for ACM Multimedia 2020,2021, and reviewer for CVPR2021, ACM MM 2020,2021,2022, ICCV2021,ACM MM2021,CVPR2022.

@@ -61,6 +61,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Collaborators
+  - AI for Medical science
 ---
 
 Chaowei FANG (方超伟) is a lecturer in the Key Laboratory of Intelligent Perception and Image Understanding of Ministry of Education, Xidian University. He received his Phd degree (under the supervision of Prof. Yizhou Yu, IEEE Fellow) from the Department of Computer Science, The University of Hong Kong. 

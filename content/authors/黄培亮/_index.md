@@ -60,6 +60,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - Brain-inspired Visual Learning
 ---
 
 Peiliang Huang is currently pursuing the Ph.D. degree in the School of Automation at Northwestern Polytechnical University, Xian, China. His research interests include computer vision, especially on object segmentation and object detection.

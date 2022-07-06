@@ -51,6 +51,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - AI for Medical science
 ---
 
 Yingzi Fan is Master candidate in Xidian University.

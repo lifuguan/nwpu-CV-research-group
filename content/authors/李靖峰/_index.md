@@ -56,6 +56,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - AI for Unmanned Systems
 ---
 
 Jingfeng Li is Master candidate in Northwestern Polytechnical University.

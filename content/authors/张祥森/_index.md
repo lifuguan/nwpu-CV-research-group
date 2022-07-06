@@ -58,6 +58,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - AI for Medical science
 ---
 
 Xiangsen Zhang is a member of Vision & Intelligence Group in Brain Lab. His research interests include computer vision and medical information processing.

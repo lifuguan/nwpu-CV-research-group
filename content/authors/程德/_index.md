@@ -55,6 +55,7 @@ email: ''
 
 user_groups:
   - Collaborators
+  - AI for Unmanned Systems
 
 ---
 

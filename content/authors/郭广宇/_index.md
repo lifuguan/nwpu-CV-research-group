@@ -62,6 +62,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - AI for Unmanned Systems
 ---
 
 Guangyu Guo is pursuing his Ph.D. degree in the School of Automation at Northwestern Polytechnical University. His research interests include computer vision and machine learning, especially weakly supervised learning, knowledge distillation.

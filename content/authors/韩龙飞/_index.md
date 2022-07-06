@@ -46,6 +46,7 @@ email: 'draflyhan@gmail.com'
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Collaborators
+  - AI for Medical science
 ---
 Hey! I am an associate professor at School of Computer Science, Beijing Technology and Business Unversity. I am mainly interested in effective medical artifical intelligence algorithms, Currently, I am working on larges-scale pretrained framework, light-weighted neural network, and multi-modal learning.
 

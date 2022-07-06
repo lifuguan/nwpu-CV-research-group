@@ -59,6 +59,8 @@ email: ''
 user_groups:
   - Principal Investigators
   - AI for Unmanned Systems
+  - AI for Medical science
+  - Brain-inspired Visual Learning
 ---
 
 Dingwen Zhang （张鼎文）is a Professor at BRAIN Lab, NWPU. He obtained his B.S. and Ph.D. degrees from School of Automation, Northwestern Polytechnical University (NWPU) in 2012 and 2018, respectively. From Oct. 2015 to Oct. 2017, he worked with Dong Huang and Fernando de la Torre as a visiting PHD student at the Human Sensing Laboratory in Carnegie Mellon University (CMU). He is mainly interested in developing effective computer vision algorithms that are inspired by the human vison and human learning procedure. Currently, he is working on developing weakly supervised learning systems for computer vision tasks like object detection, segmentation, 3D shape reconstruction. Homepage: https://zdw-nwpu.github.io/dingwenz.github.com/

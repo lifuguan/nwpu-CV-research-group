@@ -58,6 +58,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - AI for Medical science
 ---
 
 Jieru Yao is currently pursuing the Ph.D. degree in the School of Automation at NPU, Xian, China. Her research interests include computer vision and machine learning, especially on weakly supervised object detection in general and medical image. She received her M.S. degree from CHD , Xian, China. 

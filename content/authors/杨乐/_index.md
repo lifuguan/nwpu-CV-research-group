@@ -59,6 +59,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - Brain-inspired Visual Learning
 ---
 
 Le Yang is PhD candidate in Northwestern Polytechnical University.

@@ -58,6 +58,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - Brain-inspired Visual Learning
 ---
 
 Hao Li (李昊) is PhD candidate at NWPU for deep learning.
