@@ -24,4 +24,4 @@ design:
 
 <br>
 
-We are an academic research group focusing on Artificial Intelligence for Unmanned System, Mdeical Science and Visual Learning.
+We are an academic research group focusing on **Artificial Intelligence** for Brain-inspired Visual Learning, Unmanned System and Mdeical Science.
