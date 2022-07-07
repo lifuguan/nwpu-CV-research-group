@@ -9,7 +9,7 @@ weight: 10 # Order that this section will appear.
 title: |
   Vision &
   Intelligence Group
-hero_media: welcome3.jpg
+hero_media: welcome2.jpg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns: '1'
