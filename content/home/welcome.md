@@ -7,12 +7,16 @@ widget: hero # See https://wowchemy.com/docs/page-builder/
 headless: true # This file represents a page section.
 weight: 10 # Order that this section will appear.
 title: |
-  Vision 
+  Vision &
   Intelligence Group
-hero_media: welcome.jpg
+hero_media: welcome2.jpg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns: '1'
+  background:
+    color: '#3771ca'
+    # Text color (true=light, false=dark, or remove for the dynamic theme color). 
+    text_color_light: true
   # Add custom styles
   css_style:
   css_class:
@@ -20,4 +24,4 @@ design:
 
 <br>
 
-The **Vision & Intelligence Group** is affiliated to the Key Laboratory of Information Fusion Technology under the Ministry of Education. The team targets at the cutting-edge research in the filed of archifical intelligence and closely focuses on the country's strategic needs.
+We are an academic research group focusing on Artificial Intelligence for Unmanned System, Mdeical Science and Visual Learning.
