@@ -3,6 +3,8 @@ widget: tag_cloud
 headless: true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
+title: Active Research Areas
+subtitle: 'Our specialization.'
 
 content:
   # Choose the taxonomy from `config.yaml` to display (e.g. tags, categories)
@@ -13,3 +15,4 @@ design:
   # Minimum and maximum font sizes (1.0 = 100%).
   font_size_min: 0.7
   font_size_max: 2.0
+---
