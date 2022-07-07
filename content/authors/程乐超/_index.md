@@ -2,6 +2,8 @@
 # Display name
 title: Lechao Cheng
 
+weight: 3
+
 # Username (this should match the folder name)
 authors:
   - Lechao Cheng (程乐超)

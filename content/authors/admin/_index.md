@@ -2,6 +2,8 @@
 # Display name
 title: Hao Li
 
+weight: 4
+
 # Username (this should match the folder name)
 authors:
   - Hao Li (李昊)
