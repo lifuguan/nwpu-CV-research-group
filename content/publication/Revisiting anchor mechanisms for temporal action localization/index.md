@@ -28,6 +28,8 @@ abstract: Most of the current action localization methods follow an anchor-based
 tags:
   - Deep Learning
   - Computer Vision
+  - anchor
+  - anchor mechanisms
   - Video
   - Instance Segmentation
 featured: true

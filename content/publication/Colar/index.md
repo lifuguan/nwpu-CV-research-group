@@ -27,6 +27,9 @@ abstract: Online action detection has attracted increasing research interests in
 
 tags:
   - Deep Learning
+  - consulting exemplars
+  - Effective
+  - Efficient
   - Action Detection
 featured: true
 

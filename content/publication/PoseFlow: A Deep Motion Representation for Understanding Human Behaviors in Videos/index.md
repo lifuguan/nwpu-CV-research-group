@@ -30,6 +30,10 @@ abstract: Motion of the human body is the critical cue for understanding and cha
 tags:
   - Deep Learning
   - Motion Representation
+  - Understanding
+  - Human Behaviors
+  - Represent Learning
+  - Representation
   - Video
   - Computer Vision
 featured: true

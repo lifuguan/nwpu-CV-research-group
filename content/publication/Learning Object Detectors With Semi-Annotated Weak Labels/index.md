@@ -30,6 +30,8 @@ tags:
   - Computer vision
   - image processing
   - object detection
+  - Semi-Annotated
+  - Weak Labels
   - Semi-supervised Learning
 featured: true
 

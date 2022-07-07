@@ -27,6 +27,10 @@ abstract: The coronavirus disease 2019 (COVID-19) has swept all over the world. 
 
 tags:
   - Medical Imaging
+  - Clinical Spectrum
+  - Eliminating
+  - Indefiniteness
+  - COVID-19
   - clinical spectrum
   - indefiniteness elimination
   - neural network

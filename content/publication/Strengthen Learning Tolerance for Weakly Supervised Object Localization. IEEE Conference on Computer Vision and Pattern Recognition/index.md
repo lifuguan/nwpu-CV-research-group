@@ -27,6 +27,8 @@ abstract: Weakly supervised object localization (WSOL) aims at learning to local
 
 tags:
   - Deep Learning
+  - Strengthen Learning Tolerance
+  - Object Localization
   - Computer Vision
   - Weakly-supervised
   - Instance Segmentation

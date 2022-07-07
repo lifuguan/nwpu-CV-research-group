@@ -30,6 +30,10 @@ tags:
   - Deep Learning
   - Computer Vision
   - Few-shot
+  - Object
+  - Segmentation
+  - Scribble
+  - Video
   - Scribble-Supervised
   - Instance Segmentation
 featured: true

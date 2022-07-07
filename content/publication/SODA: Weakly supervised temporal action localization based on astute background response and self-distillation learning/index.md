@@ -27,6 +27,8 @@ abstract: Weakly supervised temporal action localization aims at learning the in
 
 tags:
   - Deep Learning
+  - Background-click
+  - supervision
   - Temporal action localization
   - Weakly-supervised
 featured: true

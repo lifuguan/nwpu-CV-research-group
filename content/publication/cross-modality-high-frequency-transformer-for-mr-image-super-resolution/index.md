@@ -34,6 +34,9 @@ image:
   preview_only: false
 tags:
   - Deep Learning
+  - High-Frequency
+  - Super-Resolution
+  - MR Image
   - Medical Imaging
   - Transformer
   - Cross-Modality

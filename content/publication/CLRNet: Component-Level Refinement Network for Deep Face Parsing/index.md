@@ -29,6 +29,9 @@ abstract: Face parsing aims to assign pixel-wise semantic labels to different fa
 tags:
   - Deep Learning
   - Faces
+  - Component-Level
+  - Refinement Network
+  - Deep Face Parsing
   - Image segmentation
   - Convolution
   - Shape

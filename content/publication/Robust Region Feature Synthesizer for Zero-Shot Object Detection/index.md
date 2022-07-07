@@ -28,6 +28,11 @@ abstract: Zero-shot object detection aims at incorporating class semantic vector
 tags:
   - Deep Learning
   - Computer Vision
+  - Robust
+  - Region Feature Synthesizer
+  - zero-shot
+  - Detection
+  - Object
   - Few-shot
   - Instance Segmentation
 featured: true

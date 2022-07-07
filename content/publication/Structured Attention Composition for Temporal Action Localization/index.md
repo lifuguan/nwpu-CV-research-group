@@ -29,6 +29,7 @@ tags:
   - Temporal action localization
   - Deep Learning
   - Attention
+  - Structured Attention
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/9171561

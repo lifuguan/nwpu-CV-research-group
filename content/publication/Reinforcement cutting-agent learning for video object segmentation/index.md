@@ -27,6 +27,9 @@ abstract: Video object segmentation is a fundamental yet challenging task in com
 
 tags:
   - Deep Learning
+  - cutting-agent
+  - Reinforcement
+  - Object
   - Computer Vision
   - Video
   - Instance Segmentation

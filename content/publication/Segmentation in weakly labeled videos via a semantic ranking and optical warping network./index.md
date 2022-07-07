@@ -29,6 +29,10 @@ tags:
   - Deep Learning
   - Computer Vision
   - Video
+  - semantic ranking
+  - neural network
+  - Segmentation
+  - Object Segmentation
   - Optical warping
   - Weakly-supervised
   - Instance Segmentation

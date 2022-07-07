@@ -27,6 +27,8 @@ abstract: Weakly supervised temporal action localization is a newly emerging yet
 
 tags:
   - Deep Learning
+  - Equivalent classification
+  - weakly supervised
   - Equivalent mechanism
   - temporal action localization
   - post-classification pipeline

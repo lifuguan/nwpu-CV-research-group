@@ -27,6 +27,10 @@ abstract: Object segmentation in weakly labelled videos is an interesting yet ch
 
 tags:
   - Deep Learning
+  - fine-tuning
+  - self-paced
+  - neural network
+  - weakly labelled
   - Computer Vision
   - Weakly-supervised
   - Instance Segmentation
