@@ -2,6 +2,7 @@
 # Display name
 title: Longfei Han
 
+weight: 3
 # Username (this should match the folder name)
 authors:
   - Longfei Han

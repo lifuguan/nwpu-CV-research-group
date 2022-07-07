@@ -2,6 +2,8 @@
 # Display name
 title: Dingwen Zhang
 
+weight: 1
+
 # Username (this should match the folder name)
 authors:
   - Dingwen Zhang (张鼎文)

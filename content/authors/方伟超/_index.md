@@ -2,6 +2,8 @@
 # Display name
 title: Chaowei Fang
 
+weight: 2
+
 # Username (this should match the folder name)
 authors:
   - Chaowei Fang (方超伟)
