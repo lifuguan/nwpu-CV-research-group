@@ -1,5 +1,5 @@
 ---
-title: 'Spftn: A self-paced fine-tuning network for segmenting objects in weakly labelled videos.'
+title: 'Spftn: A self-paced fine-tuning network for segmenting objects in weakly labelled videos'
 authors:
   - Dingwen Zhang
   - Le Yang
@@ -26,7 +26,10 @@ abstract: Object segmentation in weakly labelled videos is an interesting yet ch
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Computer Vision
+  - Weakly-supervised
+  - Instance Segmentation
 featured: true
 
 url_pdf: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf

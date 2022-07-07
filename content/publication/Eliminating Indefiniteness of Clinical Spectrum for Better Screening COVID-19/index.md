@@ -26,7 +26,11 @@ abstract: The coronavirus disease 2019 (COVID-19) has swept all over the world. 
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Medical Imaging
+  - clinical spectrum
+  - indefiniteness elimination
+  - neural network
+  - quick screening
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/9357911

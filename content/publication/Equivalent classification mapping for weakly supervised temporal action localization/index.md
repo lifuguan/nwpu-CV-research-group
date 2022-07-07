@@ -26,7 +26,11 @@ abstract: Weakly supervised temporal action localization is a newly emerging yet
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Equivalent mechanism
+  - temporal action localization
+  - post-classification pipeline
+  - pre-classification pipeline
 featured: true
 
 url_pdf: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf

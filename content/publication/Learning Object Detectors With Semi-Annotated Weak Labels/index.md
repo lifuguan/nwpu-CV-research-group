@@ -1,5 +1,5 @@
 ---
-title: 'Learning Object Detectors with Semi-Annotated Weak Labels.'
+title: 'Learning Object Detectors with Semi-Annotated Weak Labels'
 authors:
   - Guoyu Guang
   - Dingwen Zhang
@@ -26,7 +26,11 @@ abstract: For alleviating the human labor associated with annotating the trainin
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Computer vision
+  - image processing
+  - object detection
+  - Semi-supervised Learning
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/8554285

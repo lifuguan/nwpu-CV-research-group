@@ -32,5 +32,10 @@ image:
   filename: featured
   focal_point: Smart
   preview_only: false
+tags:
+  - Deep Learning
+  - Medical Imaging
+  - Transformer
+  - Cross-Modality
 date: 2022-07-03T05:22:29.310Z
 ---

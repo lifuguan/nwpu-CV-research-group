@@ -26,7 +26,10 @@ abstract: Zero-shot object detection aims at incorporating class semantic vector
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Computer Vision
+  - Few-shot
+  - Instance Segmentation
 featured: true
 
 url_pdf: https://arxiv.org/pdf/2201.00103

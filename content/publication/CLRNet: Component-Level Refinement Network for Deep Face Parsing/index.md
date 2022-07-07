@@ -27,7 +27,13 @@ abstract: Face parsing aims to assign pixel-wise semantic labels to different fa
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Faces
+  - Image segmentation
+  - Convolution
+  - Shape
+  - Agriculture
+  - Customer relationship management
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/abstract/document/9525038

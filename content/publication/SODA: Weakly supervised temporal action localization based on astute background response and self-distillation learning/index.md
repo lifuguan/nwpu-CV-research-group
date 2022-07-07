@@ -26,7 +26,9 @@ abstract: Weakly supervised temporal action localization aims at learning the in
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Temporal action localization
+  - Weakly-supervised
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/8579044

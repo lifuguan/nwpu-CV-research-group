@@ -26,7 +26,9 @@ abstract: Temporal action localization aims at localizing action instances from 
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Temporal action localization
+  - Deep Learning
+  - Attention
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/9171561

@@ -26,7 +26,10 @@ abstract: Most of the current action localization methods follow an anchor-based
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Temporal action localization
+  - Default anchor
+  - Anchor free
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/9171561

@@ -28,7 +28,10 @@ abstract: Motion of the human body is the critical cue for understanding and cha
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Motion Representation
+  - Video
+  - Computer Vision
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/8578805

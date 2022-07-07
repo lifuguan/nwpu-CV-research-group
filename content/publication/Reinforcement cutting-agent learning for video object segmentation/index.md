@@ -1,5 +1,5 @@
 ---
-title: 'Reinforcement cutting-agent learning for video object segmentation.'
+title: 'Reinforcement cutting-agent learning for video object segmentation'
 authors:
   - Dingwen Zhang
   - Le Yang
@@ -26,7 +26,10 @@ abstract: Video object segmentation is a fundamental yet challenging task in com
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Computer Vision
+  - Video
+  - Instance Segmentation
 featured: true
 
 url_pdf: https://ieeexplore.ieee.org/document/8579044

@@ -1,5 +1,5 @@
 ---
-title: 'Strengthen Learning Tolerance for Weakly Supervised Object Localization.'
+title: 'Strengthen Learning Tolerance for Weakly Supervised Object Localization'
 authors:
   - Guangyu Guo
   - Dingwen Zhang
@@ -26,7 +26,10 @@ abstract: Weakly supervised object localization (WSOL) aims at learning to local
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Computer Vision
+  - Weakly-supervised
+  - Instance Segmentation
 featured: true
 
 url_pdf: https://openaccess.thecvf.com/content_cvpr_2018/papers/Han_Reinforcement_Cutting-Agent_Learning_CVPR_2018_paper.pdf

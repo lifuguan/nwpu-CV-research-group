@@ -27,7 +27,11 @@ abstract: Recently, video object segmentation has received great attention in th
 # summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-  - Source Themes
+  - Deep Learning
+  - Computer Vision
+  - Few-shot
+  - Scribble-Supervised
+  - Instance Segmentation
 featured: true
 
 
