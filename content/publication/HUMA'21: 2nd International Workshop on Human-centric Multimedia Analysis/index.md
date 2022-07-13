@@ -1,5 +1,5 @@
 ---
-title: 'HUMA'21: 2nd International Workshop on Human-centric Multimedia Analysis'
+title: 'HUMA21: 2nd International Workshop on Human-centric Multimedia Analysis'
 authors:
   - Wu Liu
   - Xinchen Liu
