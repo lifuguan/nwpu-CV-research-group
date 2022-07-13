@@ -1,5 +1,5 @@
 ---
-title: 韩军伟教授当选2022年度国际模式识别协会会士（IAPR Fellow）
+title: Professor Junwei Han Have Been Elected Fellow of 2022 International Association for Pattern Recognition（IAPR Fellow）
 date: 2022-06-22T03:20:03.654Z
 draft: false
 featured: false
@@ -8,7 +8,8 @@ image:
   focal_point: top
   preview_only: false
 ---
- 2022年6月23日，国际模式识别协会（The International Association for Pattern Recognition，IAPR）公布了2022年度新当选会士（IAPR Fellow）人选。
+
+Professor Junwei Han Have Been Elected Fellow of 2022 International Association for Pattern Recognition（IAPR Fellow）
 
 <!--more-->
 

@@ -1,5 +1,5 @@
 ---
-title: 我研究团队多篇论文被国际顶级会议CVPR 2022录用
+title: Multiple Papers of Our Team Have Been Accepted by CVPR 2022
 date: 2022-03-02T03:42:32.972Z
 draft: false
 featured: false
@@ -8,7 +8,7 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-近日，CVPR 2022官方公布了接收论文列表，我研究团队多篇论文入选，录用率接近60%。
+CVPR 2022 officially released the list of accepted papers. Multiple papers from our team are included.
 
 <!--more-->
 
