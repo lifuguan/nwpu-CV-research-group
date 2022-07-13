@@ -14,7 +14,7 @@ ACM MM 2022 officially released the list of accepted papers. Multiple papers fro
 
 ## Cross-Modality High-Frequency Transformer for MR Image Super-Resolution
 
-Authors：方超伟,程乐超,韩军伟,张鼎文
+Authors：Chaowei Fang,  [Dingwen Zhang](https://arxiv.org/search/cs?searchtype=author&query=Zhang%2C+D), [Liang Wang](https://arxiv.org/search/cs?searchtype=author&query=Wang%2C+L), [Lechao Cheng](https://arxiv.org/search/cs?searchtype=author&query=Cheng%2C+L), [Junwei Han](https://arxiv.org/search/cs?searchtype=author&query=Han%2C+J)
 
 ![](1.png)
 
