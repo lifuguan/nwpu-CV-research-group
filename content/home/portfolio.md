@@ -30,8 +30,6 @@ content:
       tag: '*'
     - name: CVPR
       tag: CVPR
-    - name: NLP
-      tag: NLP
 
 design:
   columns: '1'
