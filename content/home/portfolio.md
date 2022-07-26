@@ -10,8 +10,8 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: ''
-subtitle: ''
+title: 'Projects'
+subtitle: 'Pathways to AI impact '
 
 content:
   # Page type to display. E.g. project.
@@ -28,8 +28,6 @@ content:
   filter_button:
     - name: All
       tag: '*'
-    - name: 
-      tag: ML
     - name: Computer Vision
       tag: CV
     - name: NLP
