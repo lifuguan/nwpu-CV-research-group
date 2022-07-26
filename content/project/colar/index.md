@@ -1,5 +1,5 @@
 ---
-title: Colar: Effective and Efficient Online Action Detection by Consulting Exemplars
+title: Colar：Effective and Efficient Online Action Detection by Consulting Exemplars
 summary: This repository is the official implementation of Colar. In this work, we study the online action detection and develop an effective and efficient exemplar-consultation mechanism. Paper from arXiv.
 tags:
   - CVPR
