@@ -28,8 +28,8 @@ content:
   filter_button:
     - name: All
       tag: '*'
-    - name: Computer Vision
-      tag: CV
+    - name: CVPR
+      tag: CVPR
     - name: NLP
       tag: NLP
 
