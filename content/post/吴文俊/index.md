@@ -6,11 +6,6 @@ featured: false
 
 authors: ['韩军伟','张鼎文']
 
-
-image:
-  filename: https://pic4.zhimg.com/v2-50662adbc1ef02d3ac2d4321299ded57_1440w.jpg?source=172ae18b
-  focal_point: top
-  preview_only: false
 ---
 
 On July 22, the list of “2022 Wu Wenjun AI Science and Technology Award”, the highest award in China’s AI field, was officially released.
