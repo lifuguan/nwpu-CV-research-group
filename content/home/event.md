@@ -10,7 +10,7 @@ headless: true
 weight: 40
 
 title: Recent Events
-subtitle:
+subtitle: Share and Collaborate ...
 
 content:
   # Filter on criteria

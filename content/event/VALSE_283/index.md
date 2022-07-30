@@ -1,31 +1,25 @@
 ---
-title: VALSE Webinar 22-16-283 Contrastive Representive Learning
+title: VALSE Paper Review (Presented by Dr. Le Yang)
 
 event: VALSE Conference
-event_url: https://live.bilibili.com/22300737
+event_url: https://www.bilibili.com/video/BV1aT411g7gZ/
 
 location: Virtual
-address:
-  street: 友谊西路127号
-  city: 西安市
-  region: 陕西省
-  postcode: '710072'
-  country: China
-  country_code: CHN
 
-summary: CRIS CLIP-Driven Referring Image Segmentation
-abstract: 'Mingming Gong is a lecturer and PhD supervisor at the School of Mathematics and Statistics, University of Melbourne, Australia, and a principal investigator at the Melbourne Centre for Data Science. He received his PhD from the University of Technology Sydney in 2017 and then did postdoctoral research at the University of Pittsburgh and Carnegie Mellon University. His research interests include causal machine learning, weakly supervised/ self-supervised learning, transfer learning, generative models, and 3D vision. He has published more than 50 papers in top conferences and journals related to artificial intelligence, such as NeurIPS, ICML, and CVPR. He is a recipient of the Australian Research Council Discovery Early Career Award in 2021. He is area chairs of top machine learning conferences such as NeurIPS, ICML, and ICLR.'
+
+summary: 基于样例查询的在线动作检测
+abstract: 时序动作定位任务致力于从漫长的视频中发现有意义的动作片段，并标注起止时间和动作类别。在实际应用中，算法需要在线地处理视频流并及时准确地检测出正在发生的动作，这将传统的时序动作定位任务发展为新兴的在线动作检测任务。已有方法通常在一个视频片段内部精细地建模时序依赖，从而进行在线动作检测。这种学习范式会导致两个问题：(1) 即使两个动作实例属于同一类别，他们可能由于来自不同视频而无法进行信息交互。(2) 训练过程希望为每类动作学习特定的一种表征，但同类动作的不同阶段通常具有较大的差异性。为应对上述两点挑战，本文提出样例查询机制，在动态样例分支中，通过比较时序样例和当前帧的相似性，以一种简单高效的方式建模时序信息；在静态样例分支中，通过比较类别样例和当前帧的相似性，能进行跨视频信息交互并为每类动作学习多样性的表征。相比已有方法，所提方法效率更快，检测精度更高，能为后续在线动作检测研究提供简单有效的基准模型。
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2022-06-29T18:00:00Z'
-date_end: '2022-06-29T20:00:00Z'
+date: '2022-07-10T18:00:00Z'
+date_end: '2022-07-10T20:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2022-06-20T20:00:00Z'
+publishDate: '2022-07-10T20:00:00Z'
 
-authors: ['宫明明']
+authors: ['杨乐']
 tags: []
 
 # Is this a featured talk? (true/false)
@@ -54,9 +48,3 @@ slides:
 #   Otherwise, set `projects = []`.
 projects:
 ---
-
-1. 对比学习的成功涉及很多技术细节，包括数据增强，负样本，动量编码器，projection head等等，如何可以化繁为简，并取得不错的效果？
-2. 目前对比学习多用于image-level分类任务，未来会不会更多的应用在pixel-level的下游任务？可能带来哪些优势？
-3. 对比学习可以使用labels吗？与metric learning相比，主要区别在哪里？
-4. 好的对比学习系统应该满足什么条件呢？或者说如何更好的评价对比学习的效果？
-5. 未来几年，对比学习和其他方法的结合，有哪些发展趋势？
