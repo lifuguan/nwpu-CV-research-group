@@ -1,37 +1,37 @@
 ---
 # Display name
-title: Ruiyuan Zhang
+title: Liang Wang
 
 # Username (this should match the folder name)
 authors:
-  - Ruiyuan Zhang (张瑞源)
+  - Liang Wang (王良)
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: MEng of Automation
+role: MEng of Artificial Intelligence
 
 # Organizations/Affiliations
 organizations:
-  - name: University of Science and Technology of China
+  - name: Xidian University
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Ruiyuan Zhang is pursing his master degree in the School of Automation at University of Science and Technology of China. His research intersets include mutimodal pretraining and reinforcement learning.
+bio: Liang Wang is Master candidate in Xidian University.
 
 interests:
-  - Mutimodal pretraining
-  - Reinforcement learning
+  - medical image processing
+  - image restoration
 
 education:
   courses:
-    - course: MEng of Automation
-      institution: University of Science and Technology of China
+    - course: MEng in Automation
+      institution: Xidian University
       year: So far
-    - course: BSc in Cyber Security
-      institution: University of Science and Technology of China
-      year: 2022
+    - course: BSc in Automation
+      institution: Changsha University of science and technology
+      year: 2020
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -40,10 +40,10 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'zry1292625211@mail.ustc.edu.cn'
+    link: '2451207324@qq.com'
   - icon: github
     icon_pack: fab
-    link: https://github.com/emailcannotbeblank
+    link: https://github.com/dymwl
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -58,6 +58,8 @@ email: ''
 user_groups:
   - Grad Students
   - AI for Medical science
+
 ---
 
-Ruiyuan Zhang is pursing his master degree in the School of Automation at University of Science and Technology of China. His research intersets include mutimodal pretraining and reinforcement learning.
+Liang Wang is Master candidate in Xidian University.
+

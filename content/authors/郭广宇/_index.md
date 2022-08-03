@@ -21,10 +21,8 @@ organizations:
 bio: Guangyu Guo is pursuing his Ph.D. degree in the School of Automation at Northwestern Polytechnical University.
 
 interests:
-  - Temporal action localization
-  - online action detection
-  - video object segmentation
-  - weakly supervised learning.
+  - weakly supervised learning
+  - knowledge distillation
 
 education:
   courses:

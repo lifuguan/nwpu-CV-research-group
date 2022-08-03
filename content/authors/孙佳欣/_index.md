@@ -57,6 +57,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
+  - Brain-inspired Visual Learning
 ---
 
 Jiaxin Sun is currently pursuing the Ph.D. degree in the School of Automation at Northwestern Polytechnical University, Xian, China. Her research interests include computer vision and deep learning, especially on video action localization and video object segmentation.
