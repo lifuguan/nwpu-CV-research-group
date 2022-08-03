@@ -19,7 +19,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: '2022-07-22T20:00:00Z'
 
-authors: ['张鼎文','成乐超','方超伟']
+authors: ['张鼎文','程乐超','方超伟']
 tags: []
 
 # Is this a featured talk? (true/false)
@@ -48,9 +48,3 @@ slides:
 #   Otherwise, set `projects = []`.
 projects:
 ---
-
-1. 对比学习的成功涉及很多技术细节，包括数据增强，负样本，动量编码器，projection head等等，如何可以化繁为简，并取得不错的效果？
-2. 目前对比学习多用于image-level分类任务，未来会不会更多的应用在pixel-level的下游任务？可能带来哪些优势？
-3. 对比学习可以使用labels吗？与metric learning相比，主要区别在哪里？
-4. 好的对比学习系统应该满足什么条件呢？或者说如何更好的评价对比学习的效果？
-5. 未来几年，对比学习和其他方法的结合，有哪些发展趋势？

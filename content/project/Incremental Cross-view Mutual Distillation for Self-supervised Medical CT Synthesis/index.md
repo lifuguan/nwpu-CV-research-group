@@ -9,7 +9,7 @@ url_pdf: 'https://arxiv.org/pdf/2112.10325'
 url_slides: '3827_poster.pdf'
 url_video: '202207261910.mp4'
 
-authors: ['方伟超']
+authors: ['方超伟']
 
 date: '2022-06-01T00:00:00Z'
 publication: In *IEEE / CVF Computer Vision and Pattern Recognition Conference*
