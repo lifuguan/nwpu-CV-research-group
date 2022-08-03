@@ -4,7 +4,7 @@ title: Sicheng Fei
 
 # Username (this should match the folder name)
 authors:
-  - Sicheng Fei (费思诚 )
+  - Sicheng Fei (费思诚)
 
 weight: 2022
 
