@@ -6,6 +6,8 @@ title: Peiliang Huang
 authors:
   - Peiliang Huang (黄培亮)
 
+weight: 2017
+
 # Is this the primary user of the site?
 superuser: false
 

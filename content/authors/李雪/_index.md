@@ -5,6 +5,9 @@ organizations:
   - name: Xidian University
     url: ""
 superuser: false
+
+weight: 2020
+
 authors:
   - Xue Li (李雪)
 bio: Xue Li is Master candidate in Xidian University.

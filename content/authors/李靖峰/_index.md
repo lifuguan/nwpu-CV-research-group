@@ -6,6 +6,8 @@ title: Jingfeng Li
 authors:
   - Jingfeng Li (李靖峰)
 
+weight: 2022
+
 # Is this the primary user of the site?
 superuser: false
 

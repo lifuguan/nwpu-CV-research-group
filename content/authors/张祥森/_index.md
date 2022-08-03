@@ -6,6 +6,8 @@ title: Xiangsen Zhang
 authors:
   - Xiangsen Zhang (张祥森)
 
+weight: 2019
+
 # Is this the primary user of the site?
 superuser: false
 

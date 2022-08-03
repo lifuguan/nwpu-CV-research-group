@@ -6,6 +6,8 @@ title: Ruiyuan Zhang
 authors:
   - Ruiyuan Zhang (张瑞源)
 
+weight: 2022
+
 # Is this the primary user of the site?
 superuser: false
 

@@ -6,6 +6,8 @@ title: Le Yang
 authors:
   - Le Yang (杨乐)
 
+weight: 2016
+
 # Is this the primary user of the site?
 superuser: false
 

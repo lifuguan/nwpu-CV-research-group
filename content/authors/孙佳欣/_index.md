@@ -6,6 +6,8 @@ title: Jiaxin Sun
 authors:
   - Jiaxin Sun (孙佳欣)
 
+weight: 2021
+
 # Is this the primary user of the site?
 superuser: false
 

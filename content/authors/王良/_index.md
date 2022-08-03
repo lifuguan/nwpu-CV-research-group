@@ -6,6 +6,8 @@ title: Liang Wang
 authors:
   - Liang Wang (王良)
 
+weight: 2020
+
 # Is this the primary user of the site?
 superuser: false
 

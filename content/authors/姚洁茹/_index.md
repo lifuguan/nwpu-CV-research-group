@@ -6,6 +6,8 @@ title: Jieru Yao
 authors:
   - Jieru Yao (姚洁茹)
 
+weight: 2018
+
 # Is this the primary user of the site?
 superuser: false
 

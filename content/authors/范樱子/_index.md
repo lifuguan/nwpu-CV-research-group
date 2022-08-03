@@ -6,6 +6,8 @@ title: Yingzi Fan
 authors:
   - Yingzi Fan (范樱子)
 
+weight: 2020
+
 # Is this the primary user of the site?
 superuser: false
 
