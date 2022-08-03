@@ -19,7 +19,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: '2022-07-22T20:00:00Z'
 
-authors: ['张鼎文','程乐超','方超伟']
+authors: ['张鼎文','韩龙飞','程乐超','方超伟']
 tags: []
 
 # Is this a featured talk? (true/false)
