@@ -64,5 +64,4 @@ user_groups:
   - Brain-inspired Visual Learning
 ---
 
-Le Yang is PhD candidate in Northwestern Polytechnical University.
-
+Le Yang received his B.E. degree from Northwestern Polytechnical University, Xi'an, China, in 2016. He is currently a Ph.D. candidate in the School of Automation at Northwestern Polytechnical University. His research interests include temporal action localization, video object segmentation and weakly supervised learning.
