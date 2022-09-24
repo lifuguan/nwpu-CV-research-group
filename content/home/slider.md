@@ -22,7 +22,7 @@ content:
         position: right
         color: '#666'
         brightness: 0.7
-        media: overview.png
+        media: overview.jpg
     - title: World-Class Artificial Intelligence Lab
       content: 'Targets at the Cutting-edge Research'
       align: right
@@ -30,7 +30,7 @@ content:
         position: center
         color: '#333'
         brightness: 0.5
-        media: overview3.jpg
+        media: overview2.jpg
       link:
         icon: graduation-cap
         icon_pack: fas
