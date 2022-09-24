@@ -4,7 +4,7 @@
 # Add more sections by duplicating this file and customizing to your requirements.
 
 headless: true # This file represents a page section.
-weight: 20 # Order that this section will appear.
+weight: 30 # Order that this section will appear.
 title: Active Research Areas
 subtitle: 'Our specialization.'
 
