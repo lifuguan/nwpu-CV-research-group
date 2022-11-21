@@ -1,13 +1,13 @@
 ---
-title: Conference \"AI+Medical\" was successfully held in NWPU!
+title: Conference "AI+Medical" was successfully held in NWPU!
 
-event:  \"AI+Medical\"
+event:  "AI+Medical"
 event_url: https://ecampus.nwpu.edu.cn/main.html#/newsDetail?id=8aaa93dd83f5c44e0183ff2269283119&from=globalSearch
 
 location: 中国·西安
 
 
-summary:
+summary: On October 11, Northwestern Polytechnical University "AI+Medical" conference was successfully held through an online meeting.
 abstract: 10月11日，西北工业大学“AI+医疗”新星论坛通过线上会议的方式顺利召开。本次论坛邀请了美国麻省理工学院（MIT）杨宇喆、阿里巴巴达摩院医疗AI实验室姚佳文两位专家学者进行专题报告与研讨，吸引了相关领域的数百名学者及学生围绕我国医疗与生命健康国家重大需求，积极探索人工智能与医疗大数据领域面临的关键理论和技术问题，深入研讨面临的挑战和可能的发展技术路线，向与会者呈现了人工智能与医疗大数据的最新前沿进展。
 
 # Talk start and end times.
