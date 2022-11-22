@@ -30,7 +30,12 @@ content:
       tag: '*'
     - name: CVPR
       tag: CVPR
-
+    - name: TPAMI
+      tag: TPAMI
+    - name: JAS
+      tag: JAS
+    - name: TNNLS
+      tag: TNNLS
 design:
   columns: '1'
   view: masonry
