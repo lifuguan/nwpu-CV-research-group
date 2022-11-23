@@ -4,7 +4,7 @@ summary: Weakly supervised temporal action localization is a newly emerging yet 
 tags:
   - TPAMI
 date: 2020-10-06
-url_code: ''
+url_code: 'https://github.com/VividLe/Equivalent-Classification-Mapping'
 url_pdf: 'https://arxiv.org/pdf/2008.07728.pdf'
 url_slides: ''
 url_video: ''
