@@ -1,5 +1,6 @@
 ---
-title: Part-Object Relational Visual SaliencyDisentangled Capsule Routing for Fast Part-Object Relational Saliency:Recent years have witnessed a big leap in automatic visual saliency detection attributed to advances in deep learning, especially Convolutional Neural Networks (CNNs). However, inferring the saliency of each image part separately, as was adopted by most CNNs methods, inevitably leads to an incomplete segmentation of the salient object.
+title: Part-Object Relational Visual SaliencyDisentangled Capsule Routing for Fast Part-Object Relational Saliency
+summary: Recent years have witnessed a big leap in automatic visual saliency detection attributed to advances in deep learning, especially Convolutional Neural Networks (CNNs). However, inferring the saliency of each image part separately, as was adopted by most CNNs methods, inevitably leads to an incomplete segmentation of the salient object.
 tags:
   - TIP
 date: 2022-10-25
