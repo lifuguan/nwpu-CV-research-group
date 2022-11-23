@@ -4,7 +4,7 @@ summary: Weakly supervised temporal action localization aims at learning the ins
 tags:
   - TPAMI
 date: 2020-12-02
-url_code: ''
+url_code: 'https://github.com/VividLe/BackTAL'
 url_pdf: 'https://ieeexplore.ieee.org/abstract/document/9633199'
 url_slides: ''
 url_video: ''
