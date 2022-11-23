@@ -8,7 +8,7 @@ widget: portfolio
 headless: true
 
 # Order that this section appears on the page.
-weight: 60
+weight: 30
 
 title: 'Projects'
 subtitle: 'Pathways to AI impact '
@@ -32,10 +32,16 @@ content:
       tag: CVPR
     - name: TPAMI
       tag: TPAMI
+    - name: TIP
+      tag: TIP
     - name: JAS
       tag: JAS
     - name: TNNLS
       tag: TNNLS
+    - name: IJCV
+      tag: IJCV
+    - name: Others
+      tag: Others
 design:
   columns: '1'
   view: masonry
