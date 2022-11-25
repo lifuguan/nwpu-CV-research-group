@@ -36,8 +36,10 @@ content:
       tag: TIP
     - name: IJCV
       tag: IJCV
-    - name: Others
-      tag: Others
+    - name: SICS
+      tag: SICS
+    - name: TIFS
+      tag: TIFS
 design:
   columns: '1'
   view: masonry

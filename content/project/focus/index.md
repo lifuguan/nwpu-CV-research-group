@@ -2,7 +2,7 @@
 title: Onfocus Detection:Identifying Individual-Camera Eye Contact from Unconstrained Images
 summary: This repository is the official implementation of Onfocus Detection:Identifying Individual-Camera Eye Contact from Unconstrained Images.
 tags:
-  - Others
+  - SICS
 date: 2022-04-20
 url_code: 'https://github.com/wintercho/focus'
 url_pdf: 'https://link.springer.com/article/10.1007/s11432-020-3181-9'
