@@ -34,10 +34,6 @@ content:
       tag: TPAMI
     - name: TIP
       tag: TIP
-    - name: JAS
-      tag: JAS
-    - name: TNNLS
-      tag: TNNLS
     - name: IJCV
       tag: IJCV
     - name: Others

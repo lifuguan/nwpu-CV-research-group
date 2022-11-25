@@ -2,7 +2,7 @@
 title: Integrating Part-Object Relationship and Contrast for Camouflaged Object Detection
 summary: Object detectors that solely rely on image contrast are struggling to detect camouflaged objects in images because of the high similarity between camouflaged objects and their surroundings. To address this issue, in this paper, we investigate the role of the part-object relationship for camouflaged object detection.
 tags:
-  - Others
+  - TIFS
 date: 2021-12-04
 url_code: 'https://github.com/liuyi1989/POCINet'
 url_pdf: 'https://ieeexplore.ieee.org/abstract/document/9334445'
