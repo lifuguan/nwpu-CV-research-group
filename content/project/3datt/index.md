@@ -1,5 +1,5 @@
 ---
-title: Cross-Modality Deep Feature Learning for Brain Tumor Segmentation published on Pattern Recognition
+title: Cross-Modality Deep Feature Learning for Brain Tumor Segmentation
 summary: This is an implementation of the paper Cross-Modality Deep Feature Learning for Brain Tumor Segmentation published on Pattern Recognition. The "2m_re1" program is for BraTS 2018.
 tags:
   - PR

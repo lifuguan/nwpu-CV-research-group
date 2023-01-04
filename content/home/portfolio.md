@@ -40,6 +40,8 @@ content:
       tag: SICS
     - name: TIFS
       tag: TIFS
+    - name: PR
+      tag: PR
 design:
   columns: '1'
   view: masonry
