@@ -42,7 +42,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'sunjiaxin0604@163.com'
+    link: 'mailto:sunjiaxin0604@163.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/gyguo

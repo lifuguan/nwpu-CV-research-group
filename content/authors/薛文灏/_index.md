@@ -44,7 +44,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'wenhaoxue@mail.nwpu.edu.cn'
+    link: 'mailto:wenhaoxue@mail.nwpu.edu.cn'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

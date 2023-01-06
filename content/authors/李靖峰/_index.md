@@ -41,7 +41,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '1207814560@qq.com'
+    link: 'mailto:1207814560@qq.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/Li-jingfeng

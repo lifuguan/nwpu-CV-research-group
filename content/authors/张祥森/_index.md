@@ -43,7 +43,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'xszhang116@gmail.com'
+    link: 'mailto:xszhang116@gmail.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/jixiangsenlin

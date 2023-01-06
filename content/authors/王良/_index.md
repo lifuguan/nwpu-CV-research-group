@@ -42,7 +42,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '2451207324@qq.com'
+    link: 'mailto:2451207324@qq.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/dymwl

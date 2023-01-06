@@ -42,7 +42,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '15091172525@163.com'
+    link: 'mailto:15091172525@163.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/Fanyingzi

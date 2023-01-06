@@ -45,7 +45,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'peilianghuang2017@gmail.com'
+    link: 'mailto:peilianghuang2017@gmail.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/HPL123

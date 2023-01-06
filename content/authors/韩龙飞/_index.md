@@ -32,7 +32,7 @@ interests:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'draflyhan@gmail.com'
+    link: 'mailto:draflyhan@gmail.com'
   - icon: personal page
     icon_pack: fab
     link: http://longfeihan.cn/

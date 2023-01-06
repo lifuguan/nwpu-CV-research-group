@@ -44,7 +44,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'nwpuyangle@gmail.com'
+    link: 'mailto:nwpuyangle@gmail.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/VividLe

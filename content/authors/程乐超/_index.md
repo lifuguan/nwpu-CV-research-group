@@ -41,7 +41,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'chenglc@zhejianglab.com'
+    link: 'mailto:chenglc@zhejianglab.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/liygcheng

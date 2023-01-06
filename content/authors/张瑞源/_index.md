@@ -42,7 +42,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'zry1292625211@mail.ustc.edu.cn'
+    link: 'mailto:zry1292625211@mail.ustc.edu.cn'
   - icon: github
     icon_pack: fab
     link: https://github.com/emailcannotbeblank

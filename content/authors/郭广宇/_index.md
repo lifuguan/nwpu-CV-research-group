@@ -45,7 +45,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'gyguo95@gmail.com'
+    link: 'mailto:gyguo95@gmail.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/gyguo
