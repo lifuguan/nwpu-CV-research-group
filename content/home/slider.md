@@ -15,7 +15,7 @@ design:
 
 content:
   slides:
-    - title: We're VISION INTELLIGENCE Research Group
+    - title: We're Vision Intelligence Research Group
       content: Take a look at what we're working on...
       align: center
       background:
