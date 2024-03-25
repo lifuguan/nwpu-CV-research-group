@@ -62,4 +62,4 @@ user_groups:
   - AI for Unmanned Systems
 ---
 
-Liangbo Cheng is Master candidate in Northwestern Polytechnical University.
+Liangbo Cheng is Master candidate in Northwestern Polytechnical University. His research interests include computer vision and machine learning, especially Capsule Networks,Camouflaged Object Detection.
