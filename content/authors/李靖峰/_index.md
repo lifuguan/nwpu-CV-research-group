@@ -31,7 +31,7 @@ education:
       institution: Northwestern Polytechnical University
       year: So far
     - course: BSc in Automation
-      institution: Northwestern Polytechnical University
+      institution: Southeast University
       year: 2022
 
 # Social/Academic Networking
@@ -41,7 +41,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:1207814560@qq.com'
+    link: 'mailto:li0jingfeng@gmail.com'
   - icon: github
     icon_pack: fab
     link: https://github.com/Li-jingfeng
