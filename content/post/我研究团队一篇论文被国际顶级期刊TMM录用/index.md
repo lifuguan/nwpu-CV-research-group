@@ -1,11 +1,11 @@
 ---
-title: One Papers of Our Team Have Been Accepted by TMM
+title: One Paper of Our Team Have Been Accepted by TMM
 date: 2024-03-19T03:42:32.972Z
 draft: false
 featured: false
 
 ---
-One papers of our team have been accepted by *IEEE Transactions on Image Processing* recently.
+One paper of our team have been accepted by *IEEE Transactions on Multimedia* recently.
 
 <!--more-->
 

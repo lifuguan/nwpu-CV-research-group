@@ -24,7 +24,7 @@ bio: Wenqi Zhong is currently pursuing the Ph.D degree with the School of Automa
 
 interests:
   - Machine vision
-  - scanpath
+  - Scanpath
   - Gaze estimation
   - Saliency estimation
 
