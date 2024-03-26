@@ -1,18 +1,18 @@
 ---
 # Display name
-title: Yanling Ji
+title: Weinan Zhao
 
 # Username (this should match the folder name)
 authors:
-  - Yanling Ji (姬延岭)
+  - Weinan Zhao (赵蔚楠)
 
-weight: 2022
+weight: 2023
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: MEng of Artificial Intelligence
+role: PhD of Computer Vision
 
 # Organizations/Affiliations
 organizations:
@@ -20,32 +20,31 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Yanling Ji is Master candidate in Northwestern Polytechnical University.
+bio: Weinan Zhao is currently pursuing the Ph.D. degree in the School of Automation at Northwestern Polytechnical University, Xian, China.
 
 interests:
-  - Continual Learning
-  - Prompt Learning
+  - Multi-source information fusion
+  - Image generation
+
 
 education:
   courses:
-    - course: MS in Automation
+    - course: PhD in Computer Vision
       institution: Northwestern Polytechnical University
       year: So far
-    - course: BSc in Communication Engineering
-      institution: Xidian University
-      year: 2022
+    - course: MEng in Astronautics
+      institution: Northwestern Polytechnical University
+      year: 2023
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-  - icon: envelope
-    icon_pack: fas
-    link: 'mailto:jiyanling6@gmail.com'
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/xiaojihh
+# social:
+#   - icon: envelope
+#     icon_pack: fas
+#     link: 'mailto:arya3630519@163.com'
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -59,7 +58,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
-  - AI for Unmanned Systems
+  - Brain-inspired Visual Learning
 ---
 
-Yanling Ji is Master candidate in Northwestern Polytechnical University.
+Weinan Zhao is currently pursuing the Ph.D. degree in the School of Automation at NPU, Xian, China. His research interests include computer vision and artificial intelligence, especially on multi-source information fusion and image generation.

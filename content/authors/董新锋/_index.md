@@ -1,39 +1,38 @@
 ---
 # Display name
-title: Yanling Ji
+title: Xinfeng Dong
 
 # Username (this should match the folder name)
 authors:
-  - Yanling Ji (姬延岭)
+  - Xinfeng Dong (董新锋)
 
-weight: 2022
+weight: 2023
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: MEng of Artificial Intelligence
+role: PhD of Computer Vision
 
 # Organizations/Affiliations
 organizations:
-  - name: Northwestern Polytechnical University
+  - name: Shandong Normal University
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: Yanling Ji is Master candidate in Northwestern Polytechnical University.
+bio: Xinfeng Dong is currently a PhD candidate at the School of Information Science and Engineering, Shandong Normal University, Jinan, China.
 
 interests:
-  - Continual Learning
-  - Prompt Learning
+  - Visual-language navigation
+  - Multi-media analysis
+
 
 education:
   courses:
-    - course: MS in Automation
-      institution: Northwestern Polytechnical University
+    - course: PhD in Computer Vision
+      institution: Shandong Normal University
       year: So far
-    - course: BSc in Communication Engineering
-      institution: Xidian University
-      year: 2022
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
@@ -42,10 +41,11 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:jiyanling6@gmail.com'
+    link: 'mailto:dongxinfeng150531@163.com'
   - icon: github
     icon_pack: fab
-    link: https://github.com/xiaojihh
+    link: https://github.com/dongxinfeng1
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -59,7 +59,7 @@ email: ''
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Grad Students
-  - AI for Unmanned Systems
+  - Brain-inspired Visual Learning
 ---
 
-Yanling Ji is Master candidate in Northwestern Polytechnical University.
+Xinfeng Dong is currently a PhD candidate at the School of Information Science and Engineering, Shandong Normal University. Her research interests include visual-language navigation,  cross-modal retrieval and multi-media analysis.
