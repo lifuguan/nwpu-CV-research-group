@@ -1061,48 +1061,23 @@
 		<div class="visitor-map-container">
 			<h2>🌍 Visitor Map</h2>
 			<p>欢迎来自世界各地的访客 | Welcome visitors from around the world</p>
-			<div class="map-wrapper">
-				<!-- 
-					访客地图设置说明：
-					请访问以下任一网站注册并获取您的访客地图代码：
-					
-					方案1 - ClustrMaps (推荐)：
-					1. 访问 https://clustrmaps.com/add
-					2. 输入您的网站URL
-					3. 选择地图样式
-					4. 获取嵌入代码并替换下方的 YOUR_SITE_ID
-					
-					方案2 - Revolvermaps：
-					1. 访问 https://www.revolvermaps.com/
-					2. 注册并添加您的网站
-					3. 复制提供的代码并替换下方内容
-					
-					方案3 - Flag Counter：
-					1. 访问 https://flagcounter.com/
-					2. 自定义您的计数器
-					3. 获取代码并替换
-				-->
-				
-				<!-- ClustrMaps 示例（需要替换 YOUR_SITE_ID） -->
-				<div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-					<!-- 3D 地球仪版本 -->
-					<!--
-					<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=YOUR_SITE_ID"></script>
-					-->
-					
-					<!-- 2D 地图版本 -->
-					<a href="https://clustrmaps.com/site/1c0wh" title="Visit tracker">
-						<img src="//www.clustrmaps.com/map_v2.png?d=1c0wh&cl=ffffff&w=a" style="border-radius: 10px; max-width: 100%; height: auto;" alt="Visit tracker" />
-					</a>
-					
-					<p style="color: var(--text-gray); font-size: 0.9rem; max-width: 600px;">
-						📍 访客地图显示了访问本网站的全球访客分布情况<br/>
-						🕒 自动记录访问时间和地理位置<br/>
-						📊 点击地图可查看详细的访客统计信息<br/><br/>
-						<small>访客统计由 <a href="https://clustrmaps.com" target="_blank" style="color: var(--primary-color); text-decoration: none;">ClustrMaps</a> 提供</small>
-					</p>
+		<div class="map-wrapper">
+			<!-- 3D 地球仪访客地图 - MapMyVisitors Globe Widget -->
+			<div style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+				<!-- 3D 交互式地球仪 -->
+				<div style="text-align: center;">
+					<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=IyoY7KAQcwuOUXemXBBPmZPG083tuiKeK2oZWgd0oVY"></script>
 				</div>
+				
+				<p style="color: var(--text-gray); font-size: 0.9rem; max-width: 600px; text-align: center;">
+					🌐 3D 交互式地球仪显示全球访客实时分布<br/>
+					📍 每个光点代表一位访客的地理位置<br/>
+					🖱️ 可以拖动旋转地球仪，查看不同角度的访客分布<br/>
+					📊 实时记录访问统计和地理位置信息<br/><br/>
+					<small>3D Globe Widget 由 <a href="https://mapmyvisitors.com" target="_blank" style="color: var(--primary-color); text-decoration: none;">MapMyVisitors</a> 提供</small>
+				</p>
 			</div>
+		</div>
 		</div>
 	</section>
 
