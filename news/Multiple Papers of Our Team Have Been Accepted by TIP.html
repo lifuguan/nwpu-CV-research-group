@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multiple Papers of Our Team Have Been Accepted by TIP - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+	/* ==================== 主容器 ==================== */
+	.main-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 3rem 2rem;
+	}
+		
+	/* ==================== 返回按钮 ==================== */
+	.back-button-container {
+		position: absolute;
+		left: -80px;
+		top: 3rem;
+	}
+	
+	.back-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		background: var(--bg-white);
+		border: 2px solid var(--border-color);
+		border-radius: 50%;
+		color: var(--text-gray);
+		text-decoration: none;
+		transition: var(--transition);
+		box-shadow: var(--shadow-md);
+	}
+	
+	.back-button:hover {
+		background: var(--primary-color);
+		color: var(--text-white);
+		border-color: var(--primary-color);
+		transform: scale(1.1);
+		box-shadow: var(--shadow-lg);
+	}
+	
+	.back-button svg {
+		transition: var(--transition);
+	}
+	
+	.back-button:hover svg {
+		transform: translateX(-3px);
+	}
+	
+	.back-button span {
+		display: none;
+	}
+		
+	/* ==================== 新闻头部 ==================== */
+	.news-header {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 16px;
+		box-shadow: var(--shadow-md);
+		margin-bottom: 2rem;
+		position: relative;
+	}
+		
+		.news-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.news-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.news-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-author {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #f59e0b, #d97706);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 新闻图片 ==================== */
+		.news-image {
+			width: 100%;
+			margin-bottom: 2rem;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 新闻内容 ==================== */
+		.news-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.news-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.news-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.news-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.news-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.news-content a {
+			color: var(--primary-color);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.news-content a:hover {
+			color: var(--primary-dark);
+			text-decoration: underline;
+		}
+		
+		.paper-info {
+			background: linear-gradient(135deg, #eff6ff, #dbeafe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.paper-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.paper-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.news-title {
+				font-size: 2rem;
+			}
+			
+			.news-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+		.main-container {
+			padding: 2rem 1rem;
+		}
+		
+		.back-button-container {
+			position: static;
+			transform: none;
+			margin-bottom: 1rem;
+		}
+		
+		.back-button {
+			width: 50px;
+			height: 50px;
+		}
+			
+			.news-header,
+			.news-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+						<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+<div class="main-container">
+	<!-- 新闻标题 -->
+	<div class="news-header">
+		<!-- 返回按钮 -->
+		<div class="back-button-container">
+			<a href="../pages/news.html" class="back-button" title="Back to News">
+				<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+					<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+				</svg>
+				<span>Back to News</span>
+			</a>
+		</div>
+		<h1 class="news-title">🎉 Multiple Papers of Our Team Have Been Accepted by TIP</h1>
+		<div class="news-meta">
+			<div class="news-date">
+				📅 <span>February 15, 2024</span>
+			</div>
+			<div class="news-author">
+				⏱️ <span>3 min read</span>
+			</div>
+			<span class="news-badge">IEEE TIP</span>
+		</div>
+	</div>
+		
+	<!-- 新闻内容 -->
+	<div class="news-content">
+		<p>
+			Two papers of our team have been accepted by <strong>IEEE Transactions on Image Processing</strong> recently.
+		</p>
+		
+		<h2>Paper 1: Uncertainty Modeling for Gaze Estimation</h2>
+		
+		<!-- Paper 1 图片 -->
+		<div class="news-image" style="margin: 1.5rem 0;">
+			<img src="../public/images/project/Uncertainty Modeling for Gaze Estimation.png" alt="Uncertainty Modeling for Gaze Estimation">
+		</div>
+			
+			<div class="paper-info">
+				<h3>📄 Uncertainty Modeling for Gaze Estimation</h3>
+				<p><strong>Authors:</strong> Wenqi Zhong, Chen Xia, Dingwen Zhang, Junwei Han</p>
+				<p><strong>Journal:</strong> IEEE Transactions on Image Processing</p>
+			</div>
+			
+			<h3>Research Background</h3>
+			<p>
+				<strong>Gaze estimation</strong> is an important fundamental task in computer vision and medical research. Existing works have explored various effective paradigms and modules for precisely predicting eye gazes.
+			</p>
+			<p>
+				However, the <strong>uncertainty for gaze estimation</strong>, e.g., input uncertainty and annotation uncertainty, have been neglected in previous research. Existing models use a deterministic function to estimate the gaze, which cannot reflect the actual situation in gaze estimation.
+			</p>
+			
+			<h3>Key Contributions</h3>
+			<p>
+				To address this issue, we propose a <strong>probabilistic framework for gaze estimation</strong> by modeling the input uncertainty and annotation uncertainty.
+			</p>
+			<p>
+				<strong>Main innovations include:</strong>
+			</p>
+			<ul style="margin-left: 2rem; margin-bottom: 1.25rem;">
+				<li style="margin-bottom: 0.5rem;">We utilize <strong>probabilistic embeddings</strong> to model the input uncertainty, representing the input image as a Gaussian distribution in the embedding space.</li>
+				<li style="margin-bottom: 0.5rem;">We give an <strong>instance-wise uncertainty estimation</strong> to measure the confidence of prediction results, which is critical in practical applications.</li>
+				<li style="margin-bottom: 0.5rem;">We propose a new label distribution learning method, <strong>probabilistic annotations</strong>, to model the annotation uncertainty, representing the raw hard labels as Gaussian distributions.</li>
+				<li style="margin-bottom: 0.5rem;">We develop an <strong>Embedding Distribution Smoothing (EDS)</strong> module and a hard example mining method to improve the consistency between embedding distribution and label distribution.</li>
+			</ul>
+			
+			<h3>Experimental Results</h3>
+			<p>
+				We conduct extensive experiments, demonstrating that the proposed approach achieves <strong>significant improvements</strong> over baseline and state-of-the-art methods on two widely used benchmark datasets, <strong>GazeCapture and MPIIFaceGaze</strong>, as well as our collected dataset using mobile devices.
+			</p>
+			
+		<h2>Paper 2: Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching</h2>
+		
+		<!-- Paper 2 图片 -->
+		<div class="news-image" style="margin: 1.5rem 0;">
+			<img src="../public/images/project/Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching.png" alt="Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching">
+		</div>
+		
+		<div class="paper-info">
+			<h3>📄 Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching</h3>
+			<p><strong>Authors:</strong> Dingwen Zhang, Hao Li, Wenyuan Zeng, Chaowei Fang, Lechao Cheng, Ming-Ming Cheng, Junwei Han</p>
+			<p><strong>Journal:</strong> IEEE Transactions on Image Processing</p>
+		</div>
+		
+		<h3>Research Background</h3>
+			<p>
+				<strong>Weakly supervised semantic segmentation (WSSS)</strong> is a challenging yet important research field in vision community. In WSSS, the key problem is to generate high-quality pseudo segmentation masks (PSMs).
+			</p>
+			<p>
+				Existing approaches mainly depend on the discriminative object part to generate PSMs, which would inevitably <strong>miss object parts or involve surrounding image background</strong>, as the learning process is unaware of the full object structure.
+			</p>
+			
+			<h3>Key Contributions</h3>
+			<p>
+				To fully explore these two information cues, we build a novel end-to-end learning framework, <strong>alternate self-dual teaching (ASDT)</strong>, based on a dual-teacher single-student network architecture.
+			</p>
+			<p>
+				<strong>Main innovations include:</strong>
+			</p>
+			<ul style="margin-left: 2rem; margin-bottom: 1.25rem;">
+				<li style="margin-bottom: 0.5rem;">The information interaction among different network branches is formulated in the form of <strong>knowledge distillation (KD)</strong>.</li>
+				<li style="margin-bottom: 0.5rem;">Inspired by the <strong>Pulse Width (PW) modulation</strong>, we introduce a PW wave-like selection signal to alleviate the influence of the imperfect knowledge from either teacher model on the KD process.</li>
+			</ul>
+			
+			<h3>Experimental Results</h3>
+			<p>
+				Comprehensive experiments on the <strong>PASCAL VOC 2012</strong> and <strong>COCO-Stuff 10K</strong> demonstrate the effectiveness of the proposed ASDT framework, and <strong>new state-of-the-art results</strong> are achieved.
+			</p>
+			
+			<h2>Conclusion</h2>
+			<p>
+				These acceptances by IEEE Transactions on Image Processing represent significant contributions to the field. The first paper advances gaze estimation through uncertainty modeling, while the second paper pushes the boundaries of weakly supervised semantic segmentation.
+			</p>
+			<p>
+				Congratulations to Wenqi Zhong, Dingwen Zhang, Hao Li, and all co-authors for these outstanding achievements! 🎊
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+

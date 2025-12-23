@@ -1,0 +1,117 @@
+{
+  "demos": [
+    {
+      "name": "A Memory-based Robust region feature synthesizer for zero-shot object detection",
+      "pdf": "",
+      "code": ""
+    },
+    {
+      "name": "Background-click supervision for temporal action localization",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/9633199",
+      "code": "https://github.com/VividLe/BackTAL"
+    },
+    {
+      "name": "Colar Effective and Efficient Online Action Detection by Consulting Exemplars",
+      "pdf": "https://arxiv.org/abs/2203.01057",
+      "code": "https://github.com/VividLe/Online-Action-Detection"
+    },
+    {
+      "name": "Contextual Dependency Vision Transformer for spectrogram-based multivariate time series analysis",
+      "pdf": "https://www.sciencedirect.com/science/article/pii/S0925231223013383",
+      "code": "https://github.com/KaIi-github/CD-ViT"
+    },
+    {
+      "name": "Continual All-in-One Adverse Weather Removal With Knowledge Replay on a Unified Network Structure",
+      "pdf": "https://arxiv.org/pdf/2311.11863.pdf",
+      "code": "https://github.com/xiaojihh/CL_all-in-one"
+    },
+    {
+      "name": "Cross-Modality Deep Feature Learning for Brain Tumor Segmentation",
+      "pdf": "https://ieeexplore.ieee.org/document/9199562/",
+      "code": "https://github.com/lixiaopang221/2m_re1"
+    },
+    {
+      "name": "Disentangled Capsule Routing for Fast Part-Object Relational Saliency",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/9929280",
+      "code": "https://github.com/liuyi1989/DCR"
+    },
+    {
+      "name": "Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization",
+      "pdf": "https://arxiv.org/pdf/2008.07728.pdf",
+      "code": "https://github.com/VividLe/Equivalent-Classification-Mapping"
+    },
+    {
+      "name": "Exploring Task Structure for Brain Tumor Segmentation From Multi-Modality MR Images",
+      "pdf": "https://pubmed.ncbi.nlm.nih.gov/32941137/",
+      "code": "https://github.com/lixiaopang221/3datt"
+    },
+    {
+      "name": "GP-NeRF Generalized Perception NeRF for Context-Aware 3D Scene Understanding",
+      "pdf": "https://arxiv.org/pdf/2311.11863.pdf",
+      "code": "https://vision-intelligence.com.cn/%e2%80%98https:/github.com/lifuguan/GP-NeRF%27"
+    },
+    {
+      "name": "HTD Heterogeneous Task Decoupling for Two-stage Object Detection",
+      "pdf": "https://ieeexplore.ieee.org/document/9615001",
+      "code": "https://github.com/CityU-AIM-Group/HTD"
+    },
+    {
+      "name": "Incremental Cross-view Mutual Distillation for Self-supervised Medical CT Synthesis",
+      "pdf": "https://arxiv.org/pdf/2112.10325",
+      "code": "https://github.com/wangliang88/cvpr_ct_synthesis"
+    },
+    {
+      "name": "Integrating Part-Object Relationship and Contrast for Camouflaged Object Detection",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/9334445",
+      "code": "https://github.com/liuyi1989/POCINet"
+    },
+    {
+      "name": "Learning Self-Supervised Low-Rank Network for Single-Stage Weakly and Semi-Supervised Semantic Segmentation",
+      "pdf": "http://dx.doi.org/10.1007/s11263-022-01590-z",
+      "code": "https://github.com/DesertsP/SLRNet"
+    },
+    {
+      "name": "Onfocus Detection Identifying Individual-Camera Eye Contact from Unconstrained Images",
+      "pdf": "https://link.springer.com/article/10.1007/s11432-020-3181-9",
+      "code": "https://github.com/wintercho/focus"
+    },
+    {
+      "name": "Part-Object Relational Visual Saliency",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/9334445",
+      "code": "https://github.com/liuyi1989/TSPORTNet"
+    },
+    {
+      "name": "Position-based anchor optimization for point supervised dense nuclei detection",
+      "pdf": "https://www.sciencedirect.com/science/article/pii/S0893608023007001",
+      "code": "https://github.com/NucleiDet/DenseNucleiDet"
+    },
+    {
+      "name": "Robust Region Feature Synthesizer for Zero-Shot Object Detection",
+      "pdf": "https://arxiv.org/abs/2203.01057",
+      "code": "https://github.com/HPL123/RRFS"
+    },
+    {
+      "name": "Salient Object Detection via Integrity Learning",
+      "pdf": "https://ieeexplore.ieee.org/abstract/document/9789317",
+      "code": "https://github.com/mczhuge/ICON"
+    },
+    {
+      "name": "Structured Attention Composition for Temporal Action Localization",
+      "pdf": "https://ieeexplore.ieee.org/document/9794923",
+      "code": "https://github.com/vividle/structured-attention-composition"
+    },
+    {
+      "name": "Uncertainty Modeling for Gaze Estimation",
+      "pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10438351",
+      "code": ""
+    },
+    {
+      "name": "Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching",
+      "pdf": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10367821",
+      "code": "https://github.com/lifuguan/ASDT"
+    }
+  ]
+}
+
+
+

@@ -1,0 +1,10 @@
+{
+  "name": "李燕",
+  "grade": "博士二年级",
+  "photo": null,
+  "bio_zh": "我目前是西北工业大学自动化学院的二年级（2024年-至今）博士研究生，师从张鼎文教授。\n\n我的研究兴趣包括端侧连续学习、高效训练。",
+  "bio_en": "I am currently a second-year (2024-Now) Ph. D. student in the School of Automation at Northwestern Polytechnical University (NPU), supervision by Prof. Dingwen Zhang. \n\nMy research interests in on-device continual learning and efficient training.",
+  "google_scholar": "https://scholar.google.com/citations?user=h5vHAxcAAAAJ",
+  "github": "https://github.com/YanLi-LY",
+  "research_interests": "端侧连续学习，高效训练"
+}

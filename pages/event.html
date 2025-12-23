@@ -1,0 +1,505 @@
+		<!doctype html>
+<html lang="zh-CN">
+<head>
+			<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Events - Vision Intelligence Research Group</title>
+		
+<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.7;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		.nav-menu a::after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--primary-color);
+			transition: width 0.3s ease;
+		}
+		
+		.nav-menu a:hover::after {
+			width: 100%;
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+		
+		/* ==================== Page Header ==================== */
+		.page-header {
+    text-align: center;
+			padding: 4rem 2rem 3rem;
+			margin-bottom: 3rem;
+			background: linear-gradient(135deg, #059669, #0d9488);
+			color: var(--text-white);
+			border-radius: 16px;
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.page-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 3rem;
+			font-weight: 800;
+			margin-bottom: 1rem;
+		}
+		
+		.page-subtitle {
+			font-size: 1.25rem;
+			opacity: 0.95;
+		}
+		
+		/* ==================== Events Section ==================== */
+		.events-section {
+			padding: 2rem 0;
+		}
+		
+		.year-section {
+			margin-bottom: 4rem;
+		}
+		
+		.year-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			font-weight: 700;
+			color: var(--primary-color);
+			margin-bottom: 2rem;
+			padding-bottom: 0.75rem;
+			border-bottom: 3px solid var(--primary-color);
+			display: inline-block;
+		}
+		
+		.event-list {
+			list-style: none;
+			padding: 0;
+		}
+		
+		.event-item {
+			background: var(--bg-white);
+			border-radius: 12px;
+			padding: 0;
+			margin-bottom: 1.5rem;
+			border-left: 4px solid var(--primary-color);
+			box-shadow: var(--shadow-sm);
+			transition: var(--transition);
+			overflow: hidden;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		
+		.event-item:hover {
+			transform: translateX(8px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-image {
+			width: 280px;
+			height: 200px;
+			object-fit: contain;
+			flex-shrink: 0;
+			padding: 1rem;
+			background: var(--bg-light);
+			order: 2;
+		}
+		
+		.event-content {
+			padding: 2rem;
+			flex: 1;
+			order: 1;
+		}
+		
+	.event-title {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-dark);
+		margin-bottom: 0.75rem;
+		line-height: 1.5;
+	}
+	
+	.event-title a {
+		text-decoration: none;
+		color: inherit;
+		transition: var(--transition);
+	}
+	
+	.event-title a:hover {
+		color: var(--primary-color);
+	}
+		
+		.event-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin-bottom: 0.75rem;
+			align-items: center;
+		}
+		
+		.event-date {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.4rem 1rem;
+			border-radius: 20px;
+			font-size: 0.85rem;
+			font-weight: 600;
+			color: white;
+			background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+		}
+		
+		.event-location {
+			color: var(--text-gray);
+			font-size: 0.9rem;
+		}
+		
+		.event-description {
+			color: var(--text-gray);
+			font-size: 0.95rem;
+			margin-bottom: 0.75rem;
+			line-height: 1.6;
+		}
+		
+		.event-speakers {
+			color: var(--text-gray);
+			font-size: 0.9rem;
+			font-style: italic;
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 4rem 2rem 2rem;
+			margin-top: 4rem;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式 ==================== */
+		@media (max-width: 768px) {
+			.page-title {
+				font-size: 2rem;
+			}
+			
+			.nav-menu {
+				display: none;
+			}
+			
+			.event-item {
+				flex-direction: column;
+			}
+			
+			.event-image {
+				width: 100%;
+				height: 180px;
+				order: 1;
+			}
+			
+			.event-content {
+			padding: 1.5rem;
+				order: 2;
+			}
+			
+			.event-title {
+				font-size: 1.1rem;
+			}
+			
+			.event-meta {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.5rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="people.html">People</a></li>
+				<li><a href="publications.html">Publications</a></li>
+				<li><a href="demo.html">Projects</a></li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="event.html">Events</a></li>
+			</ul>
+	</div>
+	</nav>
+	
+	<!-- 主内容区 -->
+	<div class="main-container">
+		<!-- Page Header -->
+		<div class="page-header">
+			<h1 class="page-title">Recent & Upcoming Events</h1>
+			<p class="page-subtitle">Vision & Intelligence Group 活动与资源</p>
+	</div>
+
+		<!-- Events -->
+		<section class="events-section">
+			<!-- 2025 -->
+			<div class="year-section">
+				<h2 class="year-title">2025</h2>
+				<ul class="event-list">
+				<li class="event-item">
+					<img src="../public/images/media/overview9.jpg" alt="VALSE 2025" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/Attending VALSE 2025!.html'>Attending VALSE 2025!</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Jun 6, 2025 — Jun 8, 2025</span>
+							<span class="event-location">📍 珠海国际会展中心</span>
+						</div>
+						<p class="event-description">VALSE 2025（第十五届视觉与学习青年学者研讨会）于2025年6月6日至8日在珠海国际会展中心举行，由中国图象图形学学会主办、中山大学承办。吸引了5900余名来自学术界和产业界的青年学者、学生参会。</p>
+						<p class="event-speakers">参与成员: 张鼎文，费思成，赵蔚楠，李燕，王雨晴，杨凯辉，程亮泊，高源远，施易，王明宇，邹正宇，何狄其，谢惠超，焦奎璇</p>
+					</div>
+				</li>
+				</ul>
+			</div>
+
+			<!-- 2023 -->
+			<div class="year-section">
+				<h2 class="year-title">2023</h2>
+				<ul class="event-list">
+				<li class="event-item">
+					<img src="../events/CCIG/featured.jpg" alt="CCF-CV Unlimited Vision" class="event-image">
+					<div class="event-content">
+					<h3 class="event-title">
+						<a href='../events/The 16th CCF-CV "Unlimited Vision" series of activities hosted by Northwestern Polytechnical University.html'>The 16th CCF-CV "Unlimited Vision" series of activities hosted by Northwestern Polytechnical University</a>
+					</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Mar 26, 2023 6:00 PM — 8:00 PM</span>
+							<span class="event-location">📍 中国·西安</span>
+		</div>
+						<p class="event-description">On March 26, the 16th CCF-CV "Unlimited Vision" series of activities hosted by the Computer Vision Committee of the China Computer Federation and undertaken by Northwestern Polytechnical University.</p>
+						<p class="event-speakers">Speakers: Dingwen Zhang, Junwei Han</p>
+</div>
+								</li>
+								</ul>
+	</div>
+
+			<!-- 2022 -->
+			<div class="year-section">
+				<h2 class="year-title">2022</h2>
+				<ul class="event-list">
+				<li class="event-item">
+					<img src="../events/science_and_technology/featured.jpg" alt="Intelligence Science and Technology Conference" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/Conference "Intellegence Science and Technology" was successfully held in NWPU!.html'>Conference "Intellegence Science and Technology" was successfully held in NWPU!</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Oct 23, 2022 6:00 PM — Oct 26, 2022 8:00 PM</span>
+							<span class="event-location">📍 中国·西安</span>
+	</div>
+						<p class="event-description">On October 11, Northwestern Polytechnical University "Intellegence Science and Technology" conference was successfully held through an online meeting.</p>
+						<p class="event-speakers">Organizers: Dingwen Zhang, Junwei Han</p>
+	</div>
+				</li>
+					
+				<li class="event-item">
+					<img src="../events/AI_and_medic/featured.jpg" alt="AI+Medical Conference" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/Conference "AI+Medical" was successfully held in NWPU!.html'>Conference "AI+Medical" was successfully held in NWPU!</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Oct 11, 2022 6:00 PM — 8:00 PM</span>
+							<span class="event-location">📍 中国·西安</span>
+</div>
+						<p class="event-description">On October 11, Northwestern Polytechnical University "AI+Medical" conference was successfully held through an online meeting.</p>
+						<p class="event-speakers">Organizers: Dingwen Zhang, Junwei Han</p>
+					</div>
+				</li>
+					
+				<li class="event-item">
+					<img src="../events/valse 2022/featured.jpg" alt="VALSE 2022" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/Attending VALSE 2022!.html'>Attending VALSE 2022!</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Aug 25, 2022 6:00 PM — 8:00 PM</span>
+							<span class="event-location">📍 中国·天津</span>
+						</div>
+						<p class="event-description">Prof. Cheng, Dr. Yao, Dr. Li and M.S. Fan attended VALSE 2022.</p>
+						<p class="event-speakers">Attendees: Lechao Cheng, Jieru Yao, Hao Li, 范樱子</p>
+	</div>
+				</li>
+					
+				<li class="event-item">
+					<img src="../events/china mm 2022/featured.jpg" alt="China MultiMedia 2022" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/Attending China MultiMedia 2022!.html'>Attending China MultiMedia 2022!</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Jul 20, 2022 6:00 PM — Jul 22, 2022 8:00 PM</span>
+							<span class="event-location">📍 中国·贵阳</span>
+</div>
+						<p class="event-description">Prof. Dingwen Zhang, Prof. Lechao Cheng and Prof. Chaowei Fang attended China MM 2022.</p>
+						<p class="event-speakers">Attendees: Dingwen Zhang, Longfei Han, Lechao Cheng, Chaowei Fang</p>
+</div>
+				</li>
+					
+				<li class="event-item">
+					<img src="../events/VALSE_yangle/featured.jpg" alt="VALSE Paper Review by Dr. Le Yang" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/VALSE Paper Review (Presented by Dr. Le Yang).html'>VALSE Paper Review (Presented by Dr. Le Yang)</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Jul 10, 2022 6:00 PM — 8:00 PM</span>
+							<span class="event-location">📍 Virtual</span>
+</div>
+						<p class="event-description">Colar：Effective and Efficient Online Action Detection by Consulting Exemplars</p>
+						<p class="event-speakers">Presenter: 杨乐</p>
+</div>
+				</li>
+					
+				<li class="event-item">
+					<img src="../events/VALSE_283/featured.jpg" alt="VALSE Webinar 283" class="event-image">
+					<div class="event-content">
+						<h3 class="event-title">
+							<a href='../events/VALSE Webinar 22-16-283 Contrastive Representive Learning.html'>VALSE Webinar 22-16-283 Contrastive Representive Learning</a>
+						</h3>
+						<div class="event-meta">
+							<span class="event-date">📅 Jun 29, 2022 6:00 PM — 8:00 PM</span>
+							<span class="event-location">📍 Virtual</span>
+</div>
+						<p class="event-description">CRIS CLIP-Driven Referring Image Segmentation</p>
+						<p class="event-speakers">Presenter: 宫明明</p>
+						</div>
+				</li>
+				</ul>
+		</div>
+		</section>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+							</div>
+	</footer>
+</body>
+</html>

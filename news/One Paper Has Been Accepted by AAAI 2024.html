@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>One Paper Has Been Accepted by AAAI 2024 - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+	/* ==================== 主容器 ==================== */
+	.main-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 3rem 2rem;
+	}
+		
+	/* ==================== 返回按钮 ==================== */
+	.back-button-container {
+		position: absolute;
+		left: -80px;
+		top: 3rem;
+	}
+	
+	.back-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		background: var(--bg-white);
+		border: 2px solid var(--border-color);
+		border-radius: 50%;
+		color: var(--text-gray);
+		text-decoration: none;
+		transition: var(--transition);
+		box-shadow: var(--shadow-md);
+	}
+	
+	.back-button:hover {
+		background: var(--primary-color);
+		color: var(--text-white);
+		border-color: var(--primary-color);
+		transform: scale(1.1);
+		box-shadow: var(--shadow-lg);
+	}
+	
+	.back-button svg {
+		transition: var(--transition);
+	}
+	
+	.back-button:hover svg {
+		transform: translateX(-3px);
+	}
+	
+	.back-button span {
+		display: none;
+	}
+		
+	/* ==================== 新闻头部 ==================== */
+	.news-header {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 16px;
+		box-shadow: var(--shadow-md);
+		margin-bottom: 2rem;
+		position: relative;
+	}
+		
+		.news-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.news-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.news-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-author {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #f59e0b, #d97706);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 新闻图片 ==================== */
+		.news-image {
+			width: 100%;
+			margin-bottom: 2rem;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 新闻链接 ==================== */
+		.news-links {
+			display: flex;
+			gap: 1rem;
+			margin-bottom: 2rem;
+			flex-wrap: wrap;
+		}
+		
+		.news-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.875rem 1.5rem;
+			background: white;
+			border: 2px solid var(--border-color);
+			border-radius: 12px;
+			text-decoration: none;
+			font-weight: 600;
+			transition: var(--transition);
+			box-shadow: var(--shadow-sm);
+		}
+		
+		.link-code {
+			background: linear-gradient(135deg, #6366f1, #4f46e5);
+			color: white;
+			border: none;
+		}
+		
+		.link-code:hover {
+			background: #4338ca;
+			transform: translateY(-3px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		/* ==================== 新闻内容 ==================== */
+		.news-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.news-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.news-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.news-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.news-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.news-content a {
+			color: var(--primary-color);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.news-content a:hover {
+			color: var(--primary-dark);
+			text-decoration: underline;
+		}
+		
+		.paper-info {
+			background: linear-gradient(135deg, #eff6ff, #dbeafe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.paper-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.paper-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.news-title {
+				font-size: 2rem;
+			}
+			
+			.news-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+		.main-container {
+			padding: 2rem 1rem;
+		}
+		
+		.back-button-container {
+			position: static;
+			transform: none;
+			margin-bottom: 1rem;
+		}
+		
+		.back-button {
+			width: 50px;
+			height: 50px;
+		}
+			
+			.news-header,
+			.news-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+						<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+<div class="main-container">
+	<!-- 新闻标题 -->
+	<div class="news-header">
+		<!-- 返回按钮 -->
+		<div class="back-button-container">
+			<a href="../pages/news.html" class="back-button" title="Back to News">
+				<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+					<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+				</svg>
+				<span>Back to News</span>
+			</a>
+		</div>
+		<h1 class="news-title">🎉 One Paper Has Been Accepted by AAAI 2024</h1>
+		<div class="news-meta">
+			<div class="news-date">
+				📅 <span>March 24, 2024</span>
+			</div>
+			<div class="news-author">
+				⏱️ <span>2 min read</span>
+			</div>
+			<span class="news-badge">AAAI 2024</span>
+		</div>
+	</div>
+		
+		<!-- 新闻图片 -->
+		<div class="news-image">
+			<img src="../public/images/news/One Paper Has Been Accepted by AAAI 2024.webp" alt="AAAI 2024">
+		</div>
+		
+		<!-- 新闻链接 -->
+		<div class="news-links">
+			<a href="https://github.com/wenqizhong/SpFormer" target="_blank" class="news-link link-code">💻 Code</a>
+		</div>
+		
+		<!-- 新闻内容 -->
+		<div class="news-content">
+			<p>
+				<strong>AAAI 2024</strong> officially released the list of accepted papers. We are thrilled to announce that Dr. Zhong's paper from our team has been included!
+			</p>
+			
+			<div class="paper-info">
+				<h3>📄 SpFormer: Spatio-Temporal Modeling for Scanpaths with Transformer</h3>
+				<p><strong>Authors:</strong> Wenqi Zhong, Linzhi Yu, Chen Xia, Junwei Han, Dingwen Zhang</p>
+				<p><strong>Conference:</strong> AAAI Conference on Artificial Intelligence 2024</p>
+				<p><strong>Code:</strong> <a href="https://github.com/wenqizhong/SpFormer" target="_blank">https://github.com/wenqizhong/SpFormer</a></p>
+			</div>
+			
+			<h2>Research Background</h2>
+			<p>
+				<strong>Saccadic scanpath</strong>, a data representation of human visual behavior, has received broad interest in multiple domains. Scanpath is a complex eye-tracking data modality that includes the sequences of fixation positions and fixation duration, coupled with image information.
+			</p>
+			<p>
+				However, previous methods usually face the <strong>spatial misalignment problem</strong> of fixation features and <strong>loss of critical temporal data</strong> (including temporal correlation and fixation duration).
+			</p>
+			
+			<h2>Key Contributions</h2>
+			<p>
+				In this study, we propose a <strong>Transformer-based scanpath model, SpFormer</strong>, to alleviate these problems. The main contributions include:
+			</p>
+			
+			<h3>1. Fixation-Centric Paradigm</h3>
+			<p>
+				We propose a fixation-centric paradigm to extract the aligned spatial fixation features and tokenize the scanpaths, effectively addressing the spatial misalignment problem.
+			</p>
+			
+			<h3>2. Local Meta Attention</h3>
+			<p>
+				According to the <strong>visual working memory mechanism</strong>, we design a local meta attention to reduce the semantic redundancy of fixations and guide the model to focus on the meta scanpath.
+			</p>
+			
+			<h3>3. Duration Information Integration</h3>
+			<p>
+				We progressively integrate the duration information and fuse it with the fixation features to solve the problem of ambiguous location with the Transformer block increasing.
+			</p>
+			
+			<h2>Experimental Results</h2>
+			<p>
+				We conduct extensive experiments on <strong>four databases</strong> under <strong>three tasks</strong>. The SpFormer establishes <strong>new state-of-the-art results</strong> in distinct settings, verifying its flexibility and versatility in practical applications.
+			</p>
+			<p>
+				The experimental results demonstrate that our approach significantly outperforms existing methods across multiple evaluation metrics, showcasing the effectiveness of the proposed spatio-temporal modeling framework.
+			</p>
+			
+			<h2>Conclusion</h2>
+			<p>
+				This acceptance at AAAI 2024 represents a significant milestone for our research team. We believe that SpFormer will contribute to advancing the understanding of human visual behavior and inspire future research in eye-tracking analysis and related fields.
+			</p>
+			<p>
+				Congratulations to Dr. Wenqi Zhong and all co-authors for this outstanding achievement! 🎊
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+

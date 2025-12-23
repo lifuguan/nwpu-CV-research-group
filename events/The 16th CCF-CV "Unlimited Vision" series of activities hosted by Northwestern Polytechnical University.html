@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The 16th CCF-CV "Unlimited Vision" series of activities - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #7c3aed;
+			--primary-dark: #5b21b6;
+			--accent-color: #06b6d4;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 3rem 2rem;
+		}
+		
+		/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 活动头部 ==================== */
+		.event-header {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+			margin-bottom: 2rem;
+			position: relative;
+		}
+		
+		.event-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.event-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.event-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.event-location {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.event-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #7c3aed, #6d28d9);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 活动图片 ==================== */
+		.event-image {
+			width: 100%;
+			margin-bottom: 2rem;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 活动内容 ==================== */
+		.event-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.event-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.event-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.event-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.event-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.event-content ul {
+			margin-left: 2rem;
+			margin-bottom: 1.25rem;
+		}
+		
+		.event-content li {
+			margin-bottom: 0.5rem;
+		}
+		
+		.event-info {
+			background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.event-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.event-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		.person-card {
+			background: linear-gradient(135deg, #cffafe, #a5f3fc);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid #06b6d4;
+			margin: 1.5rem 0;
+		}
+		
+		.person-card h3 {
+			color: #0e7490;
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.person-card p {
+			margin-bottom: 0.5rem;
+			color: var(--text-gray);
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.event-title {
+				font-size: 2rem;
+			}
+			
+			.event-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+			.main-container {
+				padding: 2rem 1rem;
+			}
+			
+			.back-button-container {
+				position: static;
+				transform: none;
+				margin-bottom: 1rem;
+			}
+			
+			.back-button {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.event-header,
+			.event-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+						<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="main-container">
+		<!-- 活动标题 -->
+		<div class="event-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/event.html" class="back-button" title="Back to Events">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to Events</span>
+				</a>
+			</div>
+			<h1 class="event-title">🎓 第16期CCF-CV"视界无限"系列活动——"认知启发的新一代人工智能技术"研讨会</h1>
+			<h2 style="font-size: 1.5rem; font-weight: 600; color: var(--text-gray); margin-top: 1rem;">The 16th CCF-CV "Unlimited Vision" series of activities hosted by Northwestern Polytechnical University</h2>
+			<div class="event-meta">
+				<div class="event-date">
+					📅 <span>March 26, 2023 | 6:00 PM - 8:00 PM</span>
+				</div>
+				<div class="event-location">
+					📍 <span>中国·西安 | Xi'an, China</span>
+				</div>
+				<span class="event-badge">CCF-CV</span>
+			</div>
+		</div>
+		
+		<!-- 活动图片 -->
+		<div class="event-image">
+			<img src="../events/CCIG/featured.jpg" alt="CCF-CV Event">
+		</div>
+		
+		<!-- 活动内容 -->
+		<div class="event-content">
+			<div class="event-info">
+				<h3>📋 活动信息 | Event Information</h3>
+				<p><strong>主办单位 | Organizer:</strong> 中国计算机学会计算机视觉专委会 (CCF-CV)</p>
+				<p><strong>承办单位 | Host:</strong> 西北工业大学 (Northwestern Polytechnical University)</p>
+				<p><strong>活动地点 | Venue:</strong> 西北工业大学友谊校区国际会议中心</p>
+				<p><strong>活动时间 | Time:</strong> 2023年3月26日 18:00-20:00</p>
+			</div>
+			
+			<h2>活动概况 | Event Overview</h2>
+			<p>
+				3月26日，由<strong>中国计算机学会计算机视觉专委会</strong>主办、<strong>西北工业大学</strong>承办的<strong>第16期CCF-CV"视界无限"系列活动——"认知启发的新一代人工智能技术"研讨会</strong>在西北工业大学友谊校区国际会议中心隆重举行。
+			</p>
+			<p>
+				On March 26, 2023, the <strong>16th CCF-CV "Unlimited Vision" Series - Symposium on Cognitive-Inspired Next-Generation Artificial Intelligence Technology</strong> was held at the International Conference Center of Northwestern Polytechnical University's Youyi Campus. The event was organized by the Computer Vision Committee of China Computer Federation (CCF-CV) and hosted by Northwestern Polytechnical University.
+			</p>
+			
+			<h2>活动主持与致辞 | Event Moderator and Opening Remarks</h2>
+			
+			<div class="person-card">
+				<h3>👤 主持人 | Moderator</h3>
+				<p><strong>韩军伟教授</strong> - 西北工业大学自动化学院院长</p>
+				<p><strong>Prof. Junwei Han</strong> - Dean of School of Automation, Northwestern Polytechnical University</p>
+			</div>
+			
+			<p>
+				研讨会由<strong>西北工业大学自动化学院韩军伟院长</strong>主持，<strong>北京大学查红彬教授</strong>与<strong>国家自然科学基金委信息科学部原常务副主任张兆田</strong>致辞。
+			</p>
+			<p>
+				The symposium was moderated by <strong>Dean Junwei Han</strong> from the School of Automation at Northwestern Polytechnical University. Opening remarks were delivered by <strong>Professor Hongbin Zha from Peking University</strong> and <strong>Mr. Zhaotian Zhang, former Executive Deputy Director of the Department of Information Science, National Natural Science Foundation of China</strong>.
+			</p>
+			
+			<h2>CCF-CV "视界无限"系列活动简介 | About CCF-CV "Unlimited Vision" Series</h2>
+			<p>
+				<strong>CCF-CV"视界无限"系列活动</strong>是中国计算机学会计算机视觉专委会的品牌学术活动之一，旨在为计算机视觉领域的学者、研究人员和业界专家提供一个高水平的学术交流平台。
+			</p>
+			<p>
+				该系列活动聚焦计算机视觉领域的前沿技术和研究热点，通过专题研讨、学术报告、技术分享等形式，促进学术界与产业界的深度交流与合作。
+			</p>
+			
+			<h2>本期主题："认知启发的新一代人工智能技术" | Theme: "Cognitive-Inspired Next-Generation AI Technology"</h2>
+			<p>
+				本期研讨会聚焦<strong>"认知启发的新一代人工智能技术"</strong>这一重要主题，探讨如何借鉴人类认知机制，推动人工智能技术的创新与发展。
+			</p>
+			<p>
+				This symposium focused on the important theme of <strong>"Cognitive-Inspired Next-Generation Artificial Intelligence Technology"</strong>, discussing how to draw inspiration from human cognitive mechanisms to drive innovation and development in artificial intelligence technology.
+			</p>
+			
+			<h3>研讨会核心议题 | Key Topics</h3>
+			<ul>
+				<li><strong>认知计算与人工智能</strong> - Cognitive computing and artificial intelligence</li>
+				<li><strong>类脑智能与神经形态计算</strong> - Brain-inspired intelligence and neuromorphic computing</li>
+				<li><strong>认知启发的视觉理解</strong> - Cognitive-inspired visual understanding</li>
+				<li><strong>新一代AI技术的理论与应用</strong> - Theory and applications of next-generation AI technology</li>
+				<li><strong>人工智能的未来发展方向</strong> - Future directions of artificial intelligence development</li>
+			</ul>
+			
+			<h2>活动意义 | Significance</h2>
+			<p>
+				本次研讨会为计算机视觉和人工智能领域的专家学者提供了一个高水平的学术交流平台，促进了学术界对认知启发的新一代人工智能技术的深入探讨，对推动我国人工智能技术的创新发展具有重要意义。
+			</p>
+			<p>
+				This symposium provided a high-level academic exchange platform for experts and scholars in the fields of computer vision and artificial intelligence, promoting in-depth discussions on cognitive-inspired next-generation artificial intelligence technology. It holds great significance for driving the innovative development of China's artificial intelligence technology.
+			</p>
+			
+			<h2>组织者介绍 | About the Organizers</h2>
+			
+			<h3>中国计算机学会计算机视觉专委会 (CCF-CV)</h3>
+			<p>
+				中国计算机学会计算机视觉专委会是中国计算机学会下属的专业委员会，致力于推动计算机视觉领域的学术研究和技术发展，促进学术界与产业界的交流合作。
+			</p>
+			
+			<h3>西北工业大学 (Northwestern Polytechnical University)</h3>
+			<p>
+				西北工业大学是我国"双一流"建设高校，在计算机视觉、人工智能等领域具有深厚的研究基础和丰富的人才储备，为本次研讨会的成功举办提供了有力保障。
+			</p>
+			
+			<div class="person-card">
+				<h3>👥 主要参与者 | Key Participants</h3>
+				<p><strong>Prof. Dingwen Zhang (张鼎文教授)</strong></p>
+				<p>Professor of Northwestern Polytechnical University</p>
+				<p>西北工业大学教授、博士生导师</p>
+				<br>
+				<p><strong>Prof. Junwei Han (韩军伟教授)</strong></p>
+				<p>IEEE Fellow, IAPR Fellow, IET Fellow</p>
+				<p>Professor of Artificial Intelligence, Dean of School of Automation</p>
+				<p>西北工业大学人工智能教授、自动化学院院长</p>
+			</div>
+			
+			<h2>活动影响 | Impact</h2>
+			<p>
+				作为CCF-CV"视界无限"系列活动的第16期，本次研讨会：
+			</p>
+			<ul>
+				<li>🎯 <strong>汇聚了国内计算机视觉和人工智能领域的顶尖专家学者</strong></li>
+				<li>💡 <strong>深入探讨了认知启发的新一代人工智能技术的前沿问题</strong></li>
+				<li>🤝 <strong>促进了学术界与产业界的交流与合作</strong></li>
+				<li>🌟 <strong>为推动我国人工智能技术的创新发展贡献了智慧和力量</strong></li>
+			</ul>
+			
+			<h2>结语 | Conclusion</h2>
+			<p>
+				第16期CCF-CV"视界无限"系列活动的成功举办，展示了西北工业大学在计算机视觉和人工智能领域的学术实力，也为相关领域的研究人员提供了宝贵的学术交流机会。期待未来有更多这样高水平的学术活动，持续推动我国人工智能技术的创新与发展！
+			</p>
+			<p>
+				The successful hosting of the 16th CCF-CV "Unlimited Vision" Series demonstrated Northwestern Polytechnical University's academic strength in computer vision and artificial intelligence, and provided valuable academic exchange opportunities for researchers in related fields. We look forward to more high-level academic activities in the future to continue driving the innovation and development of China's artificial intelligence technology!
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+

@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>杨腾 Teng Yang - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="杨腾 Teng Yang - Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.7;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		.nav-menu a::after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--primary-color);
+			transition: width 0.3s ease;
+		}
+		
+		.nav-menu a:hover::after {
+			width: 100%;
+		}
+		
+		/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 主要内容 ==================== */
+		.profile-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 1.5rem 2rem 3rem;
+		}
+		
+		.profile-header {
+			background: var(--bg-white);
+			border-radius: 16px;
+			padding: 3rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-md);
+			display: flex;
+			gap: 3rem;
+			align-items: flex-start;
+			position: relative;
+		}
+		
+		.profile-avatar {
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0 8px 16px rgba(37, 99, 235, 0.2);
+			border: 5px solid var(--primary-color);
+			flex-shrink: 0;
+			margin-top: -10px;
+		}
+		
+		.profile-info {
+			flex: 1;
+		}
+		
+		.profile-name {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.2rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 0.75rem;
+		}
+		
+		.profile-title {
+			font-size: 1.15rem;
+			color: var(--text-gray);
+			margin-bottom: 0.5rem;
+			font-weight: 500;
+		}
+		
+		.profile-affiliation {
+			font-size: 1.05rem;
+			color: var(--primary-color);
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+		
+		.profile-bio {
+			font-size: 0.95rem;
+			color: var(--text-gray);
+			line-height: 1.8;
+			margin-bottom: 1rem;
+			text-align: justify;
+		}
+		
+		.bio-section {
+			margin-bottom: 2rem;
+		}
+		
+		.bio-section:last-of-type {
+			margin-bottom: 1.5rem;
+		}
+		
+		.bio-lang-label {
+			font-size: 0.85rem;
+			font-weight: 600;
+			color: var(--primary-color);
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			margin-bottom: 0.75rem;
+			display: inline-block;
+			padding: 0.25rem 0.75rem;
+			background: rgba(37, 99, 235, 0.1);
+			border-radius: 4px;
+		}
+		
+		.social-links {
+			display: flex;
+			gap: 0.75rem;
+		}
+		
+		.social-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			color: white;
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-sm);
+		}
+		
+		.social-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.btn-email {
+			background: linear-gradient(135deg, #ea4335, #d32f2f);
+		}
+		
+		/* ==================== 内容部分 ==================== */
+		.profile-section {
+			background: var(--bg-white);
+			border-radius: 12px;
+			padding: 2.5rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.section-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 1.5rem;
+			padding-bottom: 1rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.interests-list {
+			list-style: none;
+			padding: 0;
+		}
+		
+		.interests-list li {
+			padding: 0.75rem 0;
+			color: var(--text-gray);
+			font-size: 1rem;
+			position: relative;
+			padding-left: 2rem;
+		}
+		
+		.interests-list li::before {
+			content: "▸";
+			position: absolute;
+			left: 0.5rem;
+			color: var(--primary-color);
+			font-weight: bold;
+		}
+		
+		.education-item {
+			padding: 1rem 0;
+			border-bottom: 1px solid var(--border-color);
+		}
+		
+		.education-item:last-child {
+			border-bottom: none;
+		}
+		
+		.education-degree {
+			font-size: 1.1rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin-bottom: 0.25rem;
+		}
+		
+		.education-year {
+			font-size: 0.9rem;
+			color: var(--text-light);
+		}
+		
+		.education-institution {
+			font-size: 1rem;
+			color: var(--text-gray);
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.profile-header {
+				flex-direction: column;
+				text-align: center;
+				padding: 2rem;
+			}
+			
+			.back-button-container {
+				position: static;
+				transform: none;
+				margin-bottom: 1rem;
+			}
+			
+			.back-button {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.profile-avatar {
+				width: 150px;
+				height: 150px;
+			}
+			
+			.profile-name {
+				font-size: 1.8rem;
+			}
+			
+			.social-links {
+				justify-content: center;
+			}
+			
+			.profile-section {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- 个人资料主体 -->
+	<div class="profile-container">
+		<!-- 个人资料头部 -->
+		<div class="profile-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/people.html" class="back-button" title="Back to Team">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to Team</span>
+				</a>
+			</div>
+			
+			<img src="../public/authors/杨腾/avatar.png" alt="杨腾 Teng Yang" class="profile-avatar">
+			<div class="profile-info">
+				<h1 class="profile-name">杨腾 Teng Yang</h1>
+				<p class="profile-title">MEng Student (Year 3) of Artificial Intelligence</p>
+				<p class="profile-affiliation">Northwestern Polytechnical University</p>
+				
+				<!-- 中文简介 -->
+				<div class="bio-section">
+					<div class="bio-lang-label">中文 Chinese</div>
+					<p class="profile-bio">
+						杨腾是西北工业大学自动化学院硕士研究生（三年级，2023年至今）。他的研究兴趣是持续学习。
+					</p>
+				</div>
+				
+				<!-- 英文简介 -->
+				<div class="bio-section">
+					<div class="bio-lang-label">English</div>
+					<p class="profile-bio">
+						Yang Teng is a Master candidate (Year 3, 2023 - present) in the School of Automation at Northwestern Polytechnical University. His research interest is continual learning.
+					</p>
+				</div>
+				
+				<div class="social-links">
+					<a href="mailto:yangteng@mail.nwpu.edu.cn" class="social-btn btn-email" title="Email">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+							<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 研究兴趣 -->
+		<div class="profile-section">
+			<h2 class="section-title">Research Interests</h2>
+			<ul class="interests-list">
+				<li>Continual Learning (持续学习)</li>
+			</ul>
+		</div>
+
+		<!-- 教育背景 -->
+		<div class="profile-section">
+			<h2 class="section-title">Education</h2>
+			<div class="education-item">
+				<div class="education-degree">MEng in Automation</div>
+				<div class="education-institution">Northwestern Polytechnical University</div>
+				<div class="education-year">2023 - Present</div>
+			</div>
+			<div class="education-item">
+				<div class="education-degree">BSc in Automation</div>
+				<div class="education-institution">Northwestern Polytechnical University</div>
+				<div class="education-year">2023</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

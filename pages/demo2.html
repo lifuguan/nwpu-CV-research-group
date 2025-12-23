@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Projects - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.7;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		.nav-menu a::after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--primary-color);
+			transition: width 0.3s ease;
+		}
+		
+		.nav-menu a:hover::after {
+			width: 100%;
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+		
+		/* ==================== Page Header ==================== */
+		.page-header {
+			text-align: center;
+			padding: 4rem 2rem 3rem;
+			margin-bottom: 3rem;
+			background: linear-gradient(135deg, #059669, #0d9488);
+			color: var(--text-white);
+			border-radius: 16px;
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.page-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 3rem;
+			font-weight: 800;
+			margin-bottom: 1rem;
+		}
+		
+		.page-subtitle {
+			font-size: 1.25rem;
+			opacity: 0.95;
+		}
+		
+		/* ==================== Projects Grid ==================== */
+		.projects-section {
+			padding: 2rem 0;
+		}
+		
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
+			margin-top: 2rem;
+		}
+		
+		.project-card {
+			background: var(--bg-white);
+			border-radius: 12px;
+			overflow: hidden;
+			border: 1px solid var(--border-color);
+			box-shadow: var(--shadow-sm);
+			transition: var(--transition);
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.project-card:hover {
+			transform: translateY(-8px);
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary-color);
+		}
+		
+		.project-image-placeholder {
+			width: 100%;
+			height: 200px;
+			background: linear-gradient(135deg, var(--bg-light), #e0e7ff);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--text-gray);
+			font-size: 0.9rem;
+			border-bottom: 1px solid var(--border-color);
+			overflow: hidden;
+		}
+		
+		.project-image-placeholder img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		
+		.project-content {
+			padding: 1.5rem;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.project-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.1rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 0.75rem;
+			line-height: 1.4;
+			transition: var(--transition);
+			cursor: pointer;
+		}
+		
+		.project-content a:hover .project-title {
+			color: var(--primary-color);
+		}
+		
+		.project-author {
+			color: var(--text-gray);
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+			font-style: italic;
+		}
+		
+		.project-links {
+			display: flex;
+			gap: 0.75rem;
+			margin-top: auto;
+		}
+		
+		.project-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.25rem;
+			padding: 0.4rem 0.8rem;
+			border-radius: 6px;
+			font-size: 0.85rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.link-pdf {
+			background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+			color: white;
+		}
+		
+		.link-pdf:hover {
+			background: var(--primary-dark);
+			transform: translateY(-2px);
+		}
+		
+		.link-code {
+			background: linear-gradient(135deg, var(--accent-color), #059669);
+			color: white;
+		}
+		
+		.link-code:hover {
+			background: #047857;
+			transform: translateY(-2px);
+		}
+		
+		.link-video {
+			background: linear-gradient(135deg, #ef4444, #dc2626);
+			color: white;
+		}
+		
+		.link-video:hover {
+			background: #b91c1c;
+			transform: translateY(-2px);
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 4rem 2rem 2rem;
+			margin-top: 4rem;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 分页导航 ==================== */
+		.pagination {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 0.75rem;
+			margin-top: 3rem;
+			padding: 2rem 0;
+		}
+		
+		.pagination a,
+		.pagination span {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 45px;
+			height: 45px;
+			padding: 0.5rem 1rem;
+			border-radius: 8px;
+			font-weight: 600;
+			text-decoration: none;
+			transition: var(--transition);
+			border: 2px solid var(--border-color);
+			background: var(--bg-white);
+			color: var(--text-gray);
+		}
+		
+		.pagination a:hover {
+			background: var(--primary-color);
+			color: white;
+			border-color: var(--primary-color);
+			transform: translateY(-2px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.pagination .active {
+			background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+			color: white;
+			border-color: var(--primary-color);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.pagination .prev,
+		.pagination .next {
+			font-size: 1.2rem;
+		}
+		
+		/* ==================== 响应式 ==================== */
+		@media (max-width: 1024px) {
+			.projects-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.page-title {
+				font-size: 2rem;
+			}
+			
+			.nav-menu {
+				display: none;
+			}
+			
+			.projects-grid {
+				grid-template-columns: 1fr;
+			}
+			
+			.project-content {
+				padding: 1.25rem;
+			}
+			
+			.pagination {
+				gap: 0.5rem;
+			}
+			
+			.pagination a,
+			.pagination span {
+				min-width: 40px;
+				height: 40px;
+				padding: 0.5rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="people.html">People</a></li>
+				<li><a href="publications.html">Publications</a></li>
+				<li><a href="demo.html">Projects</a></li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- 主内容区 -->
+	<div class="main-container">
+		<!-- Page Header -->
+		<div class="page-header">
+			<h1 class="page-title">Projects</h1>
+			<p class="page-subtitle">Vision & Intelligence Group 研究项目</p>
+		</div>
+		
+		<!-- Projects -->
+		<section class="projects-section">
+			<div class="projects-grid">
+				<!-- Project 1 (索引10) -->
+				<div class="project-card">
+					<div class="project-image-placeholder">
+						<img src="../public/images/project/HTD-Heterogeneous Task Decoupling for Two-stage Object Detection.png" alt="HTD">
+					</div>
+					<div class="project-content">
+						<a href="../demo/HTD Heterogeneous Task Decoupling for Two-stage Object Detection.html" style="text-decoration: none; color: inherit;">
+							<h3 class="project-title">HTD Heterogeneous Task Decoupling for Two-stage Object Detection</h3>
+						</a>
+					<p class="project-author">Dingwen Zhang</p>
+					<div class="project-links">
+						<a href="https://ieeexplore.ieee.org/document/9615001" target="_blank" class="project-link link-pdf">📄 PDF</a>
+						<a href="https://github.com/CityU-AIM-Group/HTD" target="_blank" class="project-link link-code">💻 Code</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Project 2 (索引11) -->
+			<div class="project-card">
+				<div class="project-image-placeholder">
+					<img src="../public/images/project/Incremental Cross-view Mutual Distillation for Self-supervised Medical CT Synthesis.png" alt="Incremental Cross-view">
+				</div>
+				<div class="project-content">
+					<a href="../demo/Incremental Cross-view Mutual Distillation for Self-supervised Medical CT Synthesis.html" style="text-decoration: none; color: inherit;">
+						<h3 class="project-title">Incremental Cross-view Mutual Distillation for Self-supervised Medical CT Synthesis</h3>
+					</a>
+					<p class="project-author">Chaowei Fang</p>
+					<div class="project-links">
+						<a href="https://arxiv.org/pdf/2112.10325" target="_blank" class="project-link link-pdf">📄 PDF</a>
+						<a href="https://github.com/wangliang88/cvpr_ct_synthesis" target="_blank" class="project-link link-code">💻 Code</a>
+						<a href="../public/videos/202207261910.mp4" target="_blank" class="project-link link-video">🎥 Video</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Project 3 (索引12) -->
+			<div class="project-card">
+				<div class="project-image-placeholder">
+					<img src="../public/images/project/Integrating Part-Object Relationship and Contrast for Camouflaged Object Detection .png" alt="Part-Object">
+				</div>
+				<div class="project-content">
+					<a href="../demo/Integrating Part-Object Relationship and Contrast for Camouflaged Object Detection.html" style="text-decoration: none; color: inherit;">
+						<h3 class="project-title">Integrating Part-Object Relationship and Contrast for Camouflaged Object Detection</h3>
+					</a>
+					<p class="project-author">Dingwen Zhang</p>
+					<div class="project-links">
+						<a href="https://ieeexplore.ieee.org/abstract/document/9334445" target="_blank" class="project-link link-pdf">📄 PDF</a>
+						<a href="https://github.com/liuyi1989/POCINet" target="_blank" class="project-link link-code">💻 Code</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Project 4 (索引13) -->
+				<div class="project-card">
+					<div class="project-image-placeholder">
+						<img src="../public/images/project/Learning Self-Supervised Low-Rank Network for Single-Stage Weakly and Semi-Supervised Semantic Segmentation.png" alt="Low-Rank Network">
+					</div>
+					<div class="project-content">
+						<a href="../demo/Learning Self-Supervised Low-Rank Network for Single-Stage Weakly and Semi-Supervised Semantic Segmentation.html" style="text-decoration: none; color: inherit;">
+							<h3 class="project-title">Learning Self-Supervised Low-Rank Network for Single-Stage Weakly and Semi-Supervised Semantic Segmentation</h3>
+						</a>
+					<p class="project-author">Dingwen Zhang</p>
+					<div class="project-links">
+						<a href="http://dx.doi.org/10.1007/s11263-022-01590-z" target="_blank" class="project-link link-pdf">📄 PDF</a>
+						<a href="https://github.com/DesertsP/SLRNet" target="_blank" class="project-link link-code">💻 Code</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project 5 (索引14) -->
+			<div class="project-card">
+				<div class="project-image-placeholder">
+					<img src="../public/images/project/Onfocus Detection:Identifying Individual-Camera Eye Contact from Unconstrained Images.png" alt="Onfocus Detection">
+				</div>
+				<div class="project-content">
+					<a href="../demo/Onfocus Detection Identifying Individual-Camera Eye Contact from Unconstrained Images.html" style="text-decoration: none; color: inherit;">
+						<h3 class="project-title">Onfocus Detection Identifying Individual-Camera Eye Contact from Unconstrained Images</h3>
+					</a>
+					<p class="project-author">Dingwen Zhang</p>
+					<div class="project-links">
+						<a href="https://link.springer.com/article/10.1007/s11432-020-3181-9" target="_blank" class="project-link link-pdf">📄 PDF</a>
+						<a href="https://github.com/wintercho/focus" target="_blank" class="project-link link-code">💻 Code</a>
+					</div>
+				</div>
+			</div>
+			
+		<!-- Project 6 (索引15) -->
+		<div class="project-card">
+			<div class="project-image-placeholder">
+				<img src="../public/images/project/Robust Region Feature Synthesizer for Zero-Shot Object Detection.png" alt="RRFS">
+			</div>
+			<div class="project-content">
+				<a href="../demo/Robust Region Feature Synthesizer for Zero-Shot Object Detection.html" style="text-decoration: none; color: inherit;">
+					<h3 class="project-title">Robust Region Feature Synthesizer for Zero-Shot Object Detection</h3>
+				</a>
+				<p class="project-author">Peiliang Huang</p>
+				<div class="project-links">
+					<a href="https://arxiv.org/abs/2203.01057" target="_blank" class="project-link link-pdf">📄 PDF</a>
+					<a href="https://github.com/HPL123/RRFS" target="_blank" class="project-link link-code">💻 Code</a>
+					<a href="../public/videos/1658710652088375.mp4" target="_blank" class="project-link link-video">🎥 Video</a>
+				</div>
+			</div>
+		</div>
+			
+		<!-- Project 7 (索引16) -->
+		<div class="project-card">
+			<div class="project-image-placeholder">
+				<img src="../public/images/project/Colar：Effective and Efficient Online Action Detection by Consulting Exemplars.png" alt="Colar">
+			</div>
+			<div class="project-content">
+				<a href="../demo/Colar Effective and Efficient Online Action Detection by Consulting Exemplars.html" style="text-decoration: none; color: inherit;">
+					<h3 class="project-title">Colar: Effective and Efficient Online Action Detection by Consulting Exemplars</h3>
+				</a>
+				<p class="project-author">杨乐</p>
+				<div class="project-links">
+					<a href="https://arxiv.org/abs/2203.01057" target="_blank" class="project-link link-pdf">📄 PDF</a>
+					<a href="https://github.com/VividLe/Online-Action-Detection" target="_blank" class="project-link link-code">💻 Code</a>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Project 8 (索引17) -->
+		<div class="project-card">
+			<div class="project-image-placeholder">
+				<img src="../public/images/project/Cross-Modality Deep Feature Learning for Brain Tumor Segmentation.png" alt="Cross-Modality">
+			</div>
+			<div class="project-content">
+				<a href="../demo/Cross-Modality Deep Feature Learning for Brain Tumor Segmentation.html" style="text-decoration: none; color: inherit;">
+					<h3 class="project-title">Cross-Modality Deep Feature Learning for Brain Tumor Segmentation</h3>
+				</a>
+				<p class="project-author">Dingwen Zhang</p>
+				<div class="project-links">
+					<a href="https://ieeexplore.ieee.org/document/9199562/" target="_blank" class="project-link link-pdf">📄 PDF</a>
+					<a href="https://github.com/lixiaopang221/2m_re1" target="_blank" class="project-link link-code">💻 Code</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 9 (索引18) -->
+		<div class="project-card">
+			<div class="project-image-placeholder">
+				<img src="../public/images/project/Background-click supervision for temporal action localization.png" alt="Background-click">
+			</div>
+			<div class="project-content">
+				<a href="../demo/Background-click supervision for temporal action localization.html" style="text-decoration: none; color: inherit;">
+					<h3 class="project-title">Background-click supervision for temporal action localization</h3>
+				</a>
+				<p class="project-author">杨乐</p>
+				<div class="project-links">
+					<a href="https://ieeexplore.ieee.org/abstract/document/9633199" target="_blank" class="project-link link-pdf">📄 PDF</a>
+					<a href="https://github.com/VividLe/BackTAL" target="_blank" class="project-link link-code">💻 Code</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 10 (索引19) -->
+		<div class="project-card">
+			<div class="project-image-placeholder">
+				<img src="../public/images/project/Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization.png" alt="ECM">
+			</div>
+			<div class="project-content">
+				<a href="../demo/Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization.html" style="text-decoration: none; color: inherit;">
+					<h3 class="project-title">Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization</h3>
+				</a>
+				<p class="project-author">杨乐</p>
+				<div class="project-links">
+					<a href="https://arxiv.org/pdf/2008.07728.pdf" target="_blank" class="project-link link-pdf">📄 PDF</a>
+					<a href="https://github.com/VividLe/Equivalent-Classification-Mapping" target="_blank" class="project-link link-code">💻 Code</a>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<!-- 分页导航 -->
+			<div class="pagination">
+				<a href="demo.html" class="prev">«</a>
+				<a href="demo.html">1</a>
+				<span class="active">2</span>
+				<a href="demo3.html">3</a>
+				<a href="demo3.html" class="next">»</a>
+			</div>
+		</section>
+	</div>
+
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+
+	<script>
+		// 加载项目数据并更新链接
+		fetch('../public/link/demos.json')
+			.then(response => response.json())
+			.then(data => {
+				const demos = data.demos;
+				
+				// 获取所有项目卡片
+				const projectCards = document.querySelectorAll('.project-card');
+				
+				// demo2.html 显示索引 10-19 的项目
+				projectCards.forEach((card, index) => {
+					const demoIndex = 10 + index; // 从索引10开始
+					
+					if (demoIndex < demos.length) {
+						const project = demos[demoIndex];
+						const linksContainer = card.querySelector('.project-links');
+						const pdfLink = linksContainer.querySelector('.link-pdf');
+						const codeLink = linksContainer.querySelector('.link-code');
+						
+						// 处理PDF链接
+						if (project.pdf && project.pdf.trim() !== '') {
+							pdfLink.href = project.pdf;
+							pdfLink.target = '_blank';
+							pdfLink.style.display = 'inline-flex';
+						} else {
+							pdfLink.style.display = 'none';
+						}
+						
+						// 处理Code链接
+						if (codeLink) {
+							if (project.code && project.code.trim() !== '') {
+								codeLink.href = project.code;
+								codeLink.target = '_blank';
+								codeLink.style.display = 'inline-flex';
+							} else {
+								codeLink.style.display = 'none';
+							}
+						}
+					}
+				});
+			})
+			.catch(error => {
+				console.error('Error loading projects data:', error);
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HUMA21: 2nd International Workshop on Human-centric Multimedia Analysis - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		.nav-menu a::after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--primary-color);
+			transition: width 0.3s ease;
+		}
+		
+		.nav-menu a:hover::after {
+			width: 100%;
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+		
+				/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 项目标题区 ==================== */
+		.project-header {
+			background: var(--bg-white);
+			border-radius: 16px;
+			padding: 3rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-md);
+			border-left: 6px solid var(--primary-color);
+		position: relative;
+		}
+		
+		.project-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			margin-bottom: 1.5rem;
+			line-height: 1.3;
+		}
+		
+		.project-meta {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			margin-bottom: 1.5rem;
+			flex-wrap: wrap;
+		}
+		
+		.project-author {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--text-gray);
+			font-size: 1rem;
+			font-weight: 600;
+		}
+		
+		.project-date {
+			color: var(--text-light);
+			font-size: 0.9rem;
+		}
+		
+		.project-venue {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.95rem;
+			letter-spacing: 0.5px;
+		}
+		
+		.project-type {
+			display: inline-block;
+			padding: 0.4rem 1rem;
+			background: linear-gradient(135deg, #f59e0b, #d97706);
+			color: white;
+			border-radius: 20px;
+			font-weight: 600;
+			font-size: 0.85rem;
+		}
+		
+		/* ==================== 项目内容 ==================== */
+		.project-content {
+			background: var(--bg-white);
+			border-radius: 16px;
+			padding: 3rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-sm);
+			line-height: 2;
+		}
+		
+		.project-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid var(--border-color);
+		}
+		
+		.project-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.project-content p {
+			color: var(--text-gray);
+			font-size: 1.05rem;
+			margin-bottom: 1.5rem;
+			text-align: justify;
+		}
+		
+		.project-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.project-content ul {
+			margin-left: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		
+		.project-content li {
+			color: var(--text-gray);
+			font-size: 1.05rem;
+			margin-bottom: 0.5rem;
+		}
+		
+		.project-keywords {
+			margin-top: 2rem;
+			padding-top: 1.5rem;
+			border-top: 2px solid var(--border-color);
+		}
+		
+		.keyword-label {
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-right: 1rem;
+		}
+		
+		.keyword {
+			display: inline-block;
+			padding: 0.4rem 1rem;
+			background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+			color: var(--primary-color);
+			border-radius: 20px;
+			font-size: 0.9rem;
+			font-weight: 600;
+			margin: 0.25rem;
+		}
+		
+		/* ==================== 项目操作按钮 ==================== */
+		.project-action-buttons {
+			margin-top: 1.5rem;
+			display: flex;
+			gap: 1rem;
+			flex-wrap: wrap;
+		}
+		
+		.action-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.625rem 1.25rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+			border-radius: 8px;
+			border: 2px solid;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			text-decoration: none;
+			background: transparent;
+			font-family: 'Inter', sans-serif;
+		}
+		
+		.pdf-btn {
+			color: #dc2626;
+			border-color: #dc2626;
+		}
+		
+		.pdf-btn:hover {
+			background: #dc2626;
+			color: white;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+		}
+		
+		.cite-btn {
+			color: #2563eb;
+			border-color: #2563eb;
+		}
+		
+		.cite-btn:hover {
+			background: #2563eb;
+			color: white;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+		}
+		
+		.action-btn svg {
+			width: 16px;
+			height: 16px;
+		}
+		
+		.link-cite:hover {
+			background: #6d28d9;
+			transform: translateY(-3px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 4rem 2rem 2rem;
+			margin-top: 4rem;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式 ==================== */
+		@media (max-width: 768px) {		
+		.back-button-container {
+			position: static;
+			transform: none;
+			margin-bottom: 1rem;
+		}
+		
+		.back-button {
+			width: 50px;
+			height: 50px;
+		}
+		
+			.nav-menu {
+				display: none;
+			}
+			
+			.project-header {
+				padding: 2rem;
+			}
+			
+			.project-title {
+				font-size: 1.75rem;
+			}
+			
+			.project-content {
+				padding: 2rem;
+			}
+			
+			.project-meta {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 1rem;
+			}
+		}
+	
+		/* ==================== Cite Modal ==================== */
+		.cite-modal {
+			display: none;
+			position: fixed;
+			z-index: 2000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			animation: fadeIn 0.3s ease;
+		}
+		
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		
+		.cite-modal-content {
+			background-color: white;
+			margin: 10% auto;
+			padding: 0;
+			border-radius: 16px;
+			width: 90%;
+			max-width: 500px;
+			box-shadow: var(--shadow-lg);
+			animation: slideDown 0.3s ease;
+		}
+		
+		@keyframes slideDown {
+			from {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+		
+		.cite-modal-header {
+			padding: 1.5rem;
+			background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+			color: white;
+			border-radius: 16px 16px 0 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.cite-modal-header h2 {
+			margin: 0;
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+		
+		.cite-modal-close {
+			background: none;
+			border: none;
+			color: white;
+			font-size: 2rem;
+			cursor: pointer;
+			padding: 0;
+			width: 32px;
+			height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			transition: var(--transition);
+		}
+		
+		.cite-modal-close:hover {
+			background: rgba(255, 255, 255, 0.2);
+		}
+		
+		.cite-modal-body {
+			padding: 2rem;
+		}
+		
+		.cite-modal-body p {
+			margin-bottom: 1.5rem;
+			color: var(--text-gray);
+			font-size: 1rem;
+		}
+		
+		.cite-options {
+			display: flex;
+			gap: 1rem;
+			flex-direction: column;
+		}
+		
+		.cite-option-btn {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			padding: 1rem 1.5rem;
+			border: 2px solid var(--border-color);
+			border-radius: 12px;
+			background: white;
+			cursor: pointer;
+			transition: var(--transition);
+			font-size: 1rem;
+			color: var(--text-dark);
+		}
+		
+		.cite-option-btn:hover {
+			border-color: var(--primary-color);
+			background: linear-gradient(135deg, #eff6ff, #dbeafe);
+			transform: translateY(-2px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.cite-option-btn .icon {
+			font-size: 1.5rem;
+		}
+		
+		.cite-option-btn .text {
+			flex: 1;
+		}
+		
+		.cite-option-btn .text strong {
+			display: block;
+			color: var(--text-dark);
+			margin-bottom: 0.25rem;
+		}
+		
+		.cite-option-btn .text small {
+			color: var(--text-gray);
+			font-size: 0.875rem;
+		}
+		
+		.cite-notification {
+			position: fixed;
+			top: 100px;
+			right: 20px;
+			background: linear-gradient(135deg, #10b981, #059669);
+			color: white;
+			padding: 1rem 1.5rem;
+			border-radius: 12px;
+			box-shadow: var(--shadow-lg);
+			display: none;
+			animation: slideInRight 0.3s ease;
+			z-index: 3000;
+		}
+		
+		@keyframes slideInRight {
+			from {
+				transform: translateX(400px);
+				opacity: 0;
+			}
+			to {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+		
+		.cite-notification.show {
+			display: block;
+		}
+
+	</style>
+</head>
+
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- 主内容区 -->
+	<div class="main-container">
+		<!-- 项目标题 -->
+		<div class="project-header">
+		<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/publications.html" class="back-button" title="Back to Publications">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to Publications</span>
+				</a>
+			</div>
+			<h1 class="project-title">HUMA21: 2nd International Workshop on Human-centric Multimedia Analysis</h1>
+			<div class="project-meta">
+				<div class="project-author">
+					👤 <span>Wu Liu, Xinchen Liu, Jingkuan Song, Dingwen Zhang</span>
+				</div>
+				<div class="project-date">
+					📅 October 2021
+				</div>
+			</div>
+			<div class="project-meta">
+				<span class="project-venue">ACM MM 2021</span>
+				<span class="project-type">Conference paper</span>
+			</div>
+		<div class="project-action-buttons">
+			<a href="https://dl.acm.org/doi/abs/10.1145/3474085.3478574" target="_blank" class="action-btn pdf-btn">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				<span>View PDF</span>
+			</a>
+			<button id="citeButton" class="action-btn cite-btn">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+					<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+				</svg>
+				<span>Cite</span>
+			</button>
+		</div>
+		</div>
+		<!-- 项目内容 -->
+		<div class="project-content">
+			<h2>Abstract</h2>
+			<p>
+				The <strong>Second International Workshop on Human-centric Multimedia Analysis</strong> is focused on human-centric analysis using multimedia information. The human-centric multimedia analysis is one of the fundamental and challenging problems of multimedia understanding.
+			</p>
+			<p>
+				It involves various <strong>human-centric analysis tasks</strong> like:
+			</p>
+			<ul>
+				<li>Face recognition</li>
+				<li>Human pose estimation</li>
+				<li>Person re-identification</li>
+				<li>Human action recognition</li>
+				<li>Person tracking</li>
+				<li>Human-computer interaction</li>
+			</ul>
+			
+			<h2>Workshop Vision</h2>
+			<p>
+				Nowadays, various multimedia sensing devices and large-scale computing infrastructures are generating a <strong>wide variety of multi-modality data</strong> at a rapid velocity, which supplies rich knowledge to tackle these challenges for human-centric analysis.
+			</p>
+			<p>
+				Researchers and engineers have strived to push the limits of human-centric multimedia analysis in a wide variety of <strong>applications</strong>, such as:
+			</p>
+			<ul>
+				<li>Smart city</li>
+				<li>Retailing</li>
+				<li>Intelligent manufacturing</li>
+				<li>Public services</li>
+			</ul>
+			
+			<h2>Workshop Goals</h2>
+			<p>
+				To this end, our workshop aims to provide a <strong>platform to promote exchanges and integration</strong> for the fields of human analysis and multimedia. The workshop brings together researchers and practitioners from academia and industry to share their latest findings and discuss future directions in human-centric multimedia analysis.
+			</p>
+			<p>
+				This workshop is part of the <strong>29th ACM International Conference on Multimedia</strong>, one of the premier conferences in multimedia research, providing a high-quality venue for presenting cutting-edge research in this important area.
+			</p>
+			
+			<div class="project-keywords">
+				<span class="keyword-label">Keywords:</span>
+				<span class="keyword">Human-centric</span>
+				<span class="keyword">Information System</span>
+				<span class="keyword">Multimedia Analysis</span>
+				<span class="keyword">Workshop</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+
+	<!-- Cite Modal -->
+	<div id="citeModal" class="cite-modal">
+		<div class="cite-modal-content">
+			<div class="cite-modal-header">
+				<h2>📚 Cite This Work</h2>
+				<button class="cite-modal-close">&times;</button>
+			</div>
+			<div class="cite-modal-body">
+				<p>Choose how you would like to access the BibTeX citation:</p>
+				<div class="cite-options">
+					<button class="cite-option-btn" id="downloadCite">
+						<span class="icon">⬇️</span>
+						<div class="text">
+							<strong>Download</strong>
+							<small>Download the BibTeX file (.bib)</small>
+						</div>
+					</button>
+					<button class="cite-option-btn" id="copyCite">
+						<span class="icon">📋</span>
+						<div class="text">
+							<strong>Copy to Clipboard</strong>
+							<small>Copy BibTeX content directly</small>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Notification -->
+	<div id="citeNotification" class="cite-notification"></div>
+
+
+			<script>
+		// BibTeX文件内容（内嵌）
+		const bibContent = `@inbook{10.1145/3474085.3478574,
+author = {Liu, Wu and Liu, Xinchen and Song, Jingkuan and Zhang, Dingwen and Huang, Wenbing and Guo, Junbo and Smith, John},
+title = {HUMA'21: 2nd International Workshop on Human-Centric Multimedia Analysis},
+year = {2021},
+isbn = {9781450386517},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3474085.3478574},
+abstract = {The Second International Workshop on Human-centric Multimedia Analysis is focused on human-centric analysis using multimedia information. The human-centric multimedia analysis is one of the fundamental and challenging problems of multimedia understanding. It involves various human-centric analysis tasks like face recognition, human pose estimation, person re-identification, human action recognition, person tracking, human-computer interaction, etc. Nowadays, various multimedia sensing devices and large-scale computing infrastructures are generating a wide variety of multi-modality data at a rapid velocity, which supplies rich knowledge to tackle these challenges for human-centric analysis. Researchers and engineers have strived to push the limits of human-centric multimedia analysis in a wide variety of applications, such as smart city, retailing, intelligent manufacturing, and public services. To this end, our workshop aims to provide a platform to promote exchanges and integration for the fields of human analysis and multimedia.},
+booktitle = {Proceedings of the 29th ACM International Conference on Multimedia},
+pages = {5690–5691},
+numpages = {2}
+}`;
+
+		// 等待DOM加载完成
+		document.addEventListener('DOMContentLoaded', function() {
+			console.log('🚀 Cite功能初始化...');
+			
+			// 获取页面元素
+			const citeBtn = document.getElementById('citeButton');
+			const citeModal = document.getElementById('citeModal');
+			const closeModal = document.querySelector('.cite-modal-close');
+			const downloadBtn = document.getElementById('downloadCite');
+			const copyBtn = document.getElementById('copyCite');
+			const notification = document.getElementById('citeNotification');
+			
+			// 打开模态窗口
+			if (citeBtn) {
+				citeBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+					console.log('打开Cite模态窗口');
+					citeModal.style.display = 'block';
+				});
+			}
+			
+			// 关闭模态窗口
+			if (closeModal) {
+				closeModal.addEventListener('click', function() {
+					console.log('关闭Cite模态窗口');
+					citeModal.style.display = 'none';
+				});
+			}
+			
+			// 点击模态窗口外部关闭
+			window.addEventListener('click', function(e) {
+				if (e.target === citeModal) {
+					citeModal.style.display = 'none';
+				}
+			});
+			
+			// 下载BibTeX文件
+			if (downloadBtn) {
+				downloadBtn.addEventListener('click', function() {
+					console.log('下载BibTeX文件');
+					try {
+						// 创建Blob对象
+						const blob = new Blob([bibContent], { type: 'text/plain;charset=utf-8' });
+						const url = window.URL.createObjectURL(blob);
+						
+						// 创建下载链接
+						const a = document.createElement('a');
+						a.href = url;
+						a.download = 'cite.bib';
+						document.body.appendChild(a);
+						a.click();
+						
+						// 清理
+						document.body.removeChild(a);
+						window.URL.revokeObjectURL(url);
+						
+						// 关闭模态窗口并显示通知
+						citeModal.style.display = 'none';
+						showNotification('✅ BibTeX文件下载成功！');
+						console.log('✅ 下载成功');
+					} catch (error) {
+						console.error('❌ 下载失败:', error);
+						showNotification('❌ 下载失败: ' + error.message, true);
+					}
+				});
+			}
+			
+			// 复制BibTeX到剪贴板
+			if (copyBtn) {
+				copyBtn.addEventListener('click', async function() {
+					console.log('复制BibTeX到剪贴板');
+					try {
+						// 使用Clipboard API复制文本
+						await navigator.clipboard.writeText(bibContent);
+						
+						// 关闭模态窗口并显示通知
+						citeModal.style.display = 'none';
+						showNotification('✅ BibTeX已复制到剪贴板！');
+						console.log('✅ 复制成功');
+						console.log('复制内容:', bibContent);
+					} catch (error) {
+						console.error('❌ 复制失败:', error);
+						// 降级方案：使用传统方法
+						try {
+							const textArea = document.createElement('textarea');
+							textArea.value = bibContent;
+							textArea.style.position = 'fixed';
+							textArea.style.left = '-999999px';
+							document.body.appendChild(textArea);
+							textArea.select();
+							document.execCommand('copy');
+							document.body.removeChild(textArea);
+							
+							citeModal.style.display = 'none';
+							showNotification('✅ BibTeX已复制到剪贴板！');
+							console.log('✅ 复制成功（降级方案）');
+						} catch (fallbackError) {
+							console.error('❌ 降级方案也失败:', fallbackError);
+							showNotification('❌ 复制失败: ' + error.message, true);
+						}
+					}
+				});
+			}
+			
+			// 显示通知函数
+			function showNotification(message, isError = false) {
+				notification.textContent = message;
+				if (isError) {
+					notification.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+				} else {
+					notification.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+				}
+				notification.classList.add('show');
+				setTimeout(function() {
+					notification.classList.remove('show');
+				}, 3000);
+			}
+			
+			console.log('✅ Cite功能初始化完成！');
+		});
+	</script>
+
+
+
+</body>
+</html>
+
+

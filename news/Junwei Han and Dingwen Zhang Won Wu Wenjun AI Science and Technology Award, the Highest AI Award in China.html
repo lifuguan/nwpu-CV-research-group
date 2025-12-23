@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Junwei Han and Dingwen Zhang Won Wu Wenjun AI Science and Technology Award - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 3rem 2rem;
+		}
+		
+		/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 新闻头部 ==================== */
+		.news-header {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+			margin-bottom: 2rem;
+			position: relative;
+		}
+		
+		.news-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.news-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.news-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-author {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #f59e0b, #d97706);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 新闻图片 ==================== */
+		.news-image {
+			width: 100%;
+			margin-bottom: 2rem;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 新闻内容 ==================== */
+		.news-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.news-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.news-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.news-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.news-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.news-content ul {
+			margin-left: 2rem;
+			margin-bottom: 1.25rem;
+		}
+		
+		.news-content li {
+			margin-bottom: 0.5rem;
+		}
+		
+		.award-info {
+			background: linear-gradient(135deg, #eff6ff, #dbeafe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.award-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.award-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		.person-card {
+			background: linear-gradient(135deg, #fef3c7, #fde68a);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid #f59e0b;
+			margin: 1.5rem 0;
+		}
+		
+		.person-card h3 {
+			color: #92400e;
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.person-card p {
+			margin-bottom: 0.5rem;
+			color: #78350f;
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.news-title {
+				font-size: 2rem;
+			}
+			
+			.news-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+			.main-container {
+				padding: 2rem 1rem;
+			}
+			
+			.back-button-container {
+				position: static;
+				transform: none;
+				margin-bottom: 1rem;
+			}
+			
+			.back-button {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.news-header,
+			.news-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+						<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="main-container">
+		<!-- 新闻标题 -->
+		<div class="news-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/news.html" class="back-button" title="Back to News">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to News</span>
+				</a>
+			</div>
+			<h1 class="news-title">🏆 Junwei Han and Dingwen Zhang Won Wu Wenjun AI Science and Technology Award, the Highest AI Award in China</h1>
+			<div class="news-meta">
+				<div class="news-date">
+					📅 <span>July 22, 2022</span>
+				</div>
+				<div class="news-author">
+					⏱️ <span>1 min read</span>
+				</div>
+				<span class="news-badge">Wu Wenjun AI Award</span>
+			</div>
+		</div>
+		
+		<!-- 新闻图片 -->
+		<div class="news-image">
+			<img src="../public/images/news/Junwei Han and Dingwen Zhang Won Wu Wenjun AI Science and Technology Award, the Highest AI Award in China.webp" alt="Wu Wenjun AI Award">
+		</div>
+		
+		<!-- 新闻内容 -->
+		<div class="news-content">
+			<p>
+				We are extremely proud to announce that on <strong>July 22, 2022</strong>, <strong>Professor Junwei Han</strong> and <strong>Professor Dingwen Zhang</strong> won the prestigious <strong>Wu Wenjun AI Science and Technology Award</strong>, the highest award in China's AI field!
+			</p>
+			
+			<div class="award-info">
+				<h3>🏆 Award Information</h3>
+				<p><strong>Award:</strong> 2022 Wu Wenjun AI Science and Technology Award (吴文俊人工智能科学技术奖)</p>
+				<p><strong>Recipients:</strong> Prof. Junwei Han (韩军伟教授) & Prof. Dingwen Zhang (张鼎文教授)</p>
+				<p><strong>Project:</strong> High-Altitude UAV Ground Observation Technology (高空无人机对地精准观测技术)</p>
+				<p><strong>Date:</strong> July 22, 2022</p>
+			</div>
+			
+			<h2>About Wu Wenjun AI Science and Technology Award</h2>
+			<p>
+				The <strong>Wu Wenjun AI Science and Technology Award</strong> (吴文俊人工智能科学技术奖) was initiated and organized by the Chinese Association for Artificial Intelligence (CAAI). It received support from <strong>Wu Wenjun</strong>, a pioneer and leader in intelligent science research in China, the first recipient of the National Highest Science and Technology Award, an academician of the Chinese Academy of Sciences, and the honorary chairman of CAAI.
+			</p>
+			<p>
+				The award was officially established on <strong>January 6, 2011</strong>. To date, the "Wu Wenjun AI Science and Technology Award" has successfully held eleven rounds of evaluation and recognition activities, and enjoys a high reputation in the field of intelligent science and technology in China.
+			</p>
+			
+			<h2>High-Altitude UAV Ground Observation Technology</h2>
+			<p>
+				High-altitude unmanned aerial vehicles (UAVs) are emerging as a new ground observation platform. Due to their significant characteristics such as <strong>high flight altitude</strong> and <strong>wide monitoring range</strong>, they effectively compensate for the shortcomings of traditional platforms such as manned aircraft and satellites, and are widely used in various fields.
+			</p>
+			<p>
+				However, high-altitude UAVs still face critical technical bottlenecks when performing ground observation tasks.
+			</p>
+			
+			<h3>Key Achievements</h3>
+			<p>
+				<strong>Professor Junwei Han's team</strong> at Northwestern Polytechnical University has overcome multiple key technologies and developed a high-altitude UAV ground observation technology system characterized by <strong>"high efficiency, fast detection, and accurate recognition"</strong>.
+			</p>
+			
+			<p>The project features:</p>
+			<ul>
+				<li><strong>Complex System</strong>: High technical difficulty with strong innovation</li>
+				<li><strong>Intellectual Property</strong>: <strong>35 authorized national invention patents</strong></li>
+				<li><strong>Academic Publications</strong>: <strong>Over 30 papers</strong> published in important domestic and international journals</li>
+				<li><strong>Technical Breakthrough</strong>: Overcame key technical bottlenecks including low efficiency, slow detection, and poor recognition in high-altitude long-endurance UAV ground observation tasks</li>
+				<li><strong>International Level</strong>: The overall technology has reached <strong>international advanced level</strong></li>
+			</ul>
+			
+			<h2>Professor Dingwen Zhang (张鼎文)</h2>
+			
+			<div class="person-card">
+				<h3>👤 Prof. Dingwen Zhang</h3>
+				<p><strong>Position:</strong> Professor and Doctoral Supervisor, Northwestern Polytechnical University</p>
+				<p><strong>Recognition:</strong> Clarivate Global "Highly Cited Researcher"</p>
+				<p><strong>Academic Experience:</strong> Conducted a 2-year visiting research at Carnegie Mellon University (CMU), USA, in 2015</p>
+			</div>
+			
+			<h3>Awards and Honors</h3>
+			<ul>
+				<li><strong>2021 IEEE TCSVT Best Paper Award</strong></li>
+				<li><strong>China Society of Image and Graphics (CSIG) Excellent Doctoral Dissertation Award</strong></li>
+				<li><strong>Wu Wenjun AI Outstanding Youth Award</strong></li>
+			</ul>
+			
+			<h3>Research Focus</h3>
+			<p>
+				Prof. Zhang is dedicated to establishing a <strong>new generation of computer vision learning framework</strong> for open environments with dynamic learning capabilities. He has published <strong>more than 10 papers in IEEE TPAMI and IJCV</strong>, the top journals in computer vision.
+			</p>
+			
+			<h3>Academic Service</h3>
+			<ul>
+				<li><strong>Leading Guest Editor</strong> for IEEE TMM and TCSVT</li>
+				<li><strong>Workshop Organizer</strong> for ACM MM and ICCV</li>
+			</ul>
+			
+			<h3>Research Funding</h3>
+			<ul>
+				<li>National Natural Science Foundation of China (NSFC) Joint Key Project with Enterprises (Course Leader)</li>
+				<li>NSFC General Program</li>
+			</ul>
+			
+			<h2>Professor Junwei Han (韩军伟)</h2>
+			
+			<div class="person-card">
+				<h3>👤 Prof. Junwei Han</h3>
+				<p><strong>Position:</strong> Professor of Artificial Intelligence, Northwestern Polytechnical University</p>
+				<p><strong>Recognition:</strong> IEEE Fellow, IAPR Fellow, IET Fellow</p>
+				<p><strong>Research Areas:</strong> Computer Vision, Pattern Recognition, and Artificial Intelligence</p>
+			</div>
+			
+			<h2>Significance</h2>
+			<p>
+				This award recognizes the outstanding contributions of Prof. Junwei Han and Prof. Dingwen Zhang to the field of artificial intelligence and computer vision in China. Their innovative work in high-altitude UAV ground observation technology has significant implications for:
+			</p>
+			<ul>
+				<li><strong>National Defense</strong>: Enhanced surveillance and reconnaissance capabilities</li>
+				<li><strong>Disaster Response</strong>: Improved monitoring and assessment of natural disasters</li>
+				<li><strong>Environmental Protection</strong>: Better tracking of ecological changes</li>
+				<li><strong>Urban Planning</strong>: Advanced urban monitoring and management</li>
+				<li><strong>Agricultural Applications</strong>: Precision agriculture and crop monitoring</li>
+			</ul>
+			
+			<h2>Conclusion</h2>
+			<p>
+				Winning the <strong>Wu Wenjun AI Science and Technology Award</strong>, the highest AI award in China, is a tremendous honor and recognition of the groundbreaking research conducted by Prof. Junwei Han and Prof. Dingwen Zhang. Their work represents the pinnacle of AI research in China and demonstrates the innovative capabilities of Northwestern Polytechnical University's research team.
+			</p>
+			<p>
+				This achievement not only highlights their technical excellence but also showcases China's growing leadership in artificial intelligence and computer vision research on the global stage.
+			</p>
+			<p>
+				<strong>Congratulations to Prof. Junwei Han and Prof. Dingwen Zhang! 🎊🎉</strong>
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+

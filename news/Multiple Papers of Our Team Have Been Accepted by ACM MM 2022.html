@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multiple Papers of Our Team Have Been Accepted by ACM MM 2022 - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 3rem 2rem;
+		}
+		
+		/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 新闻头部 ==================== */
+		.news-header {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+			margin-bottom: 2rem;
+			position: relative;
+		}
+		
+		.news-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.news-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.news-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-author {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.news-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #f59e0b, #d97706);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 新闻图片 ==================== */
+		.news-image {
+			width: 100%;
+			margin-bottom: 2rem;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 新闻内容 ==================== */
+		.news-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.news-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.news-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.news-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.news-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.news-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.news-content ul {
+			margin-left: 2rem;
+			margin-bottom: 1.25rem;
+		}
+		
+		.news-content li {
+			margin-bottom: 0.5rem;
+		}
+		
+		.paper-info {
+			background: linear-gradient(135deg, #eff6ff, #dbeafe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.paper-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.paper-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.news-title {
+				font-size: 2rem;
+			}
+			
+			.news-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+			.main-container {
+				padding: 2rem 1rem;
+			}
+			
+			.back-button-container {
+				position: static;
+				transform: none;
+				margin-bottom: 1rem;
+			}
+			
+			.back-button {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.news-header,
+			.news-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+						<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="main-container">
+		<!-- 新闻标题 -->
+		<div class="news-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/news.html" class="back-button" title="Back to News">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to News</span>
+				</a>
+			</div>
+			<h1 class="news-title">🎉 Multiple Papers of Our Team Have Been Accepted by ACM MM 2022</h1>
+			<div class="news-meta">
+				<div class="news-date">
+					📅 <span>March 2, 2022</span>
+				</div>
+				<div class="news-author">
+					⏱️ <span>1 min read</span>
+				</div>
+				<span class="news-badge">ACM MM 2022</span>
+			</div>
+		</div>
+		
+		<!-- 新闻图片 -->
+		<div class="news-image">
+			<img src="../public/images/news/Multiple Papers of Our Team Have Been Accepted by ACM MM 2022.webp" alt="ACM MM 2022">
+		</div>
+		
+		<!-- 新闻内容 -->
+		<div class="news-content">
+			<p>
+				We are thrilled to announce that <strong>ACM MM 2022</strong> has officially released the list of accepted papers, and <strong>multiple papers from our team are included</strong>! This is a significant achievement showcasing the outstanding research quality of our laboratory.
+			</p>
+			
+			<h2>About ACM MM 2022</h2>
+			<p>
+				The <strong>ACM International Conference on Multimedia (ACM MM)</strong> is the premier international conference in the field of multimedia, covering all aspects of multimedia computing, from underlying technologies to applications, theory to practice, and servers to networks.
+			</p>
+			<p>
+				ACM MM is recognized as one of the <strong>top-tier international conferences</strong> in multimedia and computer vision, attracting the world's leading researchers and practitioners in multimedia technology.
+			</p>
+			
+			<h2>Featured Paper: Cross-Modality High-Frequency Transformer for MR Image Super-Resolution</h2>
+			
+		<div class="paper-info">
+			<h3>📄 Cross-Modality High-Frequency Transformer for MR Image Super-Resolution</h3>
+			<p><strong>Authors:</strong> Chaowei Fang (方超伟), Dingwen Zhang (张鼎文), Liang Wang (王良), Lechao Cheng (程乐超), Junwei Han (韩军伟)</p>
+			<p><strong>Conference:</strong> ACM International Conference on Multimedia 2022</p>
+		</div>
+		
+		<!-- 研究配图 -->
+		<div class="news-image">
+			<img src="../public/images/project/Cross-Modality Deep Feature Learning for Brain Tumor Segmentation.png" alt="Cross-Modality Research">
+		</div>
+		
+		<h2>Research Background</h2>
+			<p>
+				Improving the resolution of <strong>magnetic resonance (MR) image data</strong> is critical to computer-aided diagnosis and brain function analysis. Higher resolution helps to capture more detailed content, which is essential for:
+			</p>
+			<ul>
+				<li><strong>Computer-aided diagnosis</strong> - Enabling more accurate disease detection and analysis</li>
+				<li><strong>Brain function analysis</strong> - Better understanding of neural activity and structures</li>
+				<li><strong>Medical research</strong> - Advancing our knowledge of human anatomy and pathology</li>
+			</ul>
+			<p>
+				However, acquiring high-resolution MR images typically induces:
+			</p>
+			<ul>
+				<li><strong>Lower signal-to-noise ratio</strong> - Reduced image quality</li>
+				<li><strong>Longer scanning time</strong> - Patient discomfort and increased costs</li>
+			</ul>
+			<p>
+				To address these challenges, <strong>MR image super-resolution</strong> has become a widely-interested research topic in recent times.
+			</p>
+			
+			<h2>Key Innovation</h2>
+			<p>
+				Existing works establish extensive deep models with conventional architectures based on <strong>Convolutional Neural Networks (CNN)</strong>. In this work, to further advance this research field, our team makes an <strong>early effort to build a Transformer-based MR image super-resolution framework</strong>, with careful designs on exploring valuable domain prior knowledge.
+			</p>
+			
+			<h3>Novel Architecture: Cross-modality High-frequency Transformer (Cohf-T)</h3>
+			<p>
+				Our research considers <strong>two-fold domain priors</strong> and establishes a novel Transformer architecture called <strong>Cross-modality High-frequency Transformer (Cohf-T)</strong> to introduce such priors into super-resolving low-resolution (LR) MR images:
+			</p>
+			
+			<h3>1. High-Frequency Structure Prior</h3>
+			<p>
+				The <strong>high-frequency structure prior</strong> captures fine-grained details and edges in MR images, which are crucial for accurate diagnosis. This prior helps the model focus on preserving and enhancing important structural information during the super-resolution process.
+			</p>
+			
+			<h3>2. Inter-Modality Context Prior</h3>
+			<p>
+				The <strong>inter-modality context prior</strong> leverages complementary information from different MR imaging modalities (e.g., T1-weighted, T2-weighted). By exploiting the relationships between different modalities, the model can generate more accurate and detailed high-resolution images.
+			</p>
+			
+			<h2>Technical Advantages</h2>
+			<p>
+				The proposed <strong>Cohf-T</strong> framework offers several key advantages:
+			</p>
+			<ul>
+				<li><strong>Transformer Architecture</strong> - First to apply Transformer to MR image super-resolution, enabling better long-range dependency modeling</li>
+				<li><strong>Domain Prior Integration</strong> - Carefully designed to incorporate high-frequency structure and cross-modality context priors</li>
+				<li><strong>Superior Performance</strong> - Achieves state-of-the-art results on benchmark datasets</li>
+				<li><strong>Efficient Learning</strong> - Learns meaningful representations by exploiting domain-specific knowledge</li>
+			</ul>
+			
+			<h2>Experimental Results</h2>
+			<p>
+				Comprehensive experiments on <strong>two benchmark datasets</strong> demonstrate that:
+			</p>
+			<ul>
+				<li><strong>Cohf-T achieves new state-of-the-art performance</strong> in MR image super-resolution</li>
+				<li>The model significantly outperforms existing CNN-based methods</li>
+				<li>Both quantitative metrics and visual quality show substantial improvements</li>
+				<li>The framework generalizes well across different MR imaging modalities</li>
+			</ul>
+			
+			<h2>Research Significance</h2>
+			<p>
+				This research makes several important contributions to the field:
+			</p>
+			<ul>
+				<li>🔬 <strong>Pioneering Work</strong> - Among the first to apply Transformer architecture to MR image super-resolution</li>
+				<li>💡 <strong>Novel Framework</strong> - Innovative integration of domain priors into deep learning models</li>
+				<li>🏆 <strong>State-of-the-Art Results</strong> - Achieves best performance on benchmark datasets</li>
+				<li>🏥 <strong>Clinical Impact</strong> - Potential to improve medical diagnosis and patient care</li>
+				<li>🌟 <strong>Future Research</strong> - Opens new directions for medical image processing research</li>
+			</ul>
+			
+			<h2>Impact on Medical Imaging</h2>
+			<p>
+				The successful application of this technology can have far-reaching implications for medical practice:
+			</p>
+			<ul>
+				<li><strong>Reduced Scanning Time</strong> - Patients spend less time in MRI scanners, improving comfort and throughput</li>
+				<li><strong>Enhanced Diagnostic Accuracy</strong> - Higher resolution images enable more precise diagnosis</li>
+				<li><strong>Cost Efficiency</strong> - Shorter scanning times reduce operational costs</li>
+				<li><strong>Broader Accessibility</strong> - Makes high-quality MR imaging more accessible to healthcare facilities</li>
+			</ul>
+			
+			<h2>Conclusion</h2>
+			<p>
+				We are extremely proud of our team's achievement in having multiple papers accepted by <strong>ACM MM 2022</strong>, one of the most prestigious conferences in multimedia and computer vision. The featured work on <strong>Cross-Modality High-Frequency Transformer for MR Image Super-Resolution</strong> represents a significant advancement in medical image processing.
+			</p>
+			<p>
+				This acceptance reflects the high quality of research conducted in our laboratory and demonstrates our team's capability to push the boundaries of multimedia technology and its applications in medical imaging.
+			</p>
+			<p>
+				Congratulations to all team members involved in this research! 🎊
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+

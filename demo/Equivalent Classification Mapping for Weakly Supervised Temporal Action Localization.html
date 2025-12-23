@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		.nav-menu a::after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--primary-color);
+			transition: width 0.3s ease;
+		}
+		
+		.nav-menu a:hover::after {
+			width: 100%;
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+		
+				/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 项目标题区 ==================== */
+		.project-header {
+			background: var(--bg-white);
+			border-radius: 16px;
+			padding: 3rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-md);
+			border-left: 6px solid var(--primary-color);
+		position: relative;
+		}
+		
+		.project-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			margin-bottom: 1.5rem;
+			line-height: 1.3;
+		}
+		
+		.project-meta {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			margin-bottom: 1.5rem;
+			flex-wrap: wrap;
+		}
+		
+		.project-author {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--text-gray);
+			font-size: 1rem;
+			font-weight: 600;
+		}
+		
+		.project-date {
+			color: var(--text-light);
+			font-size: 0.9rem;
+		}
+		
+		.project-venue {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.95rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 项目内容 ==================== */
+		.project-content {
+			background: var(--bg-white);
+			border-radius: 16px;
+			padding: 3rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-sm);
+			line-height: 2;
+		}
+		
+		.project-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid var(--border-color);
+		}
+		
+		.project-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.project-content p {
+			color: var(--text-gray);
+			font-size: 1.05rem;
+			margin-bottom: 1.5rem;
+			text-align: justify;
+		}
+		
+		.project-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		/* ==================== 项目链接 ==================== */
+		.project-links {
+			background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+			border-radius: 16px;
+			padding: 2rem;
+			margin-bottom: 2rem;
+			display: flex;
+			gap: 1rem;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		.project-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.875rem 1.75rem;
+			border-radius: 8px;
+			font-size: 1rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-sm);
+		}
+		
+		.link-pdf {
+			background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+			color: white;
+		}
+		
+		.link-pdf:hover {
+			background: var(--primary-dark);
+			transform: translateY(-3px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.link-code {
+			background: linear-gradient(135deg, var(--accent-color), #059669);
+			color: white;
+		}
+		
+		.link-code:hover {
+			background: #047857;
+			transform: translateY(-3px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.link-slides {
+			background: linear-gradient(135deg, #f59e0b, #d97706);
+			color: white;
+		}
+		
+		.link-slides:hover {
+			background: #b45309;
+			transform: translateY(-3px);
+			box-shadow: var(--shadow-md);
+		}
+		
+		/* ==================== 项目图片 ==================== */
+		.project-image {
+			background: var(--bg-white);
+			border-radius: 16px;
+			padding: 2rem;
+			margin-bottom: 2rem;
+			box-shadow: var(--shadow-sm);
+			text-align: center;
+		}
+		
+		.project-image img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 12px;
+			box-shadow: var(--shadow-md);
+			transition: var(--transition);
+		}
+		
+		.project-image img:hover {
+			transform: scale(1.02);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 4rem 2rem 2rem;
+			margin-top: 4rem;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式 ==================== */
+		@media (max-width: 768px) {		
+		.back-button-container {
+			position: static;
+			transform: none;
+			margin-bottom: 1rem;
+		}
+		
+		.back-button {
+			width: 50px;
+			height: 50px;
+		}
+		
+			.nav-menu {
+				display: none;
+			}
+			
+			.project-header {
+				padding: 2rem;
+			}
+			
+			.project-title {
+				font-size: 1.75rem;
+			}
+			
+			.project-content {
+				padding: 2rem;
+			}
+			
+			.project-meta {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 1rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- 主内容区 -->
+	<div class="main-container">
+		<!-- 项目标题 -->
+		<div class="project-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/demo2.html" class="back-button" title="Back to Projects">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to Projects</span>
+				</a>
+			</div>
+			<h1 class="project-title">Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization</h1>
+			<div class="project-meta">
+				<div class="project-author">
+					👤 <span>杨乐</span>
+				</div>
+				<div class="project-date">
+					📅 Last updated on May 22, 2024
+				</div>
+				<span class="project-venue">TPAMI</span>
+		</div>
+	</div>
+	
+	<!-- 项目图片 -->
+	<div class="project-image">
+		<img src="../public/images/project/Equivalent Classification Mapping for Weakly Supervised Temporal Action Localization.png" alt="ECM Framework">
+	</div>
+	
+	<!-- 项目链接 -->
+	<div class="project-links">
+		<a href="https://arxiv.org/pdf/2008.07728.pdf" target="_blank" class="project-link link-pdf">📄 PDF</a>
+		<a href="https://github.com/VividLe/Equivalent-Classification-Mapping" target="_blank" class="project-link link-code">💻 Code</a>
+	</div>
+		
+		<!-- 项目内容 -->
+		<div class="project-content">
+			<h2>Background</h2>
+			<p>
+				<strong>Weakly supervised temporal action localization</strong> is a newly emerging yet widely studied topic in recent years. The existing methods can be categorized into two localization-by-classification pipelines:
+			</p>
+			<p>
+				<strong>1. Pre-classification pipeline:</strong> First performs classification on each video snippet and then aggregates the snippet-level classification scores to obtain the video-level classification score.
+			</p>
+			<p>
+				<strong>2. Post-classification pipeline:</strong> Aggregates the snippet-level features first and then predicts the video-level classification score based on the aggregated feature.
+			</p>
+			<p>
+				Although the classifiers in these two pipelines are used in different ways, the role they play is exactly the same—to classify the given features to identify the corresponding action categories. To this end, an ideal classifier can make both pipelines work.
+			</p>
+			
+			<h2>Proposed Framework: ECM</h2>
+			<p>
+				This inspires us to simultaneously learn these two pipelines in a unified framework to obtain an effective classifier. Specifically, in the proposed learning framework, we implement two parallel network streams to model the two localization-by-classification pipelines simultaneously and make the two network streams share the same classifier. This achieves the novel <strong>Equivalent Classification Mapping (ECM)</strong> mechanism.
+			</p>
+			<p>
+				Moreover, we discover that an ideal classifier may possess two characteristics:
+			</p>
+			<p>
+				<strong>1.</strong> The frame-level classification scores obtained from the pre-classification stream and the feature aggregation weights in the post-classification stream should be consistent.
+			</p>
+			<p>
+				<strong>2.</strong> The classification results of these two streams should be identical.
+			</p>
+			<p>
+				Based on these two characteristics, we further introduce a <strong>weight-transition module</strong> and an <strong>equivalent training strategy</strong> into the proposed learning framework, which assists to thoroughly mine the equivalence mechanism.
+			</p>
+			
+			<h2>Contributions</h2>
+			<p>
+				The proposed ECM framework provides a principled way to unify two popular localization-by-classification paradigms, leading to more robust and effective temporal action localization with only video-level supervision.
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+
+

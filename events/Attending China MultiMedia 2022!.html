@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Attending China MultiMedia 2022! - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #7c3aed;
+			--primary-dark: #5b21b6;
+			--accent-color: #06b6d4;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 3rem 2rem;
+		}
+		
+		/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 活动头部 ==================== */
+		.event-header {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+			margin-bottom: 2rem;
+			position: relative;
+		}
+		
+		.event-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.event-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.event-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.event-location {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.event-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #7c3aed, #6d28d9);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 活动图片 ==================== */
+		.event-image {
+			max-width: 700px;
+			width: 85%;
+			margin: 0 auto 2rem auto;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 活动内容 ==================== */
+		.event-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.event-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.event-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.event-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.event-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.event-content ul {
+			margin-left: 2rem;
+			margin-bottom: 1.25rem;
+		}
+		
+		.event-content li {
+			margin-bottom: 0.5rem;
+		}
+		
+		.event-info {
+			background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.event-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.event-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		.person-card {
+			background: linear-gradient(135deg, #cffafe, #a5f3fc);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid #06b6d4;
+			margin: 1.5rem 0;
+		}
+		
+		.person-card h3 {
+			color: #0e7490;
+			margin-top: 0;
+			font-size: 1.2rem;
+		}
+		
+		.person-card p {
+			margin-bottom: 0.5rem;
+			color: var(--text-gray);
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.event-title {
+				font-size: 2rem;
+			}
+			
+			.event-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+			.main-container {
+				padding: 2rem 1rem;
+			}
+			
+			.back-button-container {
+				position: static;
+				transform: none;
+				margin-bottom: 1rem;
+			}
+			
+			.back-button {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.event-header,
+			.event-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+						<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="main-container">
+		<!-- 活动标题 -->
+		<div class="event-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/event.html" class="back-button" title="Back to Events">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to Events</span>
+				</a>
+			</div>
+			<h1 class="event-title">🎬 参加中国多媒体大会 2022!</h1>
+			<h2 style="font-size: 1.5rem; font-weight: 600; color: var(--text-gray); margin-top: 1rem;">Attending China MultiMedia 2022!</h2>
+			<div class="event-meta">
+				<div class="event-date">
+					📅 <span>July 20-22, 2022 | 6:00 PM - 8:00 PM</span>
+				</div>
+				<div class="event-location">
+					📍 <span>中国·贵阳 | Guiyang, China</span>
+				</div>
+				<span class="event-badge">China MM</span>
+			</div>
+		</div>
+		
+		<!-- 活动图片 -->
+		<div class="event-image">
+			<img src="../events/china mm 2022/featured.jpg" alt="China MultiMedia 2022">
+		</div>
+		
+		<!-- 活动内容 -->
+		<div class="event-content">
+			<div class="event-info">
+				<h3>📋 会议信息</h3>
+				<p><strong>主办单位：</strong>中国图象图形学学会（CSIG）、中国计算机学会（CCF）</p>
+				<p><strong>承办单位：</strong>CSIG多媒体专业委员会、CCF多媒体技术专业委员会</p>
+				<p><strong>联合承办：</strong>贵州省计算机学会、贵州大学、贵州民族大学、贵州师范大学、公共大数据国家重点实验室</p>
+				<p><strong>会议时间：</strong>2022年7月20-22日</p>
+				<p><strong>会议地点：</strong>贵州省贵阳市</p>
+				<p><strong>参会人员：</strong>Dingwen Zhang, Longfei Han, Lechao Cheng, Chaowei Fang</p>
+			</div>
+			
+			<h2>会议概况</h2>
+			<p>
+				由<strong>中国图象图形学学会（CSIG）、中国计算机学会（CCF）</strong>主办，CSIG多媒体专业委员会、CCF多媒体技术专业委员会承办，贵州省计算机学会、贵州大学、贵州民族大学、贵州师范大学和公共大数据国家重点实验室联合承办的<strong>中国多媒体大会（ChinaMM2022）</strong>，将于2022年7月20-22日在贵州省贵阳市召开。
+			</p>
+			<p>
+				本次大会将为多媒体领域的学术界和产业界提供<strong>前沿的技术发展动态、丰富多样的学术交流活动、全面前瞻的产业技术宣传平台</strong>，以广泛促进学术分享与交流、产业合作与互动，推动产学研联动发展，提升我国多媒体技术的研究与应用水平。
+			</p>
+			<p>
+				本次会议将邀请本领域国内外学术界和企业界的顶尖专家与学者做主题报告，分享最新的前沿技术与产业热点。会议期间，还将组织<strong>学术高峰论坛、前沿技术专题论坛、顶会顶刊论文分享论坛、多媒体智能计算讲习班、企业论坛</strong>等多角度、多层次的丰富活动，为参会者提供丰富技术盛宴，全方位地扩大交流范畴，创新交流形式，增强交流实效。
+			</p>
+			
+			<h2>参会成员</h2>
+			
+			<div class="person-card">
+				<h3>👤 Dingwen Zhang（张鼎文）</h3>
+				<p><strong>职位：</strong>Professor of Northwestern Polytechnical University</p>
+				<p>Dingwen Zhang is a Professor at BRAIN Lab, NWPU. He obtained his B.S. and Ph.D. degrees from School of Automation, Northwestern Polytechnical University (NWPU) in 2012 and 2018, respectively.</p>
+			</div>
+			
+			<div class="person-card">
+				<h3>👤 Longfei Han（韩龙飞）</h3>
+				<p><strong>职位：</strong>Associate Professor of Computer Science</p>
+				<p>Longfei Han is an associate professor at School of Computer Science, Beijing Technology and Business University.</p>
+			</div>
+			
+			<div class="person-card">
+				<h3>👤 Lechao Cheng（程乐超）</h3>
+				<p><strong>职位：</strong>Associate Professor</p>
+				<p>Lechao Cheng serves as a technical program committee (TPC) member for ACM Multimedia 2020, 2021, and reviewer for CVPR2021, ACM MM 2020, 2021, 2022, ICCV2021, ACM MM2021, CVPR2022.</p>
+			</div>
+			
+			<div class="person-card">
+				<h3>👤 Chaowei Fang（方超伟）</h3>
+				<p><strong>职位：</strong>Lecturer of Artificial Intelligence</p>
+				<p>Chaowei Fang is a lecturer in the Key Laboratory of Intelligent Perception and Image Understanding of Ministry of Education, Xidian University.</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
+
+

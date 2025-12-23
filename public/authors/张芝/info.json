@@ -1,0 +1,10 @@
+{
+  "name": "张芝",
+  "grade": "硕士一年级",
+  "photo": null,
+  "bio_zh": "我目前是西北工业大学自动化学院的硕士一年级研究生（2025年-至今），师从张鼎文教授。我的研究兴趣包括3D视觉，3DAIGC，单目深度估计。",
+  "bio_en": "I am currently a first-year master's student at the School of Automation, Northwestern Polytechnical University (2025 - present), under the supervision of Professor Zhang Dingwen. My research interests include 3D vision, 3DAIGC, and monocular depth estimation.",
+  "google_scholar": null,
+  "github": "https://github.com/zzwodiajdhjwa",
+  "research_interests": "多模态大模型，单目深度估计"
+}

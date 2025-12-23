@@ -1,0 +1,10 @@
+{
+  "name": "冀水尘",
+  "grade": "硕士一年级",
+  "photo": null,
+  "bio_zh": "我目前就读于西北工业大学自动化学院，攻读人工智能硕士学位，师从张鼎文教授。\n目前的研究兴趣主要包括多模态大模型、显著性检测以及diffusion model。",
+  "bio_en": "I am currently studying at the Automation College of Northwestern Polytechnical University, pursuing a master's degree in artificial intelligence under the guidance of Professor Zhang Dingwen.\nMy current research interests mainly include multimodal large models, saliency detection, and diffusion models.",
+  "google_scholar": "https://scholar.google.com/citations?hl=zh-CN&user=raG9mNUAAAAJ",
+  "github": "https://github.com/jsc000",
+  "research_interests": "多模态大模型、显著性检测"
+}

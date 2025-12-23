@@ -1,0 +1,1167 @@
+		<!doctype html>
+<html lang="zh-CN">
+<head>
+			<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meet the Team - Vision Intelligence Research Group 团队成员</title>
+		
+<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #2563eb;
+			--primary-dark: #1e40af;
+			--accent-color: #10b981;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.7;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		.nav-menu a::after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--primary-color);
+			transition: width 0.3s ease;
+		}
+		
+		.nav-menu a:hover::after {
+			width: 100%;
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+		
+		/* ==================== Page Header ==================== */
+		.page-header {
+    text-align: center;
+			padding: 4rem 2rem 3rem;
+			margin-bottom: 3rem;
+			background: linear-gradient(135deg, #059669, #0d9488);
+			color: var(--text-white);
+			border-radius: 16px;
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.page-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 3rem;
+			font-weight: 800;
+			margin-bottom: 1rem;
+		}
+		
+		.page-subtitle {
+			font-size: 1.25rem;
+			opacity: 0.95;
+		}
+		
+		/* ==================== 内容卡片 ==================== */
+		.content-section {
+			padding: 3rem 0;
+		}
+		
+		.section-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin-bottom: 2rem;
+			padding-bottom: 0.75rem;
+			border-bottom: 3px solid var(--primary-color);
+			display: inline-block;
+		}
+		
+		/* ==================== People Grid ==================== */
+		.people-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+			gap: 1.5rem;
+			margin-top: 2rem;
+		}
+		
+		/* 顾问和PI的特殊网格 - 全宽显示 */
+		.advisor-grid,
+		.pi-grid {
+			display: block;
+			margin-top: 2rem;
+		}
+		
+		.person-card {
+			background: var(--bg-white);
+			border-radius: 12px;
+			padding: 1.5rem;
+			transition: var(--transition);
+			box-shadow: var(--shadow-sm);
+			border: 1px solid var(--border-color);
+			display: flex;
+			align-items: center;
+			gap: 1.25rem;
+		}
+		
+		.person-card:hover {
+			transform: translateY(-5px);
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary-color);
+		}
+		
+		.person-card.clickable {
+			cursor: pointer;
+		}
+		
+		.person-card.clickable:hover {
+			border-color: var(--accent-color);
+			box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
+		}
+		
+		.person-avatar {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			object-fit: cover;
+			flex-shrink: 0;
+			border: 3px solid var(--primary-color);
+		}
+		
+		.person-info h4 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.1rem;
+			font-weight: 700;
+			color: var(--primary-color);
+			margin-bottom: 0.25rem;
+		}
+		
+		.person-info p {
+			color: var(--text-gray);
+			font-size: 0.9rem;
+		}
+		
+		/* ==================== 社交按钮 ==================== */
+		.social-buttons {
+			display: flex;
+			gap: 0.5rem;
+			margin-top: 0.75rem;
+		}
+		
+		.social-btn {
+			width: 36px;
+			height: 36px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			font-size: 1rem;
+			font-weight: 600;
+			text-decoration: none;
+			transition: var(--transition);
+			color: white;
+			border: 2px solid transparent;
+		}
+		
+		.social-btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		}
+		
+		.btn-email {
+			background: linear-gradient(135deg, #ea4335, #d32f2f);
+		}
+		
+		.btn-email:hover {
+			background: #c62828;
+			border-color: #ef5350;
+		}
+		
+		.btn-scholar {
+			background: linear-gradient(135deg, #4285f4, #1967d2);
+			font-family: 'Georgia', serif;
+			font-size: 1.3rem;
+			font-weight: 700;
+		}
+		
+		.btn-scholar:hover {
+			background: #1565c0;
+			border-color: #42a5f5;
+		}
+		
+		.btn-github {
+			background: linear-gradient(135deg, #333, #24292e);
+			font-size: 1.1rem;
+		}
+		
+		.btn-github:hover {
+			background: #181818;
+			border-color: #586069;
+		}
+		
+		/* ==================== 特殊卡片样式 ==================== */
+		.advisor-card {
+			background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(30, 64, 175, 0.08));
+			border: 2px solid var(--primary-color);
+		}
+		
+		.advisor-card .person-avatar {
+			border-width: 4px;
+		}
+		
+		.fellow-badges {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin: 0.5rem 0;
+		}
+		
+		.badge {
+			padding: 0.3rem 0.75rem;
+			border-radius: 20px;
+			font-size: 0.75rem;
+			font-weight: 600;
+			color: white;
+		}
+		
+		.badge-ieee {
+			background: linear-gradient(135deg, #dc2626, #ea580c);
+		}
+		
+		.badge-iapr {
+			background: linear-gradient(135deg, #2563eb, #7c3aed);
+		}
+		
+		.badge-iet {
+			background: linear-gradient(135deg, #059669, #0d9488);
+		}
+		
+		.alumni-card {
+			background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(22, 163, 74, 0.08));
+			border-color: #22c55e;
+		}
+		
+		.alumni-card .person-avatar {
+			border-color: #22c55e;
+		}
+		
+		.alumni-card h4 {
+			color: #16a34a;
+		}
+		
+		.collaborator-card {
+			background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(37, 99, 235, 0.05));
+		}
+		
+		.cat-card {
+			background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
+			border: 2px solid #f59e0b;
+		}
+		
+		.cat-card .person-avatar {
+			border-color: #f59e0b;
+		}
+		
+		.cat-card h4 {
+			color: #d97706;
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 4rem 2rem 2rem;
+			margin-top: 4rem;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式 ==================== */
+		@media (max-width: 768px) {
+			.page-title {
+				font-size: 2rem;
+			}
+			
+			.nav-menu {
+				display: none;
+			}
+			
+			.people-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+		
+		/* ==================== 彩蛋弹窗 ==================== */
+		.easter-egg-modal {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.8);
+			backdrop-filter: blur(10px);
+			z-index: 10000;
+			justify-content: center;
+			align-items: center;
+			animation: fadeIn 0.3s ease;
+		}
+		
+		@keyframes fadeIn {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		
+		.easter-egg-content {
+			background: linear-gradient(135deg, #fef3c7, #fde68a);
+			padding: 3rem;
+			border-radius: 30px;
+			text-align: center;
+			max-width: 500px;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+			border: 5px solid #fbbf24;
+			animation: bounceIn 0.5s ease;
+		}
+		
+		@keyframes bounceIn {
+			0% { transform: scale(0.3); opacity: 0; }
+			50% { transform: scale(1.05); }
+			70% { transform: scale(0.9); }
+			100% { transform: scale(1); opacity: 1; }
+		}
+		
+		.easter-egg-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			font-weight: 800;
+			color: #ec4899;
+			margin-bottom: 1.5rem;
+			text-shadow: 2px 2px 4px rgba(236, 72, 153, 0.2);
+		}
+		
+		.easter-egg-question {
+			font-size: 1.3rem;
+			color: var(--text-dark);
+			margin-bottom: 2rem;
+			font-weight: 600;
+		}
+		
+		.easter-egg-buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		
+		.easter-egg-btn {
+			padding: 1rem 2rem;
+			border: none;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: 700;
+			cursor: pointer;
+			transition: var(--transition);
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		}
+		
+		.easter-egg-btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+		}
+		
+		.btn-yes-small {
+			background: linear-gradient(135deg, #10b981, #059669);
+			color: white;
+			font-size: 1rem;
+		}
+		
+		.btn-yes-big {
+			background: linear-gradient(135deg, #ec4899, #db2777);
+			color: white;
+			font-size: 1.8rem;
+			padding: 1.5rem 3rem;
+			animation: pulse 1.5s ease-in-out infinite;
+		}
+		
+		@keyframes pulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+		}
+		
+		.hearts-decoration {
+			font-size: 2rem;
+			margin: 1rem 0;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<a href="home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="people.html">People</a></li>
+				<li><a href="publications.html">Publications</a></li>
+				<li><a href="demo.html">Projects</a></li>
+				<li><a href="news.html">News</a></li>
+				<li><a href="event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<!-- 主内容区 -->
+	<div class="main-container">
+		<!-- Page Header -->
+		<div class="page-header">
+			<h1 class="page-title">Meet the Team </h1>
+			<p class="page-subtitle">Vision & Intelligence Research Group 团队成员</p>
+		</div>
+		
+		<!-- Team Advisor -->
+		<section class="content-section">
+			<h2 class="section-title">🎓 Team Advisor 团队顾问</h2>
+			<div class="advisor-grid">
+				<div class="person-card advisor-card clickable" onclick="window.location.href='../people/hanjunwei.html'">
+					<img src="../public/authors/韩军伟/avatar.jpg" alt="Junwei Han" class="person-avatar">
+					<div class="person-info">
+						<h4>韩军伟</h4>
+						<div class="fellow-badges">
+							<span class="badge badge-ieee">IEEE Fellow</span>
+							<span class="badge badge-iapr">IAPR Fellow</span>
+							<span class="badge badge-iet">IET Fellow</span>
+				</div>
+						<p>Professor of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:junweihan2010@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?user=xrqsoesAAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Principal Investigators -->
+		<section class="content-section">
+			<h2 class="section-title">🔬 Principal Investigators 首席研究员</h2>
+			<div class="pi-grid">
+				<div class="person-card clickable" onclick="window.location.href='../people/zhangdingwen.html'">
+					<img src="../public/authors/张鼎文/avatar.jpg" alt="Dingwen Zhang" class="person-avatar">
+					<div class="person-info">
+						<h4>张鼎文</h4>
+						<p>Professor of Northwestern Polytechnical University</p>
+						<div class="social-buttons">
+							<a href="mailto:zhangdingwen2006yyy@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?user=lKFZwK0AAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- PhD Students -->
+		<section class="content-section">
+			<h2 class="section-title">🎓 PhD Students 博士研究生</h2>
+			<div class="people-grid">
+				<div class="person-card clickable" onclick="window.location.href='../people/zhangxiangsen.html'">
+					<img src="../public/authors/张祥森/avatar.jpeg" alt="张祥森" class="person-avatar">
+					<div class="person-info">
+						<h4>张祥森</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:xszhang116@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/jixiangsenlin" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/lihao.html'">
+					<img src="../public/authors/李昊/avatar.jpeg" alt="李昊" class="person-avatar">
+					<div class="person-info">
+						<h4>李昊</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:lifugan_10027@outlook.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?hl=zh-CN&user=4dokjDoAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/lifuguan" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/feisicheng.html'">
+					<img src="../public/authors/费思成/avatar.jpg" alt="费思成" class="person-avatar">
+					<div class="person-info">
+						<h4>费思成</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:feisicheng@sina.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+				</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/zhaoweinan.html'">
+					<img src="../public/authors/赵蔚楠/avatar.png" alt="赵蔚楠" class="person-avatar">
+					<div class="person-info">
+						<h4>赵蔚楠</h4>
+						<p>PhD of Computer Vision</p>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/zhongwenqi.html'">
+					<img src="../public/authors/钟文琦/avatar.jpeg" alt="钟文琦" class="person-avatar">
+					<div class="person-info">
+						<h4>钟文琦</h4>
+						<p>PhD of Computer Vision</p>
+						<div class="social-buttons">
+							<a href="mailto:wenqizhong@mail.nwpu.edu.cn" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/wenqizhong" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/wangyuqing.html'">
+					<img src="../public/authors/王雨晴/avatar.jpeg" alt="王雨晴" class="person-avatar">
+					<div class="person-info">
+						<h4>王雨晴</h4>
+						<p>PhD of Computer Vision</p>
+						<div class="social-buttons">
+							<a href="mailto:arya3630519@163.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/Aryabegin" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/liyan.html'">
+					<img src="../public/authors/李燕/avatar.jpeg" alt="李燕" class="person-avatar">
+					<div class="person-info">
+						<h4>李燕</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://scholar.google.com/citations?user=h5vHAxcAAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/YanLi-LY" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/huanghuan.html'">
+					<img src="../public/authors/黄欢/avatar.jpeg" alt="黄欢" class="person-avatar">
+					<div class="person-info">
+						<h4>黄欢</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://scholar.google.com/citations?hl=zh-CN&user=8jsydSkAAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+				</div>
+			</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/shiyi.html'">
+					<img src="../public/authors/施易/avatar.jpeg" alt="施易" class="person-avatar">
+					<div class="person-info">
+						<h4>施易</h4>
+						<p>PhD of Computer Vision</p>
+						<div class="social-buttons">
+							<a href="https://yishi99.github.io/yishi.github.io/" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+				</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/yangkaihui.html'">
+					<img src="../public/authors/杨凯辉/avatar.jpeg" alt="杨凯辉" class="person-avatar">
+					<div class="person-info">
+						<h4>杨凯辉</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://scholar.google.com/citations?hl=zh-CN&user=40qSNxcAAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/KaIi-github" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+					</div>
+				<div class="person-card">
+					<div class="person-info" style="margin-left: 0;">
+						<h4>田海滨</h4>
+						<p>PhD of Computer Vision</p>
+				</div>
+					</div>
+				<div class="person-card">
+					<div class="person-info" style="margin-left: 0;">
+						<h4>祝梓涵</h4>
+						<p>PhD of Computer Vision</p>
+				</div>
+				</div>
+				</div>
+		</section>
+		
+		<!-- Master Students -->
+		<section class="content-section">
+			<h2 class="section-title">📚 Master Students 硕士研究生</h2>
+			<div class="people-grid">
+				<div class="person-card clickable" onclick="window.location.href='../people/chenjiaqi.html'">
+					<img src="../public/authors/陈嘉祺/avatar.jpeg" alt="陈嘉祺" class="person-avatar">
+					<div class="person-info">
+						<h4>陈嘉祺</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:chenttt2001@163.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/chenttt2001" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/chengliangbo.html'">
+					<img src="../public/authors/程亮泊/avatar.jpg" alt="程亮泊" class="person-avatar">
+					<div class="person-info">
+						<h4>程亮泊</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:clb0928@mail.nwpu.edu.cn" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/Liangbo-Cheng" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/yangteng.html'">
+					<img src="../public/authors/杨腾/avatar.png" alt="杨腾" class="person-avatar">
+					<div class="person-info">
+						<h4>杨腾</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:yangteng@mail.nwpu.edu.cn" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+					</div>
+				</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/gaoyuanyuan.html'">
+					<img src="../public/authors/高源远/avatar.jpeg" alt="高源远" class="person-avatar">
+					<div class="person-info">
+						<h4>高源远</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:yygao7645@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?hl=en&user=1zDq0q8AAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/gyy456" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+				</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/hediqi.html'">
+					<img src="../public/authors/何狄其/avatar.jpeg" alt="何狄其" class="person-avatar">
+					<div class="person-info">
+						<h4>何狄其</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:diqihe@nwpu.mail.edu.cn" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?hl=en&user=wAGuU_wAAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/diqihe" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+			</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/wangmingyu.html'">
+					<img src="../public/authors/王明宇/avatar.jpeg" alt="王明宇" class="person-avatar">
+					<div class="person-info">
+						<h4>王明宇</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:nwpuwmy@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/WMY4333" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/jiaokuixuan.html'">
+					<img src="../public/authors/焦奎璇/avatar.jpg" alt="焦奎璇" class="person-avatar">
+					<div class="person-info">
+						<h4>焦奎璇</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:kuixuanjiao@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/Kkevindd" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/zhangzhi.html'">
+					<img src="../public/authors/张芝/avatar.jpg" alt="张芝" class="person-avatar">
+					<div class="person-info">
+						<h4>张芝</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://github.com/zzwodiajdhjwa" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+				</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/yuejinghui.html'">
+					<img src="../public/authors/岳精辉/avatar.jpeg" alt="岳精辉" class="person-avatar">
+					<div class="person-info">
+						<h4>岳精辉</h4>
+						<p>MEng of Artificial Intelligence</p>
+			</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/liuqi.html'">
+					<img src="../public/authors/刘琪/avatar.jpeg" alt="刘琪" class="person-avatar">
+					<div class="person-info">
+						<h4>刘琪</h4>
+						<p>MEng of Artificial Intelligence</p>
+				</div>
+					</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/jishuichen.html'">
+					<img src="../public/authors/冀水尘/avatar.jpeg" alt="冀水尘" class="person-avatar">
+					<div class="person-info">
+						<h4>冀水尘</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://scholar.google.com/citations?hl=zh-CN&user=raG9mNUAAAAJ" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/jsc000" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+					</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/xiehuichao.html'">
+					<img src="../public/authors/谢惠超/avatar.jpeg" alt="谢惠超" class="person-avatar">
+					<div class="person-info">
+						<h4>谢惠超</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://fishfuck.github.io/homepage/" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+				</div>
+				</div>
+				<div class="person-card clickable" onclick="window.location.href='../people/zouzhengyu.html'">
+					<img src="../public/authors/邹正宇/avatar.jpeg" alt="邹正宇" class="person-avatar">
+					<div class="person-info">
+						<h4>邹正宇</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="https://github.com/ZouZhengyu7" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+				</div>
+				<div class="person-card">
+					<div class="person-info" style="margin-left: 0;">
+						<h4>周刊</h4>
+						<p>MEng of Artificial Intelligence</p>
+				</div>
+				</div>
+				<div class="person-card">
+					<div class="person-info" style="margin-left: 0;">
+						<h4>贾秀泽</h4>
+						<p>MEng of Artificial Intelligence</p>
+				</div>
+				</div>
+				<div class="person-card">
+					<div class="person-info" style="margin-left: 0;">
+						<h4>石玉竹</h4>
+						<p>MEng of Artificial Intelligence</p>
+				</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Interns -->
+		<section class="content-section">
+			<h2 class="section-title">💼 Interns 实习生</h2>
+			<div class="people-grid">
+				<div class="person-card">
+					<img src="../public/authors/姬歆淏/avatar.jpg" alt="姬歆淏" class="person-avatar">
+					<div class="person-info">
+						<h4>姬歆淏</h4>
+						<p>Undergraduate</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Alumni -->
+		<section class="content-section">
+			<h2 class="section-title">🎓 Alumni 已毕业研究生</h2>
+			<div class="people-grid">
+				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/huangpeiliang.html'">
+					<img src="../public/authors/黄培亮/avatar.jpg" alt="黄培亮" class="person-avatar">
+					<div class="person-info">
+						<h4>黄培亮</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:peilianghuang2017@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?hl=en&user=jMusa5kAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/HPL123" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+					</div>
+				</div>
+					</div>
+				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/yaojieru.html'">
+					<img src="../public/authors/姚洁茹/avatar.jpg" alt="姚洁茹" class="person-avatar">
+					<div class="person-info">
+						<h4>姚洁茹</h4>
+						<p>PhD of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:rubyyao@mail.nwpu.edu.cn" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?hl=en&user=VKEmRKGvkdEC&view_op=list_works&sortby=pubdate" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+				</div>
+			</div>
+	</div>
+				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/guoguangyu.html'">
+					<img src="../public/authors/郭广宇/avatar.jpg" alt="郭广宇" class="person-avatar">
+					<div class="person-info">
+						<h4>郭广宇</h4>
+						<p>PhD of Computer Vision</p>
+						<div class="social-buttons">
+							<a href="mailto:gyguo95@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?user=F-mtieAAAAAJ&hl=en" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+							<a href="https://github.com/gyguo" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+				</div>
+				</div>
+				</div>
+				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/lijingfeng.html'">
+					<img src="../public/authors/李靖峰/avatar.jpg" alt="李靖峰" class="person-avatar">
+					<div class="person-info">
+						<h4>李靖峰</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:li0jingfeng@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/Li-jingfeng" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+				</a>
+			</div>
+					</div>
+				</div>
+				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/jiyanling.html'">
+					<img src="../public/authors/姬延岭/avatar.png" alt="姬延岭" class="person-avatar">
+					<div class="person-info">
+						<h4>姬延岭</h4>
+						<p>MEng of Artificial Intelligence</p>
+						<div class="social-buttons">
+							<a href="mailto:jiyanling6@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/xiaojihh" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+				</a>
+			</div>
+			</div>
+		</div>
+	</div>
+		</section>
+		
+		<!-- Collaborators -->
+		<section class="content-section">
+			<h2 class="section-title">🤝 Collaborators 合作者</h2>
+			<div class="people-grid">
+				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/fangchaowei.html'">
+					<img src="../public/authors/方超伟/avatar.jpg" alt="方超伟" class="person-avatar">
+					<div class="person-info">
+						<h4>方超伟</h4>
+						<p>Associate Professor, Xidian University</p>
+						<div class="social-buttons">
+							<a href="mailto:chaoweifang@outlook.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?user=eNtYEmcAAAAJ&hl=en" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+			</div>
+			</div>
+		</div>
+				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/chenglechao.html'">
+					<img src="../public/authors/程乐超/avatar.jpg" alt="程乐超" class="person-avatar">
+					<div class="person-info">
+						<h4>程乐超</h4>
+						<p>Associate Professor, Zhejiang Lab</p>
+						<div class="social-buttons">
+							<a href="mailto:chenglc@zhejianglab.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/liygcheng" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+	</div>
+		</div>
+	</div>
+				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/hanlongfei.html'">
+					<img src="../public/authors/韩龙飞/avatar.jpg" alt="韩龙飞" class="person-avatar">
+					<div class="person-info">
+						<h4>韩龙飞</h4>
+						<p>Associate Professor, Beijing Technology and Business University</p>
+						<div class="social-buttons">
+							<a href="mailto:draflyhan@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://github.com/drafly" target="_blank" class="social-btn btn-github" title="GitHub" onclick="event.stopPropagation();">
+								<svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+									<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+								</svg>
+							</a>
+</div>
+	</div>
+	</div>
+				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/liunian.html'">
+					<img src="../public/authors/刘念/avatar.png" alt="刘念" class="person-avatar">
+					<div class="person-info">
+						<h4>刘念</h4>
+						<p>Research Scientist, MBZUAI</p>
+						<div class="social-buttons">
+							<a href="mailto:liunian228@gmail.com" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?user=ZSilWs4AAAAJ&hl=zh-CN" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+						</div>
+</div>
+							</div>
+				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/liuyi.html'">
+					<img src="../public/authors/刘祎/avatar.png" alt="刘祎" class="person-avatar">
+					<div class="person-info">
+						<h4>刘祎</h4>
+						<p>Professor, Changzhou University</p>
+						<div class="social-buttons">
+							<a href="https://cczuyiliu.github.io/" target="_blank" class="social-btn btn-homepage" title="Homepage" onclick="event.stopPropagation();">🏠</a>
+						</div>
+					</div>
+				</div>
+				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/chengde.html'">
+					<img src="../public/authors/程德/avatar.png" alt="程德" class="person-avatar">
+					<div class="person-info">
+						<h4>程德</h4>
+						<p>Associate Professor, State Key Lab, Xidian University</p>
+						<div class="social-buttons">
+							<a href="mailto:dcheng@xidian.edu.cn" class="social-btn btn-email" title="Email" onclick="event.stopPropagation();">✉️</a>
+							<a href="https://scholar.google.com/citations?user=180lASkAAAAJ&hl=en" target="_blank" class="social-btn btn-scholar" title="Google Scholar" onclick="event.stopPropagation();">G</a>
+						</div>
+					</div>
+				</div>
+	</div>
+		</section>
+		
+		<!-- Cat Corner -->
+		<section class="content-section">
+			<h2 class="section-title">🐱 Cat Corner 猫咪专栏</h2>
+			<div class="people-grid">
+				<div class="person-card cat-card" id="pamiCard">
+					<img src="../public/authors/Pami/catvatar.jpeg" alt="Pami" class="person-avatar">
+					<div class="person-info">
+						<h4>Pami 🐾</h4>
+						<p>Miu Professor</p>
+</div>
+							</div>
+				<div class="person-card cat-card">
+					<img src="../public/authors/Timi/catvatar.jpeg" alt="Timi" class="person-avatar">
+					<div class="person-info">
+						<h4>Timi 🐾</h4>
+						<p>Miu Professor</p>
+		</div>
+	</div>
+</div>
+		</section>
+							</div>
+	
+	<!-- 彩蛋弹窗 -->
+	<div class="easter-egg-modal" id="easterEggModal">
+		<div class="easter-egg-content">
+			<h2 class="easter-egg-title">🐱 特别发现！</h2>
+			<div class="hearts-decoration">💕 💖 💗 💓 💝</div>
+			<p class="easter-egg-question">你真的很喜欢 Timi 吗？</p>
+			<div class="easter-egg-buttons">
+				<button class="easter-egg-btn btn-yes-small" onclick="goToTimi()">是</button>
+				<button class="easter-egg-btn btn-yes-big" onclick="goToTimi()">是 💖</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// 彩蛋功能：点击 Pami 5 次
+		let pamiClickCount = 0;
+		const pamiCard = document.getElementById('pamiCard');
+		const modal = document.getElementById('easterEggModal');
+		
+		if (pamiCard) {
+			pamiCard.addEventListener('click', function() {
+				pamiClickCount++;
+				console.log('Pami 点击次数:', pamiClickCount);
+				
+				// 添加点击动画
+				this.style.transform = 'scale(0.95)';
+				setTimeout(() => {
+					this.style.transform = '';
+				}, 100);
+				
+				if (pamiClickCount === 5) {
+					modal.style.display = 'flex';
+					pamiClickCount = 0; // 重置计数
+				}
+			});
+		}
+		
+		// 点击背景关闭弹窗
+		modal.addEventListener('click', function(e) {
+			if (e.target === modal) {
+				modal.style.display = 'none';
+			}
+		});
+		
+		// 跳转到 Timi 页面
+		function goToTimi() {
+			window.location.href = '../people/pami.html';
+		}
+	</script>
+
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+							</div>
+	</footer>
+</body>
+</html>

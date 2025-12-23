@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Attending VALSE 2025! - Vision Intelligence Research Group</title>
+	
+	<meta name='robots' content='max-image-preview:large' />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Vision Intelligence Research Group" />
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+	
+	<style>
+		/* ==================== 全局变量 ==================== */
+		:root {
+			--primary-color: #7c3aed;
+			--primary-dark: #5b21b6;
+			--accent-color: #06b6d4;
+			
+			--text-white: #ffffff;
+			--text-dark: #1e293b;
+			--text-gray: #64748b;
+			--text-light: #94a3b8;
+			
+			--bg-white: #ffffff;
+			--bg-light: #f8fafc;
+			--bg-dark: #0f172a;
+			
+			--border-color: #e2e8f0;
+			
+			--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.8;
+			overflow-x: hidden;
+			background: var(--bg-light);
+		}
+		
+		/* ==================== 导航栏 ==================== */
+		.navbar {
+			background: rgba(255, 255, 255, 0.98);
+			backdrop-filter: blur(10px);
+			box-shadow: var(--shadow-sm);
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			padding: 1rem 2rem;
+			transition: var(--transition);
+		}
+		
+		.nav-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+		.nav-menu {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.nav-menu a {
+			color: var(--text-gray);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.95rem;
+			transition: var(--transition);
+			position: relative;
+		}
+		
+		.nav-menu a:hover {
+			color: var(--primary-color);
+		}
+		
+		/* ==================== 主容器 ==================== */
+		.main-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 3rem 2rem;
+		}
+		
+		/* ==================== 返回按钮 ==================== */
+		.back-button-container {
+			position: absolute;
+			left: -80px;
+			top: 3rem;
+		}
+		
+		.back-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			background: var(--bg-white);
+			border: 2px solid var(--border-color);
+			border-radius: 50%;
+			color: var(--text-gray);
+			text-decoration: none;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+		}
+		
+		.back-button:hover {
+			background: var(--primary-color);
+			color: var(--text-white);
+			border-color: var(--primary-color);
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+		
+		.back-button svg {
+			transition: var(--transition);
+		}
+		
+		.back-button:hover svg {
+			transform: translateX(-3px);
+		}
+		
+		.back-button span {
+			display: none;
+		}
+		
+		/* ==================== 活动头部 ==================== */
+		.event-header {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+			margin-bottom: 2rem;
+			position: relative;
+		}
+		
+		.event-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 2.5rem;
+			font-weight: 800;
+			color: var(--text-dark);
+			line-height: 1.3;
+			margin-bottom: 1.5rem;
+		}
+		
+		.event-meta {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			color: var(--text-gray);
+			font-size: 0.95rem;
+		}
+		
+		.event-date {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.event-location {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		
+		.event-badge {
+			display: inline-block;
+			padding: 0.5rem 1.25rem;
+			background: linear-gradient(135deg, #7c3aed, #6d28d9);
+			color: white;
+			border-radius: 25px;
+			font-weight: 700;
+			font-size: 0.85rem;
+			letter-spacing: 0.5px;
+		}
+		
+		/* ==================== 活动图片 ==================== */
+		.event-image {
+			max-width: 700px;
+			width: 85%;
+			margin: 0 auto 2rem auto;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		/* ==================== 活动内容 ==================== */
+		.event-content {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 16px;
+			box-shadow: var(--shadow-md);
+		}
+		
+		.event-content h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.75rem;
+			font-weight: 700;
+			color: var(--text-dark);
+			margin: 2rem 0 1rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--primary-color);
+		}
+		
+		.event-content h2:first-child {
+			margin-top: 0;
+		}
+		
+		.event-content h3 {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin: 1.5rem 0 1rem 0;
+		}
+		
+		.event-content p {
+			margin-bottom: 1.25rem;
+			color: var(--text-gray);
+			font-size: 1.05rem;
+		}
+		
+		.event-content strong {
+			color: var(--text-dark);
+			font-weight: 600;
+		}
+		
+		.event-content ul {
+			margin-left: 2rem;
+			margin-bottom: 1.25rem;
+		}
+		
+		.event-content li {
+			margin-bottom: 0.5rem;
+		}
+		
+		.event-info {
+			background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid var(--primary-color);
+			margin: 1.5rem 0;
+		}
+		
+		.event-info h3 {
+			color: var(--primary-dark);
+			margin-top: 0;
+			font-size: 1.3rem;
+		}
+		
+		.event-info p {
+			margin-bottom: 0.5rem;
+		}
+		
+		.person-card {
+			background: linear-gradient(135deg, #cffafe, #a5f3fc);
+			padding: 1.5rem;
+			border-radius: 12px;
+			border-left: 4px solid #06b6d4;
+			margin: 1rem 0;
+		}
+		
+		.person-card h3 {
+			color: #0e7490;
+			margin-top: 0;
+			font-size: 1.2rem;
+		}
+		
+		.person-card p {
+			margin-bottom: 0.5rem;
+			color: var(--text-gray);
+		}
+		
+		/* ==================== 页脚 ==================== */
+		.footer {
+			background: var(--bg-dark);
+			color: var(--text-white);
+			padding: 3rem 2rem;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		
+		.footer-container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.footer-container p {
+			color: var(--text-light);
+			margin: 0.5rem 0;
+		}
+		
+		.footer-container a {
+			color: var(--accent-color);
+			text-decoration: none;
+		}
+		
+		/* ==================== 响应式设计 ==================== */
+		@media (max-width: 768px) {
+			.event-title {
+				font-size: 2rem;
+			}
+			
+			.event-meta {
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			
+			.main-container {
+				padding: 2rem 1rem;
+			}
+			
+			.back-button-container {
+				position: static;
+				transform: none;
+				margin-bottom: 1rem;
+			}
+			
+			.back-button {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.event-header,
+			.event-content {
+				padding: 1.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../pages/home.html" class="logo">Vision Intelligence Group</a>
+			<ul class="nav-menu">
+				<li><a href="../pages/home.html">Home</a></li>
+				<li><a href="../pages/people.html">People</a></li>
+				<li><a href="../pages/publications.html">Publications</a></li>
+				<li><a href="../pages/demo.html">Projects</a></li>
+				<li><a href="../pages/news.html">News</a></li>
+				<li><a href="../pages/event.html">Events</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="main-container">
+		<!-- 活动标题 -->
+		<div class="event-header">
+			<!-- 返回按钮 -->
+			<div class="back-button-container">
+				<a href="../pages/event.html" class="back-button" title="Back to Events">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+					</svg>
+					<span>Back to Events</span>
+				</a>
+			</div>
+			<h1 class="event-title">📚 参加 VALSE 2025!</h1>
+			<h2 style="font-size: 1.5rem; font-weight: 600; color: var(--text-gray); margin-top: 1rem;">Attending VALSE 2025!</h2>
+			<div class="event-meta">
+				<div class="event-date">
+					📅 <span>June 6-8, 2025</span>
+				</div>
+				<div class="event-location">
+					📍 <span>珠海国际会展中心 | Zhuhai International Convention Center</span>
+				</div>
+				<span class="event-badge">VALSE 2025</span>
+			</div>
+		</div>
+		
+		<!-- 活动图片 -->
+		<div class="event-image">
+			<img src="../public/images/media/overview9.jpg" alt="VALSE 2025">
+		</div>
+		
+		<!-- 活动内容 -->
+		<div class="event-content">
+			<div class="event-info">
+				<h3>📋 活动信息</h3>
+				<p><strong>活动时间：</strong>2025年6月6日至8日</p>
+				<p><strong>活动地点：</strong>珠海国际会展中心</p>
+				<p><strong>主办方：</strong>中国图象图形学学会</p>
+				<p><strong>承办方：</strong>中山大学</p>
+				<p><strong>参会人数：</strong>5900余名学术界和产业界青年学者、学生</p>
+			</div>
+			
+			<h2>会议概况</h2>
+			<p>
+				VALSE 2025（第十五届视觉与学习青年学者研讨会）于2025年6月6日至8日在珠海国际会展中心举行，由中国图象图形学学会主办、中山大学承办。吸引了5900余名来自学术界和产业界的青年学者、学生参会，围绕计算机视觉、模式识别、多媒体和机器学习等领域的前沿方向展开交流。大会设有主旨报告、领域年度进展（APR）报告、Tutorial、专题研讨会（Workshop）以及海报展示等多个环节，共计150余场报告和390余篇顶会顶刊Poster。
+			</p>
+			
+			<h2>核心内容亮点</h2>
+			
+			<h3>主旨报告</h3>
+			<p>
+				邀请了华中科技大学白翔教授、南开大学程明明教授、南京大学俞扬教授、西安交通大学孟德宇教授、清华大学鲁继文教授等学者，分别就通用文字识别、高效视觉感知、大模型强化学习等主题作报告。
+			</p>
+			
+			<h3>年度进展评述（APR）</h3>
+			<p>
+				12位青年学者介绍了各领域的最新进展，包括AI智能体、大模型复杂推理、多模态基础模型、具身智能、世界模型、3D视觉、医疗通用模型等方向。
+			</p>
+			
+			<h3>Tutorial与Workshop</h3>
+			<p>
+				涵盖大模型基础理论、可信机器学习、AI4Science等主题，Workshop涉及多模态遥感模型、智慧医疗、低空智能感知等热点议题。
+			</p>
+			
+			<h2>组织与支持</h2>
+			<p>
+				大会由中山大学副校长郑跃教授、中国图象图形学学会副理事长赖剑煌教授等担任大会主席，中山大学姬艳丽教授、郭裕兰教授等担任程序委员会主席。得到多家企业和机构的支持，包括华为、腾讯优图、百度等铂金及金牌合作单位，志愿者团队来自中山大学等高校。
+			</p>
+			<p>
+				VALSE 2025通过深度学术交流，促进了视觉与学习领域青年学者的合作与创新。
+			</p>
+		</div>
+	</div>
+	
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="footer-container">
+			<p>Copyright © 2025 <a href="../pages/home.html">Brain Lab</a>. All rights reserved.</p>
+			<p style="font-size: 0.9rem; margin-top: 0.75rem;">
+				脑与人工智能实验室 | Vision Intelligence Research Group
+			</p>
+		</div>
+	</footer>
+</body>
+</html>

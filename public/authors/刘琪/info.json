@@ -1,0 +1,10 @@
+{
+  "name": "刘琪",
+  "grade": "硕士一年级",
+  "photo": null,
+  "bio_zh": "我目前是西北工业大学自动化学院一年级（2025-至今）硕士研究生，师从张鼎文教授。研究兴趣包括VLA，diffusion model",
+  "bio_en": "I am currently a first-year Master's student (2025-Present) in the School of Automation at Northwestern Polytechnical University (NPU), advised by Professor Dingwen Zhang. My research interests include Vision-Language-Action (VLA) models and diffusion models.",
+  "google_scholar": null,
+  "github": null,
+  "research_interests": "VLA，视频生成"
+}

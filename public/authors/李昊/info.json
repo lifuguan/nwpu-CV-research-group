@@ -1,0 +1,10 @@
+{
+  "name": "李昊",
+  "grade": "博士四年级",
+  "photo": null,
+  "bio_zh": "我目前是西北工业大学自动化学院的四年级（2022年-至今）博士研究生，师从张鼎文教授。\n\n自2025年4月起，我在新加坡南洋理工大学进行访问，师从刘子纬教授。我目前还在美团龙猫基础模型团队担任进行项目合作（北斗计划）。\n\n我的研究兴趣包括多模态大模型、3D视觉和3D AIGC。",
+  "bio_en": "I am currently a fourth-year Ph.D. student (2022–present) in the School of Automation at Northwestern Polytechnical University, advised by Prof. Dingwen Zhang.\nSince April 2025, I have been a visiting Ph.D. student at Nanyang Technological University (NTU), Singapore, working with Prof. Ziwei Liu. I am also collaborating with the Meituan Longmao Foundation Model Team (Beidou Talent Program) on related research projects.\nMy research interests include multimodal large models, 3D computer vision, and 3D AIGC.",
+  "google_scholar": "https://scholar.google.com/citations?user=4dokjDoAAAAJ",
+  "github": "https://github.com/lifuguan",
+  "research_interests": "多模态大模型，3D视觉"
+}
