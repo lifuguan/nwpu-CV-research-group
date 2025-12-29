@@ -32,4 +32,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# optimization reports (keep local only)
+EVENTS_COMPRESSION_REPORT.md
+PEOPLE_PAGE_OPTIMIZATION_REPORT.md
+
 
