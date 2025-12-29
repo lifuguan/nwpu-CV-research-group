@@ -167,6 +167,19 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			/* 图片加载优化 */
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: crisp-edges;
+		}
+		
+		/* 图片懒加载占位符 */
+		img[loading="lazy"] {
+			opacity: 0;
+			transition: opacity 0.3s ease-in;
+		}
+		
+		img[loading="lazy"].loaded {
+			opacity: 1;
 		}
 		
 		/* 深色遮罩层，确保文字可读 */
@@ -811,31 +824,31 @@
 		<!-- 背景幻灯片 -->
 		<div class="hero-slideshow">
 			<div class="hero-slide active">
-				<img src="./public/images/media/overview10.jpg" alt="Research Overview 10">
+				<img src="./public/images/media/overview10.jpg" alt="Research Overview 10" loading="eager">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview9.jpg" alt="Research Overview 9">
+				<img src="./public/images/media/overview9.jpg" alt="Research Overview 9" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview8.jpg" alt="Research Overview 8">
+				<img src="./public/images/media/overview8.jpg" alt="Research Overview 8" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview7.jpg" alt="Research Overview 7">
+				<img src="./public/images/media/overview7.jpg" alt="Research Overview 7" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview6.jpg" alt="Research Overview 6">
+				<img src="./public/images/media/overview6.jpg" alt="Research Overview 6" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview4.jpg" alt="Research Overview 4">
+				<img src="./public/images/media/overview4.jpg" alt="Research Overview 4" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview3.jpg" alt="Research Overview 3">
+				<img src="./public/images/media/overview3.jpg" alt="Research Overview 3" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview2.jpg" alt="Research Overview 2">
+				<img src="./public/images/media/overview2.jpg" alt="Research Overview 2" loading="lazy">
 			</div>
 			<div class="hero-slide">
-				<img src="./public/images/media/overview1.jpg" alt="Research Overview 1">
+				<img src="./public/images/media/overview1.jpg" alt="Research Overview 1" loading="lazy">
 			</div>
 		</div>
 		
@@ -847,7 +860,7 @@
 			<div class="hero-subtitle">We're Vision Intelligence Research Group</div>
 			<h1 class="hero-title">Take a look at what we're working on…</h1>
 			<p class="hero-description">
-				We are an academic research group focusing on Artificial Intelligence for Embodied Intelligence,Spatial Intelligence,AI4Medicine.
+				We are an academic research group focusing on Artificial Intelligence for Embodied Intelligence, Spatial Intelligence, AI4Medicine.
 			</p>
 		<div class="hero-buttons">
 			<a href="./pages/people.html" class="btn btn-primary">Join Us</a>
@@ -898,7 +911,7 @@
 				<!-- Project 1 -->
 				<div class="project-card">
 					<div class="project-image-placeholder">
-						<img src="./public/images/project/A Memory-based Robust region feature synthesizer for zero-shot object detection.png" alt="M-RRFS">
+						<img src="./public/images/project/A Memory-based Robust region feature synthesizer for zero-shot object detection.png" alt="M-RRFS" loading="lazy">
 					</div>
 					<div class="project-content">
 						<a href="./demo/A Memory-based Robust region feature synthesizer for zero-shot object detection.html" style="text-decoration: none; color: inherit;">
@@ -913,7 +926,7 @@
 			<!-- Project 2 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Contextual Dependency Vision Transformer for spectrogram-based multivariate time series analysis.png" alt="CD-ViT">
+					<img src="./public/images/project/Contextual Dependency Vision Transformer for spectrogram-based multivariate time series analysis.png" alt="CD-ViT" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Contextual Dependency Vision Transformer for spectrogram-based multivariate time series analysis.html" style="text-decoration: none; color: inherit;">
@@ -930,7 +943,7 @@
 			<!-- Project 3 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Continual All-in-One Adverse Weather Removal With Knowledge Replay on a Unified Network Structure.png" alt="Continual Weather Removal">
+					<img src="./public/images/project/Continual All-in-One Adverse Weather Removal With Knowledge Replay on a Unified Network Structure.png" alt="Continual Weather Removal" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Continual All-in-One Adverse Weather Removal With Knowledge Replay on a Unified Network Structure.html" style="text-decoration: none; color: inherit;">
@@ -947,7 +960,7 @@
 			<!-- Project 4 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Position-based anchor optimization for point supervised dense nuclei detection.png" alt="Position-based Anchor Optimization">
+					<img src="./public/images/project/Position-based anchor optimization for point supervised dense nuclei detection.png" alt="Position-based Anchor Optimization" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Position-based anchor optimization for point supervised dense nuclei detection.html" style="text-decoration: none; color: inherit;">
@@ -964,7 +977,7 @@
 			<!-- Project 5 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Uncertainty Modeling for Gaze Estimation.png" alt="Uncertainty Modeling">
+					<img src="./public/images/project/Uncertainty Modeling for Gaze Estimation.png" alt="Uncertainty Modeling" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Uncertainty Modeling for Gaze Estimation.html" style="text-decoration: none; color: inherit;">
@@ -980,7 +993,7 @@
 			<!-- Project 6 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching.png" alt="ASDT">
+					<img src="./public/images/project/Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching.png" alt="ASDT" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Weakly Supervised Semantic Segmentation via Alternate Self-Dual Teaching.html" style="text-decoration: none; color: inherit;">
@@ -997,7 +1010,7 @@
 			<!-- Project 7 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/GP-NeRF- Generalized Perception NeRF for Context-Aware 3D Scene Understanding.png" alt="GP-NeRF">
+					<img src="./public/images/project/GP-NeRF- Generalized Perception NeRF for Context-Aware 3D Scene Understanding.png" alt="GP-NeRF" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/GP-NeRF Generalized Perception NeRF for Context-Aware 3D Scene Understanding.html" style="text-decoration: none; color: inherit;">
@@ -1014,7 +1027,7 @@
 			<!-- Project 8 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Disentangled Capsule Routing for Fast Part-Object Relational Saliency.png" alt="DCR">
+					<img src="./public/images/project/Disentangled Capsule Routing for Fast Part-Object Relational Saliency.png" alt="DCR" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Disentangled Capsule Routing for Fast Part-Object Relational Saliency.html" style="text-decoration: none; color: inherit;">
@@ -1031,7 +1044,7 @@
 			<!-- Project 9 -->
 			<div class="project-card">
 				<div class="project-image-placeholder">
-					<img src="./public/images/project/Structured Attention Composition for Temporal Action Localization.png" alt="Structured Attention">
+					<img src="./public/images/project/Structured Attention Composition for Temporal Action Localization.png" alt="Structured Attention" loading="lazy">
 				</div>
 				<div class="project-content">
 					<a href="./demo/Structured Attention Composition for Temporal Action Localization.html" style="text-decoration: none; color: inherit;">
@@ -1087,7 +1100,7 @@
 					<p style="color: var(--text-light); line-height: 1.8;">
 						脑与人工智能实验室<br/>
 						Vision Intelligence Research Group<br/>
-						Leading AI research in computer vision, unmanned systems, and medical applications.
+						Leading AI research in Embodied Intelligence, Spatial Intelligence, AI4Medicine.
 				</p>
 			</div>
 				
@@ -1115,7 +1128,7 @@
 			
 			<div class="footer-bottom">
 				<p>
-					Copyright © 2025 <a href="index.html">Brain Lab</a>. All rights reserved.<br/>
+					Copyright © 2025 <a href="index.html">Vision Intelligence Research Group</a>. All rights reserved.<br/>
 					脑与人工智能实验室 | Vision Intelligence Research Group
 				</p>
 			</div>
@@ -1180,6 +1193,62 @@
 					});
 				}
 			});
+		});
+		
+		// ==================== 图片懒加载优化 ====================
+		// 为懒加载图片添加加载完成的类
+		document.addEventListener('DOMContentLoaded', function() {
+			const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+			
+			// 使用 Intersection Observer 监听图片加载
+			if ('IntersectionObserver' in window) {
+				const imageObserver = new IntersectionObserver((entries, observer) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const img = entry.target;
+							img.addEventListener('load', function() {
+								img.classList.add('loaded');
+							});
+							// 如果图片已经加载完成
+							if (img.complete) {
+								img.classList.add('loaded');
+							}
+							observer.unobserve(img);
+						}
+					});
+				});
+				
+				lazyImages.forEach(img => imageObserver.observe(img));
+			} else {
+				// 降级方案：直接添加 loaded 类
+				lazyImages.forEach(img => {
+					img.classList.add('loaded');
+				});
+			}
+		});
+		
+		// ==================== 预加载下一张幻灯片 ====================
+		// 预加载即将显示的幻灯片图片
+		function preloadNextSlide() {
+			const nextSlideIndex = (currentSlide + 1) % slides.length;
+			const nextImg = slides[nextSlideIndex].querySelector('img');
+			if (nextImg && !nextImg.complete) {
+				// 创建一个新的 Image 对象来预加载
+				const preloadImg = new Image();
+				preloadImg.src = nextImg.src;
+			}
+		}
+		
+		// 在页面加载完成后预加载前几张幻灯片
+		window.addEventListener('load', function() {
+			// 预加载前3张幻灯片
+			for (let i = 1; i <= Math.min(3, slides.length - 1); i++) {
+				const img = slides[i].querySelector('img');
+				if (img) {
+					const preloadImg = new Image();
+					preloadImg.src = img.src;
+				}
+			}
 		});
 </script>
 </body>
