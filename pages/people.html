@@ -212,6 +212,18 @@
 			object-fit: cover;
 			flex-shrink: 0;
 			border: 3px solid var(--primary-color);
+			/* 懒加载优化 */
+			background: var(--bg-light);
+			transition: opacity 0.3s ease-in-out;
+		}
+		
+		/* 图片加载时的占位效果 */
+		.person-avatar[loading="lazy"] {
+			opacity: 0;
+		}
+		
+		.person-avatar[loading="lazy"].loaded {
+			opacity: 1;
 		}
 		
 		.person-info h4 {
@@ -542,7 +554,7 @@
 			<h2 class="section-title">🎓 Team Advisor 团队顾问</h2>
 			<div class="advisor-grid">
 				<div class="person-card advisor-card clickable" onclick="window.location.href='../people/hanjunwei.html'">
-					<img src="../public/authors/韩军伟/avatar.jpg" alt="Junwei Han" class="person-avatar">
+					<img src="../public/authors/韩军伟/avatar.jpg" alt="Junwei Han" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>韩军伟</h4>
 						<div class="fellow-badges">
@@ -565,7 +577,7 @@
 			<h2 class="section-title">🔬 Principal Investigators 首席研究员</h2>
 			<div class="pi-grid">
 				<div class="person-card clickable" onclick="window.location.href='../people/zhangdingwen.html'">
-					<img src="../public/authors/张鼎文/avatar.jpg" alt="Dingwen Zhang" class="person-avatar">
+					<img src="../public/authors/张鼎文/avatar.jpg" alt="Dingwen Zhang" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>张鼎文</h4>
 						<p>Professor of Northwestern Polytechnical University</p>
@@ -583,7 +595,7 @@
 			<h2 class="section-title">🎓 PhD Students 博士研究生</h2>
 			<div class="people-grid">
 				<div class="person-card clickable" onclick="window.location.href='../people/zhangxiangsen.html'">
-					<img src="../public/authors/张祥森/avatar.jpg" alt="张祥森" class="person-avatar">
+					<img src="../public/authors/张祥森/avatar.jpg" alt="张祥森" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>张祥森</h4>
 						<p>PhD of Artificial Intelligence</p>
@@ -598,7 +610,7 @@
 				</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/lihao.html'">
-					<img src="../public/authors/李昊/avatar.jpg" alt="李昊" class="person-avatar">
+					<img src="../public/authors/李昊/avatar.jpg" alt="李昊" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>李昊</h4>
 						<p>PhD of Artificial Intelligence</p>
@@ -614,7 +626,7 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/feisicheng.html'">
-					<img src="../public/authors/费思成/avatar.jpg" alt="费思成" class="person-avatar">
+					<img src="../public/authors/费思成/avatar.jpg" alt="费思成" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>费思成</h4>
 						<p>PhD of Artificial Intelligence</p>
@@ -624,14 +636,14 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/zhaoweinan.html'">
-					<img src="../public/authors/赵蔚楠/avatar.png" alt="赵蔚楠" class="person-avatar">
+					<img src="../public/authors/赵蔚楠/avatar.jpg" alt="赵蔚楠" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>赵蔚楠</h4>
 						<p>PhD of Computer Vision</p>
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/zhongwenqi.html'">
-					<img src="../public/authors/钟文琦/avatar.jpg" alt="钟文琦" class="person-avatar">
+					<img src="../public/authors/钟文琦/avatar.jpg" alt="钟文琦" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>钟文琦</h4>
 						<p>PhD of Computer Vision</p>
@@ -646,7 +658,7 @@
 				</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/wangyuqing.html'">
-					<img src="../public/authors/王雨晴/avatar.jpg" alt="王雨晴" class="person-avatar">
+					<img src="../public/authors/王雨晴/avatar.jpg" alt="王雨晴" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>王雨晴</h4>
 						<p>PhD of Computer Vision</p>
@@ -661,7 +673,7 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/liyan.html'">
-					<img src="../public/authors/李燕/avatar.jpg" alt="李燕" class="person-avatar">
+					<img src="../public/authors/李燕/avatar.jpg" alt="李燕" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>李燕</h4>
 						<p>PhD of Artificial Intelligence</p>
@@ -676,7 +688,7 @@
 				</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/huanghuan.html'">
-					<img src="../public/authors/黄欢/avatar.jpg" alt="黄欢" class="person-avatar">
+					<img src="../public/authors/黄欢/avatar.jpg" alt="黄欢" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>黄欢</h4>
 						<p>PhD of Artificial Intelligence</p>
@@ -686,7 +698,7 @@
 			</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/shiyi.html'">
-					<img src="../public/authors/施易/avatar.jpg" alt="施易" class="person-avatar">
+					<img src="../public/authors/施易/avatar.jpg" alt="施易" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>施易</h4>
 						<p>PhD of Computer Vision</p>
@@ -700,7 +712,7 @@
 				</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/yangkaihui.html'">
-					<img src="../public/authors/杨凯辉/avatar.jpg" alt="杨凯辉" class="person-avatar">
+					<img src="../public/authors/杨凯辉/avatar.jpg" alt="杨凯辉" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>杨凯辉</h4>
 						<p>PhD of Artificial Intelligence</p>
@@ -734,7 +746,7 @@
 			<h2 class="section-title">📚 Master Students 硕士研究生</h2>
 			<div class="people-grid">
 				<div class="person-card clickable" onclick="window.location.href='../people/chenjiaqi.html'">
-					<img src="../public/authors/陈嘉祺/avatar.jpg" alt="陈嘉祺" class="person-avatar">
+					<img src="../public/authors/陈嘉祺/avatar.jpg" alt="陈嘉祺" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>陈嘉祺</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -749,7 +761,7 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/chengliangbo.html'">
-					<img src="../public/authors/程亮泊/avatar.jpg" alt="程亮泊" class="person-avatar">
+					<img src="../public/authors/程亮泊/avatar.jpg" alt="程亮泊" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>程亮泊</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -764,7 +776,7 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/yangteng.html'">
-					<img src="../public/authors/杨腾/avatar.png" alt="杨腾" class="person-avatar">
+					<img src="../public/authors/杨腾/avatar.jpg" alt="杨腾" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>杨腾</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -774,7 +786,7 @@
 				</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/gaoyuanyuan.html'">
-					<img src="../public/authors/高源远/avatar.jpg" alt="高源远" class="person-avatar">
+					<img src="../public/authors/高源远/avatar.jpg" alt="高源远" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>高源远</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -790,7 +802,7 @@
 				</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/hediqi.html'">
-					<img src="../public/authors/何狄其/avatar.jpg" alt="何狄其" class="person-avatar">
+					<img src="../public/authors/何狄其/avatar.jpg" alt="何狄其" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>何狄其</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -806,7 +818,7 @@
 			</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/wangmingyu.html'">
-					<img src="../public/authors/王明宇/avatar.jpg" alt="王明宇" class="person-avatar">
+					<img src="../public/authors/王明宇/avatar.jpg" alt="王明宇" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>王明宇</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -821,7 +833,7 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/jiaokuixuan.html'">
-					<img src="../public/authors/焦奎璇/avatar.jpg" alt="焦奎璇" class="person-avatar">
+					<img src="../public/authors/焦奎璇/avatar.jpg" alt="焦奎璇" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>焦奎璇</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -836,7 +848,7 @@
 				</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/zhangzhi.html'">
-					<img src="../public/authors/张芝/avatar.jpg" alt="张芝" class="person-avatar">
+					<img src="../public/authors/张芝/avatar.jpg" alt="张芝" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>张芝</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -850,21 +862,21 @@
 				</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/yuejinghui.html'">
-					<img src="../public/authors/岳精辉/avatar.jpg" alt="岳精辉" class="person-avatar">
+					<img src="../public/authors/岳精辉/avatar.jpg" alt="岳精辉" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>岳精辉</h4>
 						<p>MEng of Artificial Intelligence</p>
 			</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/liuqi.html'">
-					<img src="../public/authors/刘琪/avatar.jpg" alt="刘琪" class="person-avatar">
+					<img src="../public/authors/刘琪/avatar.jpg" alt="刘琪" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>刘琪</h4>
 						<p>MEng of Artificial Intelligence</p>
 				</div>
 					</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/jishuichen.html'">
-					<img src="../public/authors/冀水尘/avatar.jpg" alt="冀水尘" class="person-avatar">
+					<img src="../public/authors/冀水尘/avatar.jpg" alt="冀水尘" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>冀水尘</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -879,7 +891,7 @@
 					</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/xiehuichao.html'">
-					<img src="../public/authors/谢惠超/avatar.jpg" alt="谢惠超" class="person-avatar">
+					<img src="../public/authors/谢惠超/avatar.jpg" alt="谢惠超" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>谢惠超</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -893,7 +905,7 @@
 				</div>
 				</div>
 				<div class="person-card clickable" onclick="window.location.href='../people/zouzhengyu.html'">
-					<img src="../public/authors/邹正宇/avatar.jpg" alt="邹正宇" class="person-avatar">
+					<img src="../public/authors/邹正宇/avatar.jpg" alt="邹正宇" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>邹正宇</h4>
 						<p>MEng of Artificial Intelligence</p>
@@ -932,7 +944,7 @@
 			<h2 class="section-title">💼 Interns 实习生</h2>
 			<div class="people-grid">
 				<div class="person-card">
-					<img src="../public/authors/姬歆淏/avatar.jpg" alt="姬歆淏" class="person-avatar">
+					<img src="../public/authors/姬歆淏/avatar.jpg" alt="姬歆淏" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>姬歆淏</h4>
 						<p>Undergraduate</p>
@@ -946,7 +958,7 @@
 			<h2 class="section-title">🎓 Alumni 已毕业研究生</h2>
 			<div class="people-grid">
 				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/huangpeiliang.html'">
-					<img src="../public/authors/黄培亮/avatar.jpg" alt="黄培亮" class="person-avatar">
+					<img src="../public/authors/黄培亮/avatar.jpg" alt="黄培亮" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>黄培亮</h4>
 						<p>USTC, IAI</p>
@@ -962,7 +974,7 @@
 				</div>
 					</div>
 				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/yaojieru.html'">
-					<img src="../public/authors/姚洁茹/avatar.jpg" alt="姚洁茹" class="person-avatar">
+					<img src="../public/authors/姚洁茹/avatar.jpg" alt="姚洁茹" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>姚洁茹</h4>
 						<p>Capital Medical University</p>
@@ -973,7 +985,7 @@
 			</div>
 	</div>
 				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/guoguangyu.html'">
-					<img src="../public/authors/郭广宇/avatar.jpg" alt="郭广宇" class="person-avatar">
+					<img src="../public/authors/郭广宇/avatar.jpg" alt="郭广宇" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>郭广宇</h4>
 						<p>Alibaba DAMO</p>
@@ -989,7 +1001,7 @@
 				</div>
 				</div>
 				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/lijingfeng.html'">
-					<img src="../public/authors/李靖峰/avatar.jpg" alt="李靖峰" class="person-avatar">
+					<img src="../public/authors/李靖峰/avatar.jpg" alt="李靖峰" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>李靖峰</h4>
 						<p>Hikvision</p>
@@ -1004,7 +1016,7 @@
 					</div>
 				</div>
 				<div class="person-card alumni-card clickable" onclick="window.location.href='../people/jiyanling.html'">
-					<img src="../public/authors/姬延岭/avatar.png" alt="姬延岭" class="person-avatar">
+					<img src="../public/authors/姬延岭/avatar.jpg" alt="姬延岭" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>姬延岭</h4>
 						<p>54所</p>
@@ -1026,7 +1038,7 @@
 			<h2 class="section-title">🤝 Collaborators 合作者</h2>
 			<div class="people-grid">
 				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/liuziwei.html'">
-					<img src="../public/authors/刘子纬/avatar.jpg" alt="刘子纬" class="person-avatar">
+					<img src="../public/authors/刘子纬/avatar.jpg" alt="刘子纬" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>刘子纬</h4>
 						<p>Associate Professor, Nanyang Technological University</p>
@@ -1038,7 +1050,7 @@
 			</div>
 		</div>
 				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/wangjingdong.html'">
-					<img src="../public/authors/王井东/avatar.jpg" alt="王井东" class="person-avatar">
+					<img src="../public/authors/王井东/avatar.jpg" alt="王井东" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>王井东</h4>
 						<p>Chief Scientist, Baidu</p>
@@ -1050,7 +1062,7 @@
 			</div>
 		</div>
 				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/chenglechao.html'">
-					<img src="../public/authors/程乐超/avatar.jpg" alt="程乐超" class="person-avatar">
+					<img src="../public/authors/程乐超/avatar.jpg" alt="程乐超" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>程乐超</h4>
 						<p>Associate Professor, Zhejiang Lab</p>
@@ -1065,7 +1077,7 @@
 		</div>
 	</div>
 				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/liunian.html'">
-					<img src="../public/authors/刘念/avatar.png" alt="刘念" class="person-avatar">
+					<img src="../public/authors/刘念/avatar.jpg" alt="刘念" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>刘念</h4>
 						<p>Research Scientist, MBZUAI</p>
@@ -1076,7 +1088,7 @@
 </div>
 							</div>
 				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/liuyi.html'">
-					<img src="../public/authors/刘祎/avatar.png" alt="刘祎" class="person-avatar">
+					<img src="../public/authors/刘祎/avatar.jpg" alt="刘祎" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>刘祎</h4>
 						<p>Professor, Changzhou University</p>
@@ -1086,7 +1098,7 @@
 					</div>
 				</div>
 				<div class="person-card collaborator-card clickable" onclick="window.location.href='../people/chengde.html'">
-					<img src="../public/authors/程德/avatar.png" alt="程德" class="person-avatar">
+					<img src="../public/authors/程德/avatar.jpg" alt="程德" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>程德</h4>
 						<p>Associate Professor, State Key Lab, Xidian University</p>
@@ -1104,14 +1116,14 @@
 			<h2 class="section-title">🐱 Cat Corner 猫咪专栏</h2>
 			<div class="people-grid">
 				<div class="person-card cat-card" id="pamiCard">
-					<img src="../public/authors/Pami/catvatar.jpeg" alt="Pami" class="person-avatar">
+					<img src="../public/authors/Pami/catvatar.jpeg" alt="Pami" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>Pami 🐾</h4>
 						<p>Miu Professor</p>
 </div>
 							</div>
 				<div class="person-card cat-card">
-					<img src="../public/authors/Timi/catvatar.jpeg" alt="Timi" class="person-avatar">
+					<img src="../public/authors/Timi/catvatar.jpeg" alt="Timi" class="person-avatar" loading="lazy">
 					<div class="person-info">
 						<h4>Timi 🐾</h4>
 						<p>Miu Professor</p>
@@ -1180,5 +1192,42 @@
 			</p>
 							</div>
 	</footer>
+	
+	<script>
+		// 图片懒加载优化脚本
+		document.addEventListener('DOMContentLoaded', function() {
+			const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+			
+			// 当图片加载完成时添加 loaded 类，实现平滑过渡
+			lazyImages.forEach(img => {
+				if (img.complete) {
+					img.classList.add('loaded');
+				} else {
+					img.addEventListener('load', function() {
+						img.classList.add('loaded');
+					});
+				}
+			});
+			
+			// 使用 Intersection Observer 提前加载即将进入视口的图片
+			if ('IntersectionObserver' in window) {
+				const imageObserver = new IntersectionObserver((entries, observer) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const img = entry.target;
+							// 图片进入视口，确保它被加载
+							if (img.loading === 'lazy') {
+								img.loading = 'eager';
+							}
+						}
+					});
+				}, {
+					rootMargin: '100px' // 提前100px开始加载
+				});
+				
+				lazyImages.forEach(img => imageObserver.observe(img));
+			}
+		});
+	</script>
 </body>
 </html>
